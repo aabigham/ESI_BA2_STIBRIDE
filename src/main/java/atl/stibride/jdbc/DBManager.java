@@ -17,7 +17,7 @@ class DBManager {
 
     private DBManager() {
     }
-
+    
     Connection getConnection() throws RepositoryException {
         String jdbcUrl = "jdbc:sqlite:" + ConfigManager.getInstance().getProperties("db.url");
         //|| connection.isClosed()

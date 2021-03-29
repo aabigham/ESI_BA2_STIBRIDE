@@ -17,6 +17,8 @@ public class View {
         fxmlController = loader.getController();
         Scene scene = new Scene(root);
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.setTitle("Stib ride !");
         stage.show();
     }
     // TODO

@@ -21,7 +21,7 @@ public interface Dao<K, T extends Dto<K>> {
      * @return the element's key, usefull when the key is auto-generated.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    K insert(T item) throws RepositoryException;
+    //K insert(T item) throws RepositoryException;
 
     /**
      * Deletes the item of the specific key from the resource.
@@ -29,7 +29,7 @@ public interface Dao<K, T extends Dto<K>> {
      * @param key key of the element to delete.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    void delete(K key) throws RepositoryException;
+    //void delete(K key) throws RepositoryException;
 
     /**
      * Update an element of the resource. The search of the element is based on
@@ -38,7 +38,7 @@ public interface Dao<K, T extends Dto<K>> {
      * @param item item to update.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    void update(T item) throws RepositoryException;
+    //void update(T item) throws RepositoryException;
 
     /**
      * Returns all the elements of the resource. This method can be long.
