@@ -9,5 +9,9 @@
         <module name="StibRide" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="StibRide" target="15" />
+      <module name="td3-sorting" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

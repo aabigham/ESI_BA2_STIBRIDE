@@ -5,22 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/StibRide.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/controller/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/StibRide.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/242952c1-34d7-43a5-a8ce-ddf26be5b739.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_controlsfx_controlsfx_11_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_15_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_11_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_win_11_0_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sqlite/stib.db.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/differences_api.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/observer/Observable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/observer/Observer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/metro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/view.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/src/test/java/atl/grade/jdbc/StudentsDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/src/test/java/atl/grade/jdbc/StudentsDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/src/test/java/atl/grade/repository/StudentRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/src/test/java/atl/grade/repository/StudentRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaFXApplication" />
         <option value="Class" />
       </list>
     </option>
@@ -37,6 +57,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="ProjectId" id="1qRTp94iAxCkoDFOoFUGP5U7uRh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -46,6 +67,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -55,14 +77,42 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../IntelliJprojects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/img" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.25659472" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.side.proportion" value="0.28735632" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\main\resources\img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\main\resources\fxml" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn javafx:run" />
+      <command value="mvn clean javafx:run" />
+    </option>
   </component>
   <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.main.Main" />
+      <module name="StibRide" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="atl.stibride.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -74,6 +124,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,7 +138,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1617038550520</updated>
-      <workItem from="1617038551662" duration="946000" />
+      <workItem from="1617038551662" duration="2791000" />
+      <workItem from="1617041588640" duration="1635000" />
+      <workItem from="1617043738056" duration="187000" />
     </task>
     <servers />
   </component>
@@ -100,6 +157,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

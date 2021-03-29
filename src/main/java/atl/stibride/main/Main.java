@@ -1,8 +1,17 @@
 package atl.stibride.main;
 
-public class Main {
+import atl.stibride.view.View;
+import javafx.application.Application;
+import javafx.stage.Stage;
+
+public class Main extends Application {
 
     public static void main(String[] args) {
-        System.out.println("Main");
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        View view = new View(stage);
     }
 }
