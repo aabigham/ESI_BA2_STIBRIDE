@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/config/ConfigManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +107,7 @@
       <updated>1617038550520</updated>
       <workItem from="1617038551662" duration="2791000" />
       <workItem from="1617041588640" duration="1635000" />
-      <workItem from="1617043738056" duration="405000" />
+      <workItem from="1617043738056" duration="474000" />
     </task>
     <servers />
   </component>
