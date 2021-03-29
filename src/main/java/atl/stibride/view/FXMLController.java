@@ -7,7 +7,6 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Font;
 import org.controlsfx.control.SearchableComboBox;
 
 public class FXMLController {
@@ -16,8 +15,6 @@ public class FXMLController {
     private ScrollPane scrollPane;
     @FXML
     private ImageView stibLogo;
-    @FXML
-    private Font x31;
     @FXML
     private SearchableComboBox<?> origineSearch;
     @FXML
