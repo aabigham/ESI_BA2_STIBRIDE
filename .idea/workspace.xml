@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/config/ConfigManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/Dto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/DBManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Dao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/RepositoryException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/config/ConfigManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/config/ConfigManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/src/main/java/atl/grade/jdbc/StudentsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/src/main/java/atl/grade/jdbc/StudentsDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -107,7 +118,7 @@
       <updated>1617038550520</updated>
       <workItem from="1617038551662" duration="2791000" />
       <workItem from="1617041588640" duration="1635000" />
-      <workItem from="1617043738056" duration="474000" />
+      <workItem from="1617043738056" duration="1169000" />
     </task>
     <servers />
   </component>

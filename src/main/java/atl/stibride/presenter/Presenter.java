@@ -12,13 +12,15 @@ public class Presenter implements Observer {
     }
 
     public void initialize() {
+        // TODO
     }
 
     public void soSomething() {
+        // TODO
     }
 
     @Override
     public void update(Observable observable, Object arg) {
-
+        // TODO
     }
 }

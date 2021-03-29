@@ -12,14 +12,14 @@ import java.util.Properties;
  */
 public class ConfigManager {
 
-    private ConfigManager() {
-        prop = new Properties();
-        url = getClass().getClassLoader().getResource(FILE).getFile();
-    }
-
     private static final String FILE = "./config/config.properties";
     private final Properties prop;
     private final String url;
+
+    private ConfigManager() {
+        this.prop = new Properties();
+        this.url = getClass().getClassLoader().getResource(FILE).getFile();
+    }
 
     /**
      * Loads the properties from this url.
