@@ -6,6 +6,7 @@ public class StationDto extends Dto<Integer> {
 
     private final int id;
     private final String name;
+    // TODO voisin ?
 
     public StationDto(Integer key, int id, String name) {
         super(key);

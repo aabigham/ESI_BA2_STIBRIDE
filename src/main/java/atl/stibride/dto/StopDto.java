@@ -7,6 +7,7 @@ public class StopDto extends Dto<Integer> {
     private final int id_line;
     private final int id_station;
     private final int id_order;
+    // TODO voisin ?
 
     public StopDto(Integer key, int id_line, int id_station, int id_order) {
         super(key);
