@@ -1,5 +1,6 @@
 package atl.stibride.main;
 
+import atl.stibride.presenter.Presenter;
 import atl.stibride.view.View;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -13,5 +14,6 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         View view = new View(stage);
+        Presenter presenter = new Presenter(view);
     }
 }
