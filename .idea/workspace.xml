@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/LineDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StopDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/242952c1-34d7-43a5-a8ce-ddf26be5b739.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/82e30f2c-2623-4a0a-82c8-a942c4ad5fea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ef885956-0c28-4ac5-9531-199d29921894.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/LinesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StopsDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,8 +114,16 @@
       <workItem from="1617038551662" duration="2791000" />
       <workItem from="1617041588640" duration="1635000" />
       <workItem from="1617043738056" duration="7392000" />
-      <workItem from="1617106006115" duration="2147000" />
+      <workItem from="1617106006115" duration="2519000" />
     </task>
+    <task id="LOCAL-00001" summary="Add DTO classes + update view">
+      <created>1617108191407</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617108191407</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,5 +143,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add DTO classes + update view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add DTO classes + update view" />
   </component>
 </project>
