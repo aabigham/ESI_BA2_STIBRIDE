@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/StibRide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StibRide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_20_1_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StopDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StopDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,15 +85,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -113,7 +113,8 @@
       <workItem from="1617038551662" duration="2791000" />
       <workItem from="1617041588640" duration="1635000" />
       <workItem from="1617043738056" duration="7392000" />
-      <workItem from="1617106006115" duration="5272000" />
+      <workItem from="1617106006115" duration="5310000" />
+      <workItem from="1617195888908" duration="165000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

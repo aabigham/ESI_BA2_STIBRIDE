@@ -34,7 +34,7 @@ public class FXMLController {
     void initialize() {
         Image metro_img = new Image(getClass().getResourceAsStream("/img/metro.png"));
         scrollPane.setContent(new ImageView(metro_img));
-        Image logo_img = new Image(getClass().getResourceAsStream("/img/logo.png"));
-        stibLogo.setImage(logo_img);
+        //Image logo_img = new Image(getClass().getResourceAsStream("/img/logo.png"));
+        //stibLogo.setImage(logo_img);
     }
 }
