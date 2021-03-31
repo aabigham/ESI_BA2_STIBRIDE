@@ -36,5 +36,11 @@ public class FXMLController {
         scrollPane.setContent(new ImageView(metro_img));
         //Image logo_img = new Image(getClass().getResourceAsStream("/img/logo.png"));
         //stibLogo.setImage(logo_img);
+        //
+        leftStatus.setText("Aucune recherche lancée");
+        rightStatus.setText("Nombre de stations : 0");
+        //
     }
+
+    // TODO
 }

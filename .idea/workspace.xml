@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,8 +65,8 @@
     <option name="myCommands">
       <command value="mvn install" />
       <command value="mvn compile" />
-      <command value="mvn clean javafx:run" />
       <command value="mvn javafx:run" />
+      <command value="mvn clean javafx:run" />
     </option>
   </component>
   <component name="RunManager">
@@ -111,7 +112,7 @@
       <workItem from="1617041588640" duration="1635000" />
       <workItem from="1617043738056" duration="7392000" />
       <workItem from="1617106006115" duration="5310000" />
-      <workItem from="1617195888908" duration="1136000" />
+      <workItem from="1617195888908" duration="1733000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
