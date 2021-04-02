@@ -16,6 +16,10 @@ public class StationsDao implements Dao<Integer, StationDto> {
         this.connection = DBManager.getInstance().getConnection();
     }
 
+    public static StationsDao getInstance() throws RepositoryException {
+        return StationsDaoHolder.getInstance();
+    }
+
     /**
      * Selects all of the stations.
      *
@@ -23,6 +27,7 @@ public class StationsDao implements Dao<Integer, StationDto> {
      * @throws RepositoryException if the resource can't be accessed.
      */
     @Override
+
     public List<StationDto> selectAll() throws RepositoryException {
         List<StationDto> dtos = new ArrayList<>();
         String query = "SELECT id, name FROM STATIONS";
@@ -106,5 +111,11 @@ public class StationsDao implements Dao<Integer, StationDto> {
             throw new RepositoryException(e);
         }
         return name;
+    }
+
+    private static class StationsDaoHolder {
+        private static StationsDao getInstance() throws RepositoryException {
+            return new StationsDao();
+        }
     }
 }

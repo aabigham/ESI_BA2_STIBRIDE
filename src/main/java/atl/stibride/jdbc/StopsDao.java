@@ -15,6 +15,10 @@ public class StopsDao implements Dao<Integer, StopDto> {
         this.connection = DBManager.getInstance().getConnection();
     }
 
+    public static StopsDao getInstance() throws RepositoryException {
+        return StopsDaoHolder.getInstance();
+    }
+
     @Override
     public List<StopDto> selectAll() throws RepositoryException {
         // TODO
@@ -25,5 +29,11 @@ public class StopsDao implements Dao<Integer, StopDto> {
     public StopDto select(Integer key) throws RepositoryException {
         // TODO
         return null;
+    }
+
+    private static class StopsDaoHolder {
+        private static StopsDao getInstance() throws RepositoryException {
+            return new StopsDao();
+        }
     }
 }

@@ -15,6 +15,10 @@ public class LinesDao implements Dao<Integer, LineDto> {
         this.connection = DBManager.getInstance().getConnection();
     }
 
+    public static LinesDao getInstance() throws RepositoryException {
+        return LinesDaoHolder.getInstance();
+    }
+
     @Override
     public List<LineDto> selectAll() throws RepositoryException {
         // TODO
@@ -25,5 +29,11 @@ public class LinesDao implements Dao<Integer, LineDto> {
     public LineDto select(Integer key) throws RepositoryException {
         // TODO
         return null;
+    }
+
+    private static class LinesDaoHolder {
+        private static LinesDao getInstance() throws RepositoryException {
+            return new LinesDao();
+        }
     }
 }
