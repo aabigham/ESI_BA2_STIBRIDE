@@ -57,6 +57,6 @@ public interface Repository<K, T extends Dto<K>> {
      * @return true if the element exist in the repository and false otherwise.
      * @throws RepositoryException if the repository can't access to the element.
      */
-    boolean contains(K key) throws RepositoryException;
+    //boolean contains(K key) throws RepositoryException;
 
 }

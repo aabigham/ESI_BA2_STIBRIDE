@@ -19,16 +19,11 @@ public class StopRepository implements Repository<Integer, StopDto> {
 
     @Override
     public List<StopDto> getAll() throws RepositoryException {
-        return null;
+        return dao.selectAll();
     }
 
     @Override
     public StopDto get(Integer key) throws RepositoryException {
-        return null;
-    }
-
-    @Override
-    public boolean contains(Integer key) throws RepositoryException {
-        return false;
+        return dao.select(key);
     }
 }
