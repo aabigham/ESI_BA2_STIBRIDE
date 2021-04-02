@@ -15,5 +15,6 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         View view = new View(stage);
         Presenter presenter = new Presenter(view);
+        presenter.initialize();
     }
 }

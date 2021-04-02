@@ -12,7 +12,7 @@ public class View {
     private final FXMLController fxmlController;
 
     public View(Stage stage) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/view_test.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/view.fxml"));
         Parent root = loader.load();
         fxmlController = loader.getController();
         Scene scene = new Scene(root);

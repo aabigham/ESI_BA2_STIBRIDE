@@ -15,7 +15,7 @@ public class Presenter implements Observer {
         // TODO
     }
 
-    public void soSomething() {
+    public void doSomething() {
         // TODO
     }
 

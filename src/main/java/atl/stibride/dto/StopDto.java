@@ -42,7 +42,9 @@ public class StopDto extends Dto<Integer> {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         StopDto stopDto = (StopDto) o;
-        return id_station == stopDto.id_station && id_order == stopDto.id_order && neighbors.equals(stopDto.neighbors);
+        return id_station == stopDto.id_station
+                && id_order == stopDto.id_order
+                && neighbors.equals(stopDto.neighbors);
     }
 
     @Override
