@@ -47,7 +47,7 @@ public interface Repository<K, T extends Dto<K>> {
      * @return the element of the repository with the specific key.
      * @throws RepositoryException if the repository can't access to the element.
      */
-    //T get(K key) throws RepositoryException;
+    T get(K key) throws RepositoryException;
 
     /**
      * Returns true if the element exist in the repository and false otherwise.
