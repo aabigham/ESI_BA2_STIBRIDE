@@ -4,18 +4,11 @@ import java.util.Objects;
 
 public class StationDto extends Dto<Integer> {
 
-    private final int id;
     private final String name;
-    // TODO voisin ?
 
-    public StationDto(Integer key, int id, String name) {
-        super(key);
-        this.id = id;
+    public StationDto(int id, String name) {
+        super(id);
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public String getName() {
@@ -28,11 +21,11 @@ public class StationDto extends Dto<Integer> {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         StationDto that = (StationDto) o;
-        return id == that.id && name.equals(that.name);
+        return name.equals(that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), id, name);
+        return Objects.hash(super.hashCode(), name);
     }
 }
