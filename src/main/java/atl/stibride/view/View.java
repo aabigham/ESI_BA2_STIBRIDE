@@ -26,8 +26,7 @@ public class View {
     // TODO
 
     public void initialize(List<StationDto> stations) {
-        fxmlController.setComboboxes(stations);
+        fxmlController.initComboBoxes(stations);
     }
-
 
 }

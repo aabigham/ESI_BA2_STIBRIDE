@@ -52,7 +52,7 @@ public class FXMLController {
         //
     }
 
-    void setComboboxes(List<StationDto> stations) {
+    void initComboBoxes(List<StationDto> stations) {
         ObservableList<StationDto> stationsObs
                 = FXCollections.observableList(stations);
         originSearch.setItems(stationsObs);
