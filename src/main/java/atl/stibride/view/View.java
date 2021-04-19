@@ -1,6 +1,7 @@
 package atl.stibride.view;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.model.Ride;
 import atl.stibride.presenter.Presenter;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -39,5 +40,13 @@ public class View {
 
     public StationDto getDestination() {
         return fxmlController.getDestination();
+    }
+
+    public void showRide(Ride ride) {
+        fxmlController.showRide(ride);
+    }
+
+    public void showException(String message) {
+        fxmlController.showException(message);
     }
 }

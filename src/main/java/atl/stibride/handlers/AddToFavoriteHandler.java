@@ -14,7 +14,6 @@ public class AddToFavoriteHandler implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        // TODO
         presenter.addToFavorite();
     }
 }

@@ -9,12 +9,12 @@ public class Ride {
 
     private final StationDto origin;
     private final StationDto destination;
-    private final List<StationDto> ride;
-    
-    public Ride(StationDto origin, StationDto destination, List<StationDto> ride) {
+    private final List<StationDto> path;
+
+    public Ride(StationDto origin, StationDto destination, List<StationDto> path) {
         this.origin = origin;
         this.destination = destination;
-        this.ride = ride;
+        this.path = path;
     }
 
     public StationDto getOrigin() {
@@ -25,8 +25,8 @@ public class Ride {
         return destination;
     }
 
-    public List<StationDto> getRide() {
-        return ride;
+    public List<StationDto> getPath() {
+        return path;
     }
 
     @Override
@@ -39,11 +39,11 @@ public class Ride {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Ride ride1 = (Ride) o;
-        return origin.equals(ride1.origin) && destination.equals(ride1.destination) && ride.equals(ride1.ride);
+        return origin.equals(ride1.origin) && destination.equals(ride1.destination) && path.equals(ride1.path);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(origin, destination, ride);
+        return Objects.hash(origin, destination, path);
     }
 }

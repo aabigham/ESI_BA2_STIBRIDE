@@ -14,7 +14,6 @@ public class LaunchFavoriteHandler implements EventHandler<ActionEvent> {
 
     @Override
     public void handle(ActionEvent actionEvent) {
-        // TODO
         presenter.launchFavorite();
     }
 }

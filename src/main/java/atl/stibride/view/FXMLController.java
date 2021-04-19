@@ -88,7 +88,17 @@ public class FXMLController {
 
     void showRide(Ride ride) {
         ObservableList<StationDto> stations
-                = FXCollections.observableList(ride.getRide());
+                = FXCollections.observableList(ride.getPath());
         tableView.setItems(stations);
+    }
+
+    public void showException(String message) {
+        // TODO ALERT
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning");
+        alert.setHeaderText(message);
+        alert.setContentText("Careful with the next steps !");
+        alert.showAndWait();
+        System.out.println(message);
     }
 }

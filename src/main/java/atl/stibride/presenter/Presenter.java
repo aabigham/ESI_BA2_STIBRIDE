@@ -34,7 +34,11 @@ public class Presenter implements Observer {
         System.out.println("Search button");
         StationDto origin = view.getOrigin();
         StationDto destination = view.getDestination();
-        model.computeRide(origin, destination);
+        try {
+            model.computeRide(origin, destination);
+        } catch (Exception e) {
+            view.showException(e.getMessage());
+        }
     }
 
     public void addToFavorite() {
@@ -58,6 +62,7 @@ public class Presenter implements Observer {
         try {
             Ride ride = model.getRide();
             System.out.println(ride.toString());
+            view.showRide(ride);
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
