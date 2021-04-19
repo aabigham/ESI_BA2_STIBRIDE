@@ -7,8 +7,8 @@ import java.util.Objects;
 public class StationDto extends Dto<Integer> {
 
     private final String name;
-    private List<Integer> lines;
-    private List<StationDto> neighbors;
+    private List<Integer[]> lines;
+    private List<Integer> neighbors;
 
     public StationDto(int id, String name) {
         super(id);
@@ -17,23 +17,34 @@ public class StationDto extends Dto<Integer> {
         this.neighbors = new ArrayList<>();
     }
 
-    public void addLine(int line) {
-        lines.add(line);
+    public void addLine(int line, int order) {
+        lines.add(new Integer[]{line, order});
     }
 
-    public void addNeighbor(StationDto dto) {
-        neighbors.add(dto);
+    public void addNeighbor(Integer id_station) {
+        neighbors.add(id_station);
     }
 
     public String getName() {
         return name;
     }
 
-    public String getLines() {
-        return lines.toString();
+    public List<Integer[]> getLinesAsList() {
+        return lines;
     }
 
-    public List<StationDto> getNeighbors() {
+    public String getLines() {
+        StringBuilder ret = new StringBuilder("[");
+        int length = lines.size();
+        for (int i = 0; i < length; i++) {
+            ret.append(lines.get(i)[0]);
+            if (i < length - 1) ret.append(", ");
+        }
+        ret.append("]");
+        return ret.toString();
+    }
+
+    public List<Integer> getNeighbors() {
         return neighbors;
     }
 

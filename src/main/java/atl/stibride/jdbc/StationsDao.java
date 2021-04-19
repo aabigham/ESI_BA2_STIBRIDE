@@ -28,6 +28,10 @@ public class StationsDao implements Dao<Integer, StationDto> {
      */
     @Override
     public List<StationDto> selectAll() throws RepositoryException {
+        // Cant reset the result set head so i have to store the datas here...
+        List<Integer[]> datas = new ArrayList<>();
+
+        // Return
         List<StationDto> dtos = new ArrayList<>();
 
         String queryStations = "SELECT STA.id, STA.name, STO.id_line, STO.id_order " +
@@ -37,27 +41,46 @@ public class StationsDao implements Dao<Integer, StationDto> {
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(queryStations);
-
             while (rs.next()) {
                 int key = rs.getInt(1);
                 String name = rs.getString(2);
                 int id_line = rs.getInt(3);
                 int id_order = rs.getInt(4);
 
+                // For the neighbor use
+                datas.add(new Integer[]{key, id_line, id_order});
+
+                // Add line to stations
                 boolean contains = false;
-                try {
-                    dtos.stream()
-                            .filter(stationDto -> (stationDto.getKey() == key))
-                            .findAny()
-                            .orElseThrow() // Throws NoSuchElementException if no value is present
-                            .addLine(id_line);
-                    contains = true;
-                } catch (Exception ignored) {
+                for (StationDto stationDto : dtos) {
+                    if (stationDto.getKey() == key) {
+                        contains = true;
+                        stationDto.addLine(id_line, id_order);
+                        break;
+                    }
                 }
                 if (!contains) {
                     StationDto dto = new StationDto(key, name);
-                    dto.addLine(id_line);
+                    dto.addLine(id_line, id_order);
                     dtos.add(dto);
+                }
+            }
+            // rs.beforeFirst();
+            // Neighbors
+            for (Integer[] row : datas) {
+                int key = row[0];
+                int id_line = row[1];
+                int id_order = row[2];
+                // Add neighbors to every station
+                for (StationDto stationDto : dtos) {
+                    for (Integer[] lines : stationDto.getLinesAsList()) {
+                        if (lines[0] == id_line
+                                && ((lines[1] - 1 == id_order) || (lines[1] + 1 == id_order))) {
+                            if (!stationDto.getNeighbors().contains(key)) {
+                                stationDto.addNeighbor(key);
+                            }
+                        }
+                    }
                 }
             }
         } catch (SQLException e) {
@@ -78,20 +101,31 @@ public class StationsDao implements Dao<Integer, StationDto> {
         if (key == null) {
             throw new RepositoryException("Key cannot be null.");
         }
-        String query = "SELECT id, name FROM STATIONS WHERE id = ?";
+        String query = "SELECT STA.id, STA.name, STO.id_line, STO.id_order " +
+                "FROM STATIONS STA " +
+                "JOIN STOPS STO on STA.id = STO.id_station " +
+                "WHERE id = ? " +
+                "ORDER BY STA.name ASC";
         StationDto dto = null;
         try {
             PreparedStatement pstmt = connection.prepareStatement(query);
             pstmt.setInt(1, key);
             ResultSet rs = pstmt.executeQuery();
 
+            rs.next();
+            int id = rs.getInt(1);
+            String name = rs.getString(2);
+            dto = new StationDto(id, name);
+            int id_line = rs.getInt(3);
+            int id_order = rs.getInt(4);
+            dto.addLine(id_line, id_order);
+
             int count = 0;
             while (rs.next()) {
-                dto = new StationDto(
-                        rs.getInt(1),
-                        rs.getString(2)
-                );
-                ++count;
+                dto.addLine(rs.getInt(3), rs.getInt(4));
+                if (id == rs.getInt(1)) {
+                    ++count;
+                }
             }
             if (count > 1) {
                 throw new RepositoryException("Non unique record : " + key);

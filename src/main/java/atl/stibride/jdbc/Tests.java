@@ -21,10 +21,18 @@ public class Tests {
                 System.out.println("\t" + stationDto.getKey()
                         + " " + stationDto.getName()
                         + " " + stationDto.getLines());
+                System.out.print("\t\tVOISINS : ");
+                for (Integer line : stationDto.getNeighbors()) {
+                    System.out.print(line.toString() + " ");
+                }
+                System.out.println();
+                System.out.println();
             }
 
             StationDto station = stationsDao.select(8062);
-            System.out.println("\t" + station.getKey() + " " + station.getName());
+            System.out.println("\t" + station.getKey()
+                    + " " + station.getName()
+                    + " " + station.getLines());
 
             String name = stationsDao.getStationName(8062);
             System.out.println(name);
