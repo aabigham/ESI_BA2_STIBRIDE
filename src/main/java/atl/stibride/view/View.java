@@ -32,4 +32,12 @@ public class View {
     public void addHandlers(Presenter presenter) {
         fxmlController.addHandlers(presenter);
     }
+
+    public StationDto getOrigin() {
+        return fxmlController.getOrigin();
+    }
+
+    public StationDto getDestination() {
+        return fxmlController.getDestination();
+    }
 }

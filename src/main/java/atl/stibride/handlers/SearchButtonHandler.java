@@ -15,7 +15,6 @@ public class SearchButtonHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         // TODO
-        System.out.println("Search button");
-        presenter.doSomething();
+        presenter.searchRide();
     }
 }

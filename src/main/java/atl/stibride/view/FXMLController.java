@@ -2,13 +2,16 @@ package atl.stibride.view;
 
 import atl.stibride.dto.StationDto;
 import atl.stibride.handlers.AddToFavoriteHandler;
+import atl.stibride.handlers.LaunchFavoriteHandler;
 import atl.stibride.handlers.RemoveFavoriteHandler;
 import atl.stibride.handlers.SearchButtonHandler;
+import atl.stibride.model.Ride;
 import atl.stibride.presenter.Presenter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import org.controlsfx.control.SearchableComboBox;
 
@@ -31,11 +34,11 @@ public class FXMLController {
     @FXML
     private TableView<?> tableView;
     @FXML
-    private TableColumn<?, ?> stationsCol;
+    private TableColumn<Ride, String> stationsCol;
     @FXML
-    private TableColumn<?, ?> lignesCol;
+    private TableColumn<Ride, String> lignesCol;
     @FXML
-    private ListView<?> listFavorite;
+    private ListView<Ride> listFavorite;
     @FXML
     private Button launchFavorite;
     @FXML
@@ -54,6 +57,8 @@ public class FXMLController {
         leftStatus.setText("Aucune recherche lancée");
         rightStatus.setText("Nombre de stations : 0");
         //
+        stationsCol.setCellValueFactory(new PropertyValueFactory<Ride, String>("origin"));
+        lignesCol.setCellValueFactory(new PropertyValueFactory<Ride, String>("ride"));
     }
 
     void initComboBoxes(List<StationDto> stations) {
@@ -68,9 +73,16 @@ public class FXMLController {
     void addHandlers(Presenter presenter) {
         searchButton.setOnAction(new SearchButtonHandler(presenter));
         addFavorite.setOnAction(new AddToFavoriteHandler(presenter));
-        launchFavorite.setOnAction(new AddToFavoriteHandler(presenter));
+        launchFavorite.setOnAction(new LaunchFavoriteHandler(presenter));
         removeFavorite.setOnAction(new RemoveFavoriteHandler(presenter));
     }
-    
+
+    StationDto getOrigin() {
+        return originSearch.getSelectionModel().getSelectedItem();
+    }
+
+    StationDto getDestination() {
+        return destinationSearch.getSelectionModel().getSelectedItem();
+    }
 
 }

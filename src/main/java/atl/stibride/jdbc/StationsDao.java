@@ -27,7 +27,6 @@ public class StationsDao implements Dao<Integer, StationDto> {
      * @throws RepositoryException if the resource can't be accessed.
      */
     @Override
-
     public List<StationDto> selectAll() throws RepositoryException {
         List<StationDto> dtos = new ArrayList<>();
         String query = "SELECT id, name FROM STATIONS ORDER BY name ASC";
@@ -58,7 +57,7 @@ public class StationsDao implements Dao<Integer, StationDto> {
         if (key == null) {
             throw new RepositoryException("Key cannot be null.");
         }
-        String query = "SELECT id, name FROM STATIONS WHERE  id = ?";
+        String query = "SELECT id, name FROM STATIONS WHERE id = ?";
         StationDto dto = null;
         try {
             PreparedStatement pstmt = connection.prepareStatement(query);
@@ -69,7 +68,8 @@ public class StationsDao implements Dao<Integer, StationDto> {
             while (rs.next()) {
                 dto = new StationDto(
                         rs.getInt(1),
-                        rs.getString(2));
+                        rs.getString(2)
+                );
                 ++count;
             }
             if (count > 1) {

@@ -15,7 +15,6 @@ public class AddToFavoriteHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         // TODO
-        System.out.println("Add to favorite button");
-        presenter.doSomething();
+        presenter.addToFavorite();
     }
 }

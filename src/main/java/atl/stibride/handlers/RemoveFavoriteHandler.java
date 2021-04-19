@@ -15,7 +15,6 @@ public class RemoveFavoriteHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         // TODO
-        System.out.println("Remove favorite button");
-        presenter.doSomething();
+        presenter.removeFavorite();
     }
 }

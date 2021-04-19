@@ -1,18 +1,29 @@
 package atl.stibride.dto;
 
+import java.util.List;
 import java.util.Objects;
 
 public class StationDto extends Dto<Integer> {
 
     private final String name;
+    //private List<StationDto> neighbors;
 
     public StationDto(int id, String name) {
         super(id);
         this.name = name;
+        //this.neighbors = new ArrayList<>();
     }
+
+    /*public void addNeighbor(StationDto dto) {
+        neighbors.add(dto);
+    }*/
 
     public String getName() {
         return name;
+    }
+
+    public List<StationDto> getNeighbors() {
+        return neighbors;
     }
 
     @Override
@@ -33,4 +44,5 @@ public class StationDto extends Dto<Integer> {
     public int hashCode() {
         return Objects.hash(super.hashCode(), name);
     }
+
 }

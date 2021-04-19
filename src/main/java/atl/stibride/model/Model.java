@@ -1,32 +1,29 @@
 package atl.stibride.model;
 
-import atl.stibride.config.ConfigManager;
 import atl.stibride.dto.StationDto;
+import atl.stibride.observer.Observable;
 import atl.stibride.repository.RepositoryException;
-import atl.stibride.repository.StationRepository;
-import atl.stibride.repository.StopRepository;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Model {
+public class Model extends Observable {
 
-    private StationRepository stationRepo;
-    private StopRepository stopRepository;
+    private final RequestManager requestManager;
+    private Ride ride = null;
 
     public Model() {
-        try {
-            ConfigManager.getInstance().load();
-            this.stationRepo = new StationRepository();
-            this.stopRepository = new StopRepository();
-        } catch (RepositoryException | IOException e) {
-            e.printStackTrace();
-        }
+        this.requestManager = new RequestManager();
     }
 
+    /**
+     * Selects all of the stations.
+     *
+     * @return all of the stations as a List of Dto objects.
+     * @throws RepositoryException if the resource can't be accessed.
+     */
     public List<StationDto> getStations() throws RepositoryException {
-        return stationRepo.getAll();
+        return requestManager.getAllStations();
     }
 
     /**
@@ -34,10 +31,16 @@ public class Model {
      *
      * @param start the starting station.
      * @param end   the end station.
-     * @return a list of stations describing the best path to take between the two stations.
      */
-    public static List<StationDto> getRide(StationDto start, StationDto end) {
+    public void computeRide(StationDto start, StationDto end) {
         // TODO
-        return new ArrayList<>();
+        ride = new Ride(start, end, new ArrayList<>());
+        notifyObservers(this);
+    }
+
+    public Ride getRide() throws IllegalAccessException {
+        if (ride == null)
+            throw new IllegalAccessException("Ride is null at this moment.");
+        return ride;
     }
 }
