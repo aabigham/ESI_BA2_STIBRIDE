@@ -1,6 +1,10 @@
 package atl.stibride.view;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.handlers.AddToFavoriteHandler;
+import atl.stibride.handlers.RemoveFavoriteHandler;
+import atl.stibride.handlers.SearchButtonHandler;
+import atl.stibride.presenter.Presenter;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -35,7 +39,7 @@ public class FXMLController {
     @FXML
     private Button launchFavorite;
     @FXML
-    private Button deleteFavorite;
+    private Button removeFavorite;
     @FXML
     private Label leftStatus;
     @FXML
@@ -60,5 +64,13 @@ public class FXMLController {
         destinationSearch.setItems(stationsObs);
         destinationSearch.getSelectionModel().select(0);
     }
-    // TODO
+
+    void addHandlers(Presenter presenter) {
+        searchButton.setOnAction(new SearchButtonHandler(presenter));
+        addFavorite.setOnAction(new AddToFavoriteHandler(presenter));
+        launchFavorite.setOnAction(new AddToFavoriteHandler(presenter));
+        removeFavorite.setOnAction(new RemoveFavoriteHandler(presenter));
+    }
+    
+
 }

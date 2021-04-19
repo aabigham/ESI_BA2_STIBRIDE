@@ -171,7 +171,7 @@
                               <ButtonBar prefHeight="40.0" prefWidth="218.0">
                                  <buttons>
                                     <Button fx:id="launchFavorite" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Lancer trajet" />
-                                    <Button fx:id="deleteFavorite" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Supprimer trajet" />
+                                    <Button fx:id="removeFavorite" mnemonicParsing="false" prefHeight="25.0" prefWidth="111.0" text="Supprimer trajet" />
                                  </buttons>
                                  <padding>
                                     <Insets right="17.0" />

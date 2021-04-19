@@ -1,6 +1,7 @@
 package atl.stibride.view;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.presenter.Presenter;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,10 +24,12 @@ public class View {
         stage.setTitle("Stib ride !");
         stage.show();
     }
-    // TODO
 
-    public void initialize(List<StationDto> stations) {
+    public void initComboBoxes(List<StationDto> stations) {
         fxmlController.initComboBoxes(stations);
     }
 
+    public void addHandlers(Presenter presenter) {
+        fxmlController.addHandlers(presenter);
+    }
 }

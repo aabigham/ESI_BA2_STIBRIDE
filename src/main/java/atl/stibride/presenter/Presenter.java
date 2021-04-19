@@ -21,7 +21,8 @@ public class Presenter implements Observer {
 
     public void initialize() throws RepositoryException {
         List<StationDto> stations = model.getStations();
-        view.initialize(stations);
+        view.initComboBoxes(stations);
+        view.addHandlers(this);
     }
 
     public void doSomething() {

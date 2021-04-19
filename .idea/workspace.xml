@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/AddToFavoriteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/LaunchFavoriteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/RemoveFavoriteHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/SearchButtonHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/AddToFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/AddToFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/LaunchFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/LaunchFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/RemoveFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/RemoveFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/SearchButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/SearchButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +157,7 @@
       <workItem from="1617390424875" duration="9013000" />
       <workItem from="1617746300509" duration="84000" />
       <workItem from="1617804533877" duration="667000" />
-      <workItem from="1618833366378" duration="4258000" />
+      <workItem from="1618833366378" duration="4925000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

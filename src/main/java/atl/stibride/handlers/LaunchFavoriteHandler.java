@@ -15,6 +15,7 @@ public class LaunchFavoriteHandler implements EventHandler<ActionEvent> {
     @Override
     public void handle(ActionEvent actionEvent) {
         // TODO
+        System.out.println("Launch favorite button");
         presenter.doSomething();
     }
 }
