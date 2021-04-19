@@ -3,19 +3,16 @@ package atl.stibride.model;
 import atl.stibride.dto.StationDto;
 import atl.stibride.repository.RepositoryException;
 import atl.stibride.repository.StationRepository;
-import atl.stibride.repository.StopRepository;
 
 import java.util.List;
 
 public class RepoManager {
 
     private StationRepository stationRepo;
-    private StopRepository stopRepository;
 
     public RepoManager() {
         try {
             this.stationRepo = new StationRepository();
-            this.stopRepository = new StopRepository();
         } catch (RepositoryException e) {
             e.printStackTrace();
         }

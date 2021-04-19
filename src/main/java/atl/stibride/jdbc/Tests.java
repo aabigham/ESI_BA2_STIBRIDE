@@ -2,7 +2,6 @@ package atl.stibride.jdbc;
 
 import atl.stibride.config.ConfigManager;
 import atl.stibride.dto.StationDto;
-import atl.stibride.dto.StopDto;
 import atl.stibride.repository.RepositoryException;
 
 import java.io.IOException;
@@ -38,14 +37,6 @@ public class Tests {
             System.out.println(name);
             //
             //
-            StopsDao stopsDao = new StopsDao();
-
-            List<StopDto> l = stopsDao.selectAll();
-            for (StopDto stopDto : l) {
-                System.out.println("\t" + stopDto.getKey()
-                        + " " + stopDto.getId_station()
-                        + " " + stopDto.getId_order());
-            }
 
         } catch (RepositoryException | IOException re) {
             System.out.println(re.getMessage());

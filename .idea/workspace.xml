@@ -4,17 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="">
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Update fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/AddToFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/AddToFavoriteHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/LaunchFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/LaunchFavoriteHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/RemoveFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/RemoveFavoriteHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/SearchButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/SearchButtonHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/LineDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StopDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/LinesDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StopsDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/StopRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -124,13 +122,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,7 +159,8 @@
       <workItem from="1617390424875" duration="9013000" />
       <workItem from="1617746300509" duration="84000" />
       <workItem from="1617804533877" duration="667000" />
-      <workItem from="1618833366378" duration="26336000" />
+      <workItem from="1618833366378" duration="26363000" />
+      <workItem from="1618862938316" duration="140000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
