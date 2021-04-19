@@ -37,6 +37,16 @@ public class StopDto extends Dto<Integer> {
     }
 
     @Override
+    public String toString() {
+        return "StopDto{" +
+                "key=" + key +
+                ", id_station=" + id_station +
+                ", id_order=" + id_order +
+                ", neighbors=" + neighbors +
+                '}';
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;

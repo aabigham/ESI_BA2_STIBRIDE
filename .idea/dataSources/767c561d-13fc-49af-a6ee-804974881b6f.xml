@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="stib">
-  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.20">
+  <database-model serializer="dbm" dbms="SQLITE" family-id="SQLITE" format-version="4.21">
     <root id="1">
       <ServerVersion>3.34.0</ServerVersion>
     </root>
@@ -1372,7 +1372,8 @@
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_line
 id_station</ColNames>
-      <ColumnCollations></ColumnCollations>
+      <ColumnCollations>
+</ColumnCollations>
       <Unique>1</Unique>
     </index>
     <key id="502" parent="172">

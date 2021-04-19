@@ -55,7 +55,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.SearchableComboBox?>
 
-<VBox prefHeight="783.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atl.stibride.view.FXMLController">
+<VBox prefHeight="783.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atl.stibride.view.FXMLController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -126,7 +126,7 @@
                                                 <Font size="15.0" fx:id="x31" />
                                             </font>
                                         </Label>
-                                        <SearchableComboBox fx:id="origineSearch" />
+                                        <SearchableComboBox fx:id="originSearch" />
                                         <Label layoutX="88.0" layoutY="103.0" maxHeight="1.7976931348623157E308" maxWidth="-1.0" prefHeight="25.0" prefWidth="87.0" text="Destination :" underline="true">
                                             <font>
                                                 <Font size="15.0" fx:id="x311" />

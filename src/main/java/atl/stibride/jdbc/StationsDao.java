@@ -30,7 +30,7 @@ public class StationsDao implements Dao<Integer, StationDto> {
 
     public List<StationDto> selectAll() throws RepositoryException {
         List<StationDto> dtos = new ArrayList<>();
-        String query = "SELECT id, name FROM STATIONS";
+        String query = "SELECT id, name FROM STATIONS ORDER BY name ASC";
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(query);

@@ -1,11 +1,13 @@
 package atl.stibride.view;
 
+import atl.stibride.dto.StationDto;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class View {
 
@@ -22,4 +24,10 @@ public class View {
         stage.show();
     }
     // TODO
+
+    public void initialize(List<StationDto> stations) {
+        fxmlController.setComboboxes(stations);
+    }
+
+
 }
