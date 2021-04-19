@@ -1,25 +1,22 @@
 package atl.stibride.model;
 
-import atl.stibride.config.ConfigManager;
 import atl.stibride.dto.StationDto;
 import atl.stibride.repository.RepositoryException;
 import atl.stibride.repository.StationRepository;
 import atl.stibride.repository.StopRepository;
 
-import java.io.IOException;
 import java.util.List;
 
-public class RequestManager {
+public class RepoManager {
 
     private StationRepository stationRepo;
     private StopRepository stopRepository;
 
-    public RequestManager() {
+    public RepoManager() {
         try {
-            ConfigManager.getInstance().load();
             this.stationRepo = new StationRepository();
             this.stopRepository = new StopRepository();
-        } catch (RepositoryException | IOException e) {
+        } catch (RepositoryException e) {
             e.printStackTrace();
         }
     }

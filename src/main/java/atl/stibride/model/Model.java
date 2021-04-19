@@ -9,11 +9,11 @@ import java.util.List;
 
 public class Model extends Observable {
 
-    private final RequestManager requestManager;
+    private final RepoManager repoManager;
     private Ride ride = null;
 
-    public Model() {
-        this.requestManager = new RequestManager();
+    public Model(RepoManager repoManager) {
+        this.repoManager = repoManager;
     }
 
     /**
@@ -23,7 +23,7 @@ public class Model extends Observable {
      * @throws RepositoryException if the resource can't be accessed.
      */
     public List<StationDto> getStations() throws RepositoryException {
-        return requestManager.getAllStations();
+        return repoManager.getAllStations();
     }
 
     /**
