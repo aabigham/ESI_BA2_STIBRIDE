@@ -32,11 +32,11 @@ public class FXMLController {
     @FXML
     private Button addFavorite;
     @FXML
-    private TableView<?> tableView;
+    private TableView<StationDto> tableView;
     @FXML
-    private TableColumn<Ride, String> stationsCol;
+    private TableColumn<StationDto, String> stationsCol;
     @FXML
-    private TableColumn<Ride, String> lignesCol;
+    private TableColumn<StationDto, String> lignesCol;
     @FXML
     private ListView<Ride> listFavorite;
     @FXML
@@ -54,11 +54,12 @@ public class FXMLController {
         scrollPane.setContent(new ImageView(metro_img));
         Image logo_img = new Image(getClass().getResourceAsStream("/img/logo.png"));
         stibLogo.setImage(logo_img);*/
+        //
         leftStatus.setText("Aucune recherche lancée");
         rightStatus.setText("Nombre de stations : 0");
         //
-        stationsCol.setCellValueFactory(new PropertyValueFactory<Ride, String>("origin"));
-        lignesCol.setCellValueFactory(new PropertyValueFactory<Ride, String>("ride"));
+        stationsCol.setCellValueFactory(new PropertyValueFactory<StationDto, String>("name"));
+        lignesCol.setCellValueFactory(new PropertyValueFactory<StationDto, String>("lines"));
     }
 
     void initComboBoxes(List<StationDto> stations) {
@@ -85,4 +86,9 @@ public class FXMLController {
         return destinationSearch.getSelectionModel().getSelectedItem();
     }
 
+    void showRide(Ride ride) {
+        ObservableList<StationDto> stations
+                = FXCollections.observableList(ride.getRide());
+        tableView.setItems(stations);
+    }
 }

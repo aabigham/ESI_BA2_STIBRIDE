@@ -18,7 +18,9 @@ public class Tests {
 
             List<StationDto> list = stationsDao.selectAll();
             for (StationDto stationDto : list) {
-                System.out.println("\t" + stationDto.getKey() + " " + stationDto.getName());
+                System.out.println("\t" + stationDto.getKey()
+                        + " " + stationDto.getName()
+                        + " " + stationDto.getLines());
             }
 
             StationDto station = stationsDao.select(8062);

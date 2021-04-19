@@ -22,9 +22,13 @@ public class Main extends Application {
         try {
             ConfigManager.getInstance().load();
             RepoManager repoManager = new RepoManager();
+
             Model model = new Model(repoManager);
             View view = new View(stage);
             Presenter presenter = new Presenter(model, view);
+
+            model.addObserver(presenter);
+
             presenter.initialize();
         } catch (RepositoryException | IOException e) {
             e.printStackTrace();

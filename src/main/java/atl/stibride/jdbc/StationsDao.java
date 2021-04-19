@@ -29,15 +29,36 @@ public class StationsDao implements Dao<Integer, StationDto> {
     @Override
     public List<StationDto> selectAll() throws RepositoryException {
         List<StationDto> dtos = new ArrayList<>();
-        String query = "SELECT id, name FROM STATIONS ORDER BY name ASC";
+
+        String queryStations = "SELECT STA.id, STA.name, STO.id_line, STO.id_order " +
+                "FROM STATIONS STA " +
+                "JOIN STOPS STO on STA.id = STO.id_station " +
+                "ORDER BY STA.name ASC";
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
+            ResultSet rs = stmt.executeQuery(queryStations);
+
             while (rs.next()) {
-                StationDto dto = new StationDto(
-                        rs.getInt(1),
-                        rs.getString(2));
-                dtos.add(dto);
+                int key = rs.getInt(1);
+                String name = rs.getString(2);
+                int id_line = rs.getInt(3);
+                int id_order = rs.getInt(4);
+
+                boolean contains = false;
+                try {
+                    dtos.stream()
+                            .filter(stationDto -> (stationDto.getKey() == key))
+                            .findAny()
+                            .orElseThrow() // Throws NoSuchElementException if no value is present
+                            .addLine(id_line);
+                    contains = true;
+                } catch (Exception ignored) {
+                }
+                if (!contains) {
+                    StationDto dto = new StationDto(key, name);
+                    dto.addLine(id_line);
+                    dtos.add(dto);
+                }
             }
         } catch (SQLException e) {
             throw new RepositoryException(e);

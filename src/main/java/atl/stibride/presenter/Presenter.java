@@ -22,7 +22,7 @@ public class Presenter implements Observer {
 
     public void initialize() throws RepositoryException {
         List<StationDto> stations = model.getStations();
-        view.initComboBoxes(stations);
+        view.initComboBoxes(model.getStations());
         view.addHandlers(this);
     }
 
@@ -55,9 +55,9 @@ public class Presenter implements Observer {
     @Override
     public void update(Observable observable, Object arg) {
         Model model = (Model) observable;
-        Ride ride;
         try {
-            ride = model.getRide();
+            Ride ride = model.getRide();
+            System.out.println(ride.toString());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
