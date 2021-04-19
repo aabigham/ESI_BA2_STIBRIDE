@@ -1,6 +1,5 @@
 package atl.stibride.dto;
 
-import java.util.List;
 import java.util.Objects;
 
 public class StationDto extends Dto<Integer> {
@@ -22,9 +21,9 @@ public class StationDto extends Dto<Integer> {
         return name;
     }
 
-    public List<StationDto> getNeighbors() {
+    /*public List<StationDto> getNeighbors() {
         return neighbors;
-    }
+    }*/
 
     @Override
     public String toString() {
