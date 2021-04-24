@@ -93,12 +93,10 @@ public class FXMLController {
     }
 
     public void showException(String message) {
-        // TODO ALERT
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning");
         alert.setHeaderText(message);
         alert.setContentText("Careful with the next steps !");
         alert.showAndWait();
-        System.out.println(message);
     }
 }
