@@ -21,16 +21,13 @@ public class Presenter implements Observer {
     }
 
     public void initialize() throws RepositoryException {
-        List<StationDto> stations = model.getStations();
-        view.initComboBoxes(model.getStations());
+        List<StationDto> stations = model.getAllStations();
+        view.initComboBoxes(stations);
         view.addHandlers(this);
     }
 
-    public void doSomething() {
-        // TODO
-    }
-
     public void searchRide() {
+        view.disableButtons();
         System.out.println("Search button");
         StationDto origin = view.getOrigin();
         StationDto destination = view.getDestination();
@@ -39,21 +36,28 @@ public class Presenter implements Observer {
         } catch (Exception e) {
             view.showException(e.getMessage());
         }
+        view.enableButtons();
     }
 
     public void addToFavorite() {
-        // TODO
         System.out.println("Add to favorite button");
+        view.disableButtons();
+        // TODO
+        view.enableButtons();
     }
 
     public void launchFavorite() {
-        // TODO
         System.out.println("Launch favorite button");
+        view.disableButtons();
+        // TODO
+        view.enableButtons();
     }
 
     public void removeFavorite() {
-        // TODO
         System.out.println("Remove favorite button");
+        view.disableButtons();
+        // TODO
+        view.enableButtons();
     }
 
     @Override

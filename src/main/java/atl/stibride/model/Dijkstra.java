@@ -69,7 +69,8 @@ public class Dijkstra {
                         .forEach(nodePath -> result.add(nodePath.getStationDto()));
             }
         }
-        result.add(end);
+
+        result.add(end); // Destination station
         return result;
     }
 

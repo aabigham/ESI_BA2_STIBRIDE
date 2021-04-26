@@ -12,6 +12,7 @@ import java.util.List;
 public class Model extends Observable {
 
     private final RepoManager repoManager;
+    private List<StationDto> allStations = null;
     private Ride ride = null;
 
     /**
@@ -23,30 +24,24 @@ public class Model extends Observable {
         this.repoManager = repoManager;
     }
 
+    public void initialize() throws RepositoryException {
+        allStations = repoManager.getAllStations();
+    }
+    
+    public void computeRide(StationDto start, StationDto end) throws Exception {
+        List<StationDto> path = Dijkstra.computePath(allStations, start, end);
+        ride = new Ride(start, end, path);
+        notifyObservers(this);
+    }
+
     /**
      * Selects all of the stations.
      *
      * @return all of the stations as a List of Dto objects.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    public List<StationDto> getStations() throws RepositoryException {
-        return repoManager.getAllStations();
-    }
-
-    /**
-     * Sets the ride between the two stations in argument.
-     *
-     * @param start the starting station.
-     * @param end   the end station.
-     * @throws Exception if an error occurred.
-     */
-    public void computeRide(StationDto start, StationDto end) throws Exception {
-        List<StationDto> allStations = repoManager.getAllStations();
-        //List<StationDto> path = Dijkstra.computePath(allStations, start, end);
-        List<StationDto> path = Dijkstra.computePath(allStations, start, end);
-
-        ride = new Ride(start, end, path);
-        notifyObservers(this);
+    public List<StationDto> getAllStations() throws RepositoryException {
+        return allStations;
     }
 
     /**

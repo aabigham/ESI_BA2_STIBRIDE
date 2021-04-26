@@ -99,4 +99,18 @@ public class FXMLController {
         alert.setContentText("Careful with the next steps !");
         alert.showAndWait();
     }
+
+    public void disableButtons() {
+        searchButton.setDisable(true);
+        addFavorite.setDisable(true);
+        launchFavorite.setDisable(true);
+        removeFavorite.setDisable(true);
+    }
+
+    public void enableButtons() {
+        searchButton.setDisable(false);
+        addFavorite.setDisable(false);
+        launchFavorite.setDisable(false);
+        removeFavorite.setDisable(false);
+    }
 }

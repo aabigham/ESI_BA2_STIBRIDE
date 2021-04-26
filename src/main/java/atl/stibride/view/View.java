@@ -49,4 +49,12 @@ public class View {
     public void showException(String message) {
         fxmlController.showException(message);
     }
+
+    public void disableButtons() {
+        fxmlController.disableButtons();
+    }
+
+    public void enableButtons() {
+        fxmlController.enableButtons();
+    }
 }
