@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Node {
+    
     private StationDto stationDto;
     private List<Node> shortestPath = new LinkedList<>();
     private Integer distance = Integer.MAX_VALUE;

@@ -4,7 +4,6 @@ import atl.stibride.dto.StationDto;
 
 import java.util.*;
 
-
 public class Dijkstra {
 
     /*public static List<StationDto> computePath(
@@ -90,7 +89,8 @@ public class Dijkstra {
         while (unsettledNodes.size() != 0) {
             Node currentNode = getLowestDistanceNode(unsettledNodes);
             unsettledNodes.remove(currentNode);
-            for (Map.Entry<Node, Integer> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
+            for (Map.Entry<Node, Integer> adjacencyPair
+                    : currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
                 Integer edgeWeigh = adjacencyPair.getValue();
                 if (!settledNodes.contains(adjacentNode)) {
