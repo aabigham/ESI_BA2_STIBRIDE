@@ -53,22 +53,32 @@ public class Dijkstra {
 
     @org.jetbrains.annotations.NotNull
     public static List<StationDto> computePath(List<StationDto> stations,
-                                               StationDto start, StationDto end) throws Exception {
+                                               StationDto start, StationDto end) {
         // Create graph from list
         Graph graph = new Graph();
         graph.initialize(stations);
 
         graph = calculateShortestPathFromSource(graph, graph.getNode(start.getKey()));
 
+
         List<StationDto> result = new ArrayList<>();
-        for (Node node : graph.getNodes()) {
-            /*System.out.println(node.getStationDto().getKey()
-                    + " = " + node.getShortestPath().toString());*/
+        /*for (Node node : graph.getNodes()) {
+            //System.out.println(node.getStationDto().getKey() + " = " + node.getShortestPath().toString());
             if (node.getStationDto().equals(end)) {
                 node.getShortestPath()
                         .forEach(nodePath -> result.add(nodePath.getStationDto()));
+                break;
             }
-        }
+        }*/
+
+        graph.getNodes()
+                .stream()
+                .filter(node -> node.getStationDto().equals(end))
+                .findAny()
+                .orElseThrow()
+                .getShortestPath()
+                .forEach(nodePath -> result.add(nodePath.getStationDto()));
+
 
         result.add(end); // Destination station
         return result;
