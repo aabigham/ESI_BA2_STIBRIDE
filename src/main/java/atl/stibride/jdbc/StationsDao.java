@@ -78,14 +78,13 @@ public class StationsDao implements Dao<Integer, StationDto> {
                 int key = row[0];
                 int id_line = row[1];
                 int id_order = row[2];
-                // Add neighbors to every station
-                for (StationDto stationDto : dtos) {
-                    for (Pair<Integer, Integer> lines : stationDto.getLinesAsList()) {
+                for (StationDto currStation : dtos) {
+                    // Add neighbors to every station
+                    for (Pair<Integer, Integer> lines : currStation.getLinesAsList()) {
                         if (lines.getKey() == id_line
-                                && ((lines.getValue() - 1 == id_order)
-                                || (lines.getValue() + 1 == id_order))) {
-                            if (!stationDto.getNeighbors().contains(key)) {
-                                stationDto.addNeighbor(key);
+                                && ((lines.getValue() - 1 == id_order) || (lines.getValue() + 1 == id_order))) {
+                            if (!currStation.getNeighbors().contains(key)) {
+                                currStation.addNeighbor(key);
                             }
                         }
                     }

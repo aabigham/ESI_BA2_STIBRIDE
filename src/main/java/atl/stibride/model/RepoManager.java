@@ -27,8 +27,7 @@ public class RepoManager {
      * @return all of the stations as a List of Dto objects.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    public List<StationDto> getAllStations()
-            throws RepositoryException {
+    public List<StationDto> getAllStations() throws RepositoryException {
         return stationRepo.getAll();
     }
 
@@ -39,8 +38,7 @@ public class RepoManager {
      * @return the selected station as a Dto object.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    public StationDto getStation(Integer key)
-            throws RepositoryException {
+    public StationDto getStation(Integer key) throws RepositoryException {
         return stationRepo.get(key);
     }
 }

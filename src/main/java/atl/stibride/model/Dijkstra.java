@@ -51,7 +51,6 @@ public class Dijkstra {
         return path;
     }*/
 
-    @org.jetbrains.annotations.NotNull
     public static List<StationDto> computePath(List<StationDto> stations,
                                                StationDto start, StationDto end) {
         // Create graph from list
@@ -59,7 +58,6 @@ public class Dijkstra {
         graph.initialize(stations);
 
         graph = calculateShortestPathFromSource(graph, graph.getNode(start.getKey()));
-
 
         List<StationDto> result = new ArrayList<>();
         /*for (Node node : graph.getNodes()) {
@@ -70,7 +68,6 @@ public class Dijkstra {
                 break;
             }
         }*/
-
         graph.getNodes()
                 .stream()
                 .filter(node -> node.getStationDto().equals(end))
@@ -78,7 +75,6 @@ public class Dijkstra {
                 .orElseThrow()
                 .getShortestPath()
                 .forEach(nodePath -> result.add(nodePath.getStationDto()));
-
 
         result.add(end); // Destination station
         return result;
