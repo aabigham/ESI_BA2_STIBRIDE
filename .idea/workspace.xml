@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Update fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" afterDir="false" />
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Start dijkstra">
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Graph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/StationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,13 +120,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,7 +159,8 @@
       <workItem from="1617804533877" duration="667000" />
       <workItem from="1618833366378" duration="26363000" />
       <workItem from="1618862938316" duration="179000" />
-      <workItem from="1619301461418" duration="6835000" />
+      <workItem from="1619301461418" duration="7034000" />
+      <workItem from="1619440087495" duration="4724000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -226,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617399511314</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Start dijkstra">
+      <created>1619308754830</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1619308754830</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +269,8 @@
     <MESSAGE value="Complete repositories classes template" />
     <MESSAGE value="Progress repositories classes" />
     <MESSAGE value="Update fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update fxml" />
+    <MESSAGE value="Start dijkstra" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start dijkstra" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

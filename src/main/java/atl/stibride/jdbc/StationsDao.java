@@ -3,6 +3,7 @@ package atl.stibride.jdbc;
 import atl.stibride.dto.StationDto;
 import atl.stibride.repository.Dao;
 import atl.stibride.repository.RepositoryException;
+import javafx.util.Pair;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -73,9 +74,10 @@ public class StationsDao implements Dao<Integer, StationDto> {
                 int id_order = row[2];
                 // Add neighbors to every station
                 for (StationDto stationDto : dtos) {
-                    for (Integer[] lines : stationDto.getLinesAsList()) {
-                        if (lines[0] == id_line
-                                && ((lines[1] - 1 == id_order) || (lines[1] + 1 == id_order))) {
+                    for (Pair<Integer, Integer> lines : stationDto.getLinesAsList()) {
+                        if (lines.getKey() == id_line
+                                && ((lines.getValue() - 1 == id_order)
+                                || (lines.getValue() + 1 == id_order))) {
                             if (!stationDto.getNeighbors().contains(key)) {
                                 stationDto.addNeighbor(key);
                             }

@@ -7,75 +7,6 @@ import java.util.*;
 
 public class Dijkstra {
 
-    private static class Node {
-
-        private StationDto stationDto;
-        private List<Node> shortestPath = new LinkedList<>();
-        private Integer distance = Integer.MAX_VALUE;
-        Map<Node, Integer> adjacentNodes = new HashMap<>();
-
-        public void addDestination(Node destination, int distance) {
-            adjacentNodes.put(destination, distance);
-        }
-
-        public Node(StationDto stationDto) {
-            this.stationDto = stationDto;
-        }
-
-        // getters and setters
-        public StationDto getStationDto() {
-            return stationDto;
-        }
-
-        public void setStationDto(StationDto stationDto) {
-            this.stationDto = stationDto;
-        }
-
-        public List<Node> getShortestPath() {
-            return shortestPath;
-        }
-
-        public void setShortestPath(List<Node> shortestPath) {
-            this.shortestPath = shortestPath;
-        }
-
-        public Integer getDistance() {
-            return distance;
-        }
-
-        public void setDistance(Integer distance) {
-            this.distance = distance;
-        }
-
-        public Map<Node, Integer> getAdjacentNodes() {
-            return adjacentNodes;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" + stationDto.toString() + " }";
-        }
-    }
-
-    private static class Graph {
-
-        private Set<Node> nodes = new HashSet<>();
-
-        public void addNode(Node nodeA) {
-            nodes.add(nodeA);
-        }
-
-        // getters and setters
-        public Set<Node> getNodes() {
-            return nodes;
-        }
-
-        public void setNodes(Set<Node> nodes) {
-            this.nodes = nodes;
-        }
-    }
-
-
     /**
      * Computes the best path to take between the two stations.
      *
@@ -128,44 +59,29 @@ public class Dijkstra {
         return path;
     }
 
-    public static void computePath2(List<StationDto> allStations, StationDto start) throws Exception {
-        // Nodes
-        List<Node> nodes = new ArrayList<>();
-        for (StationDto currStation : allStations) {
-            nodes.add(new Node(currStation));
-        }
-        // Destinations
-        for (Node currNode : nodes) {
-            for (Integer neighbor : currNode.getStationDto().getNeighbors()) {
-                currNode.addDestination(
-                        nodes.stream()
-                                .filter(node -> node.getStationDto().getKey().equals(neighbor))
-                                .findAny()
-                                .orElseThrow(),
-                        1
-                );
+    public static List<StationDto> computePath2(List<StationDto> stations,
+                                                StationDto start, StationDto end) throws Exception {
+        // Create graph from list
+        Graph graph = new Graph();
+        graph.initialize(stations);
+
+        graph = calculateShortestPathFromSource(graph, graph.getNode(start.getKey()));
+
+
+        List<StationDto> result = new ArrayList<>();
+        for (Node node : graph.getNodes()) {
+            /*System.out.println(node.getStationDto().getKey()
+                    + " = " + node.getShortestPath().toString());*/
+            if (node.getStationDto().equals(end)) {
+                node.getShortestPath()
+                        .forEach(nodePath -> result.add(nodePath.getStationDto()));
             }
         }
-        //
-        Graph graph = new Graph();
-        for (Node currNode : nodes) {
-            graph.addNode(currNode);
-        }
-        graph = calculateShortestPathFromSource(graph,
-                nodes.stream()
-                        .filter(node -> node.stationDto.getKey().equals(start.getKey()))
-                        .findAny()
-                        .orElseThrow());
-
-        for (Node node : graph.getNodes()) {
-            System.out.println(node.getStationDto().getKey()
-                    + " = " + node.getShortestPath().toString());
-        }
-        //return null;
+        result.add(end);
+        return result;
     }
 
-    public static Graph calculateShortestPathFromSource(Graph graph, Node source) {
-
+    private static Graph calculateShortestPathFromSource(Graph graph, Node source) {
         source.setDistance(0);
 
         Set<Node> settledNodes = new HashSet<>();
@@ -175,11 +91,9 @@ public class Dijkstra {
         while (unsettledNodes.size() != 0) {
             Node currentNode = getLowestDistanceNode(unsettledNodes);
             unsettledNodes.remove(currentNode);
-            for (Map.Entry<Node, Integer> adjacencyPair
-                    : currentNode.getAdjacentNodes().entrySet()) {
+            for (Map.Entry<Node, Integer> adjacencyPair : currentNode.getAdjacentNodes().entrySet()) {
                 Node adjacentNode = adjacencyPair.getKey();
                 Integer edgeWeigh = adjacencyPair.getValue();
-
                 if (!settledNodes.contains(adjacentNode)) {
                     CalculateMinimumDistance(adjacentNode, edgeWeigh, currentNode);
                     unsettledNodes.add(adjacentNode);
@@ -188,17 +102,6 @@ public class Dijkstra {
             settledNodes.add(currentNode);
         }
         return graph;
-    }
-
-    private static void CalculateMinimumDistance(Node evaluationNode,
-                                                 Integer edgeWeigh, Node sourceNode) {
-        Integer sourceDistance = sourceNode.getDistance();
-        if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
-            evaluationNode.setDistance(sourceDistance + edgeWeigh);
-            LinkedList<Node> shortestPath = new LinkedList<>(sourceNode.getShortestPath());
-            shortestPath.add(sourceNode);
-            evaluationNode.setShortestPath(shortestPath);
-        }
     }
 
     private static Node getLowestDistanceNode(Set<Node> unsettledNodes) {
@@ -213,4 +116,16 @@ public class Dijkstra {
         }
         return lowestDistanceNode;
     }
+
+    private static void CalculateMinimumDistance(Node evaluationNode,
+                                                 Integer edgeWeigh, Node sourceNode) {
+        Integer sourceDistance = sourceNode.getDistance();
+        if (sourceDistance + edgeWeigh < evaluationNode.getDistance()) {
+            evaluationNode.setDistance(sourceDistance + edgeWeigh);
+            LinkedList<Node> shortestPath = new LinkedList<>(sourceNode.getShortestPath());
+            shortestPath.add(sourceNode);
+            evaluationNode.setShortestPath(shortestPath);
+        }
+    }
+
 }

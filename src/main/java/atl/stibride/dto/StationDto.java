@@ -1,5 +1,7 @@
 package atl.stibride.dto;
 
+import javafx.util.Pair;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -7,8 +9,8 @@ import java.util.Objects;
 public class StationDto extends Dto<Integer> {
 
     private final String name;
-    private List<Integer[]> lines;
-    private List<Integer> neighbors;
+    private final List<Pair<Integer, Integer>> lines; // Ligne + son ordre dans la ligne
+    private final List<Integer> neighbors;
 
     public StationDto(int id, String name) {
         super(id);
@@ -18,7 +20,7 @@ public class StationDto extends Dto<Integer> {
     }
 
     public void addLine(int line, int order) {
-        lines.add(new Integer[]{line, order});
+        lines.add(new Pair<>(line, order));
     }
 
     public void addNeighbor(Integer id_station) {
@@ -29,7 +31,7 @@ public class StationDto extends Dto<Integer> {
         return name;
     }
 
-    public List<Integer[]> getLinesAsList() {
+    public List<Pair<Integer, Integer>> getLinesAsList() {
         return lines;
     }
 
@@ -37,8 +39,9 @@ public class StationDto extends Dto<Integer> {
         StringBuilder ret = new StringBuilder("[");
         int length = lines.size();
         for (int i = 0; i < length; i++) {
-            ret.append(lines.get(i)[0]);
-            if (i < length - 1) ret.append(", ");
+            ret.append(lines.get(i).getKey());
+            if (i < length - 1)
+                ret.append(", ");
         }
         ret.append("]");
         return ret.toString();
