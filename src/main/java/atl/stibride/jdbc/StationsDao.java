@@ -170,6 +170,7 @@ public class StationsDao implements Dao<Integer, StationDto> {
         return name;
     }
 
+
     private static class StationsDaoHolder {
         private static StationsDao getInstance() throws RepositoryException {
             return new StationsDao();

@@ -39,4 +39,6 @@ public class StationRepository implements Repository<Integer, StationDto> {
     public StationDto get(Integer key) throws RepositoryException {
         return dao.select(key);
     }
+
+
 }

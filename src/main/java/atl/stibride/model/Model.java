@@ -43,8 +43,7 @@ public class Model extends Observable {
     public void computeRide(StationDto start, StationDto end) throws Exception {
         List<StationDto> allStations = repoManager.getAllStations();
         //List<StationDto> path = Dijkstra.computePath(allStations, start, end);
-
-        List<StationDto> path = Dijkstra.computePath2(allStations, start, end);
+        List<StationDto> path = Dijkstra.computePath(allStations, start, end);
 
         ride = new Ride(start, end, path);
         notifyObservers(this);

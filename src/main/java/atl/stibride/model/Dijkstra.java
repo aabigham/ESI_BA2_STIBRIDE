@@ -7,15 +7,7 @@ import java.util.*;
 
 public class Dijkstra {
 
-    /**
-     * Computes the best path to take between the two stations.
-     *
-     * @param start the starting station.
-     * @param end   the end station.
-     * @return the best path to take between the two stations.
-     * @throws Exception if an error occurred.
-     */
-    public static List<StationDto> computePath(
+    /*public static List<StationDto> computePath(
             List<StationDto> allStations, StationDto start, StationDto end) throws Exception {
         // TODO better algorithm
         if (start.equals(end))
@@ -57,16 +49,16 @@ public class Dijkstra {
         }
 
         return path;
-    }
+    }*/
 
-    public static List<StationDto> computePath2(List<StationDto> stations,
-                                                StationDto start, StationDto end) throws Exception {
+    @org.jetbrains.annotations.NotNull
+    public static List<StationDto> computePath(List<StationDto> stations,
+                                               StationDto start, StationDto end) throws Exception {
         // Create graph from list
         Graph graph = new Graph();
         graph.initialize(stations);
 
         graph = calculateShortestPathFromSource(graph, graph.getNode(start.getKey()));
-
 
         List<StationDto> result = new ArrayList<>();
         for (Node node : graph.getNodes()) {
