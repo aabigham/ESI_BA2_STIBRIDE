@@ -1,6 +1,7 @@
 package atl.stibride.model;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.repository.FavoriteRepository;
 import atl.stibride.repository.RepositoryException;
 import atl.stibride.repository.StationRepository;
 
@@ -9,10 +10,12 @@ import java.util.List;
 public class RepoManager {
 
     private StationRepository stationRepo;
+    private FavoriteRepository favoriteRepository;
 
     public RepoManager() {
         try {
             this.stationRepo = new StationRepository();
+            this.favoriteRepository = new FavoriteRepository();
         } catch (RepositoryException e) {
             e.printStackTrace();
         }

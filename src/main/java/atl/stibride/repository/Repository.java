@@ -22,7 +22,7 @@ public interface Repository<K, T extends Dto<K>> {
      * @return the element's key, usefull when the key is auto-generated.
      * @throws RepositoryException if the repository can't access to the element.
      */
-    //K add(T item) throws RepositoryException;
+    K add(T item) throws RepositoryException;
 
     /**
      * Removes the element of the specific key.
@@ -30,7 +30,7 @@ public interface Repository<K, T extends Dto<K>> {
      * @param key key of the element to removes.
      * @throws RepositoryException if the repository can't access to the element.
      */
-    //void remove(K key) throws RepositoryException;
+    void remove(K key) throws RepositoryException;
 
     /**
      * Returns all the elements of the repository.
@@ -57,6 +57,6 @@ public interface Repository<K, T extends Dto<K>> {
      * @return true if the element exist in the repository and false otherwise.
      * @throws RepositoryException if the repository can't access to the element.
      */
-    //boolean contains(K key) throws RepositoryException;
+    boolean contains(K key) throws RepositoryException;
 
 }

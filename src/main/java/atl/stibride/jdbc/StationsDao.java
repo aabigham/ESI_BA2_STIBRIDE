@@ -11,6 +11,12 @@ import java.util.List;
 
 public class StationsDao implements Dao<Integer, StationDto> {
 
+    private static class StationsDaoHolder {
+        private static StationsDao getInstance() throws RepositoryException {
+            return new StationsDao();
+        }
+    }
+
     private final Connection connection;
 
     public StationsDao() throws RepositoryException {
@@ -168,12 +174,5 @@ public class StationsDao implements Dao<Integer, StationDto> {
             throw new RepositoryException(e);
         }
         return name;
-    }
-
-
-    private static class StationsDaoHolder {
-        private static StationsDao getInstance() throws RepositoryException {
-            return new StationsDao();
-        }
     }
 }

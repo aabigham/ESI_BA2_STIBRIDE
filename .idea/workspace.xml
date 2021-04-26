@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Dijkstra works">
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/FavoritesDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/FavoriteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/StationRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,9 +75,12 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28735632" />
-    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+    <property name="settings.editor.selected.configurable" value="settings.saveactions" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="atl.stibride.jdbc" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\main\resources\img" />
     </key>
@@ -162,7 +165,7 @@
       <workItem from="1618833366378" duration="26363000" />
       <workItem from="1618862938316" duration="179000" />
       <workItem from="1619301461418" duration="7034000" />
-      <workItem from="1619440087495" duration="8897000" />
+      <workItem from="1619440087495" duration="11582000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

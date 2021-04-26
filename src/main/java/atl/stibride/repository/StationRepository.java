@@ -17,6 +17,17 @@ public class StationRepository implements Repository<Integer, StationDto> {
         this.dao = StationsDao.getInstance();
     }
 
+    @Override
+    public Integer add(StationDto item) throws RepositoryException {
+        // TODO
+        return null;
+    }
+
+    @Override
+    public void remove(Integer key) throws RepositoryException {
+        // TODO
+    }
+
     /**
      * Selects all of the stations.
      *
@@ -38,6 +49,12 @@ public class StationRepository implements Repository<Integer, StationDto> {
     @Override
     public StationDto get(Integer key) throws RepositoryException {
         return dao.select(key);
+    }
+
+    @Override
+    public boolean contains(Integer key) throws RepositoryException {
+        // TODO
+        return false;
     }
 
 

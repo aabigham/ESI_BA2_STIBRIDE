@@ -1357,53 +1357,58 @@ end_station</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_FAVORITES_1</UnderlyingIndexName>
     </key>
-    <foreign-key id="498" parent="170" name="start_fk">
+    <key id="498" parent="170" name="UC_PK">
+      <ColNames>start_station
+end_station</ColNames>
+      <UnderlyingIndexName>sqlite_autoindex_FAVORITES_1</UnderlyingIndexName>
+    </key>
+    <foreign-key id="499" parent="170">
       <ColNames>start_station</ColNames>
       <RefTableName>STATIONS</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="499" parent="170" name="end_fk">
+    <foreign-key id="500" parent="170">
       <ColNames>end_station</ColNames>
       <RefTableName>STATIONS</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="500" parent="171" name="id">
+    <column id="501" parent="171" name="id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <key id="501" parent="171">
+    <key id="502" parent="171">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="502" parent="172" name="id">
+    <column id="503" parent="172" name="id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
     </column>
-    <column id="503" parent="172" name="name">
+    <column id="504" parent="172" name="name">
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="504" parent="172">
+    <key id="505" parent="172">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="505" parent="173" name="id_line">
+    <column id="506" parent="173" name="id_line">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="506" parent="173" name="id_station">
+    <column id="507" parent="173" name="id_station">
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="507" parent="173" name="id_order">
+    <column id="508" parent="173" name="id_order">
       <Position>3</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="508" parent="173" name="sqlite_autoindex_STOPS_1">
+    <index id="509" parent="173" name="sqlite_autoindex_STOPS_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id_line
 id_station</ColNames>
@@ -1411,39 +1416,39 @@ id_station</ColNames>
 </ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="509" parent="173">
+    <key id="510" parent="173">
       <ColNames>id_line
 id_station</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_STOPS_1</UnderlyingIndexName>
     </key>
-    <foreign-key id="510" parent="173">
+    <foreign-key id="511" parent="173">
       <ColNames>id_line</ColNames>
       <RefTableName>LINES</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="511" parent="173">
+    <foreign-key id="512" parent="173">
       <ColNames>id_station</ColNames>
       <RefTableName>STATIONS</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="512" parent="174" name="type">
+    <column id="513" parent="174" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="513" parent="174" name="name">
+    <column id="514" parent="174" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="514" parent="174" name="tbl_name">
+    <column id="515" parent="174" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="515" parent="174" name="rootpage">
+    <column id="516" parent="174" name="rootpage">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="516" parent="174" name="sql">
+    <column id="517" parent="174" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
