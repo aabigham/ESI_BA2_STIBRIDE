@@ -20,13 +20,18 @@ public class StationRepository implements Repository<Integer, StationDto> {
 
     @Override
     public Integer add(StationDto item) throws RepositoryException {
-        // TODO
-        return null;
+        Integer key = item.getKey();
+        if (contains(item.getKey())) {
+            dao.update(item);
+        } else {
+            key = dao.insert(item);
+        }
+        return key;
     }
 
     @Override
     public void remove(Integer key) throws RepositoryException {
-        // TODO
+        dao.delete(key);
     }
 
     /**
@@ -54,9 +59,8 @@ public class StationRepository implements Repository<Integer, StationDto> {
 
     @Override
     public boolean contains(Integer key) throws RepositoryException {
-        // TODO
-        return false;
+        StationDto refreshItem = dao.select(key);
+        return refreshItem != null;
     }
-
 
 }

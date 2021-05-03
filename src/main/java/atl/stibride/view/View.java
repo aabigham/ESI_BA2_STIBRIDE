@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.util.Pair;
 
 import java.io.IOException;
 import java.util.List;
@@ -45,6 +46,10 @@ public class View {
 
     public StationDto getDestination() {
         return fxmlController.getDestination();
+    }
+
+    public Pair<Integer, Integer> getFavorite() {
+        return fxmlController.getFavorite();
     }
 
     public void showRide(Ride ride) {

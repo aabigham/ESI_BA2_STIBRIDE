@@ -4,6 +4,7 @@ import atl.stibride.dto.FavoriteDto;
 import atl.stibride.dto.StationDto;
 import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.model.Model;
+import atl.stibride.model.Ride;
 import atl.stibride.observer.Observable;
 import atl.stibride.observer.Observer;
 import atl.stibride.view.View;
@@ -31,8 +32,8 @@ public class Presenter implements Observer {
     }
 
     public void searchRide() {
-        view.disableButtons();
         System.out.println("Search button");
+        view.disableButtons();
         StationDto origin = view.getOrigin();
         StationDto destination = view.getDestination();
         try {
@@ -46,21 +47,44 @@ public class Presenter implements Observer {
     public void addToFavorite() {
         System.out.println("Add to favorite button");
         view.disableButtons();
-        // TODO
+        StationDto origin = view.getOrigin();
+        StationDto destination = view.getDestination();
+        try {
+            model.addToFavorite(origin, destination);
+        } catch (Exception e) {
+            view.showException(e.getMessage());
+        }
         view.enableButtons();
     }
 
     public void launchFavorite() {
         System.out.println("Launch favorite button");
         view.disableButtons();
-        // TODO
+        // Favorite is a stored as a Pair
+        Integer origin = view.getFavorite().getKey();
+        Integer destination = view.getFavorite().getValue();
+        try {
+            model.computeRide(
+                    model.getStationDto(origin),
+                    model.getStationDto(destination)
+            );
+        } catch (Exception e) {
+            view.showException(e.getMessage());
+        }
         view.enableButtons();
     }
 
     public void removeFavorite() {
         System.out.println("Remove favorite button");
         view.disableButtons();
-        // TODO
+        // Favorite is a stored as a Pair
+        Integer origin = view.getFavorite().getKey();
+        Integer destination = view.getFavorite().getValue();
+        try {
+            model.removeFavorite(origin, destination);
+        } catch (Exception e) {
+            view.showException(e.getMessage());
+        }
         view.enableButtons();
     }
 
@@ -69,11 +93,13 @@ public class Presenter implements Observer {
         System.out.println("model update");
         Model model = (Model) observable;
         try {
-            //Ride ride = model.getRide();
-            view.showRide(model.getRide());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            Ride ride = model.getRide();
+            if (ride != null) {
+                view.showRide(ride);
+            }
+            view.initFavorites(model.getAllFavorites());
+        } catch (IllegalAccessException | RepositoryException e) {
+            view.showException(e.getMessage());
         }
-        // TODO
     }
 }

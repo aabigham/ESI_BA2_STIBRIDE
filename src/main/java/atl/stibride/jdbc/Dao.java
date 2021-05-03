@@ -39,7 +39,7 @@ public interface Dao<K, T extends Dto<K>> {
      * @param item item to update.
      * @throws RepositoryException if the resource can't be accessed.
      */
-    //void update(T item) throws RepositoryException;
+    void update(T item) throws RepositoryException;
 
     /**
      * Returns all the elements of the resource. This method can be long.

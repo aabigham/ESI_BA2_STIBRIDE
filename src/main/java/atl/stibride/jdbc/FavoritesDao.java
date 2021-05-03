@@ -2,6 +2,7 @@ package atl.stibride.jdbc;
 
 import atl.stibride.dto.FavoriteDto;
 import atl.stibride.exceptions.RepositoryException;
+import javafx.util.Pair;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -31,7 +32,8 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
     // Methods
 
     @Override
-    public Integer insert(FavoriteDto item) throws RepositoryException {
+    public Pair<Integer, Integer> insert(FavoriteDto item) throws RepositoryException {
+        // TODO
         return null;
     }
 
@@ -50,10 +52,6 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         // Return
         List<FavoriteDto> dtos = new ArrayList<>();
 
-        /*String query = "SELECT F.start_station, F.end_station, SS.name, SE.name " +
-                "FROM FAVORITES F " +
-                "JOIN STATIONS SS on SS.id = F.start_station " +
-                "JOIN STATIONS SE on SE.id = F.end_station";*/
         String query = "SELECT start_station, end_station, name FROM FAVORITES";
 
         try {

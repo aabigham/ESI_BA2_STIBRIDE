@@ -2,12 +2,13 @@ package atl.stibride.repository;
 
 import atl.stibride.dto.DtoPair;
 import atl.stibride.exceptions.RepositoryException;
+import javafx.util.Pair;
 
 import java.util.List;
 
 public interface RepositoryPair<K, T extends DtoPair<K>> {
-    
-    K add(T item) throws RepositoryException;
+
+    Pair<K, K> add(T item) throws RepositoryException;
 
     void remove(K firstKey, K secondKey) throws RepositoryException;
 

@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.util.Pair;
 import org.controlsfx.control.SearchableComboBox;
 
 import java.util.List;
@@ -91,6 +92,11 @@ public class FXMLController {
 
     StationDto getDestination() {
         return destinationSearch.getSelectionModel().getSelectedItem();
+    }
+
+    Pair<Integer, Integer> getFavorite() {
+        FavoriteDto favorite = listFavorite.getSelectionModel().getSelectedItem();
+        return new Pair<>(favorite.getFirstKey(), favorite.getSecondKey());
     }
 
     void showRide(Ride ride) {

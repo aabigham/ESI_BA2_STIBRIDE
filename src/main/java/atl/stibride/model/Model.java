@@ -11,6 +11,7 @@ public class Model extends Observable {
 
     private final RepoManager repoManager;
     private List<StationDto> allStations = null;
+    private List<FavoriteDto> allFavorites = null;
     private Ride ride = null;
 
     public Model(RepoManager repoManager) {
@@ -19,7 +20,10 @@ public class Model extends Observable {
 
     public void initialize() throws RepositoryException {
         allStations = repoManager.getAllStations();
+        allFavorites = repoManager.getAllFavorites();
     }
+
+    /* RIDE */
 
     public void computeRide(StationDto start, StationDto end) throws IllegalArgumentException {
         if (start.equals(end)) {
@@ -30,19 +34,46 @@ public class Model extends Observable {
         notifyObservers(this);
     }
 
+    public Ride getRide() throws IllegalAccessException {
+        return ride;
+    }
+
+    /* STATIONS */
+
     public List<StationDto> getAllStations() throws RepositoryException {
         return allStations;
     }
 
+    public StationDto getStationDto(int key) {
+        return allStations.stream()
+                .filter(stationDto -> stationDto.getKey().equals(key))
+                .findAny()
+                .orElseThrow();
+    }
+
+    /* FAVORITES */
+
     public List<FavoriteDto> getAllFavorites() throws RepositoryException {
-        return repoManager.getAllFavorites();
+        return allFavorites;
     }
 
-    public Ride getRide() throws IllegalAccessException {
-        if (ride == null)
-            throw new IllegalAccessException("Ride is null at this moment.");
-        return ride;
+    public void addToFavorite(StationDto origin, StationDto destination) throws RepositoryException {
+        if (origin.equals(destination)) {
+            throw new IllegalArgumentException("Stations cannot be the same.");
+        }
+        String name = origin.getName() + " => " + destination.getName();
+        repoManager.addFavorite(
+                origin.getKey(),
+                destination.getKey(),
+                name
+        );
+        allFavorites = repoManager.getAllFavorites(); // Change ?
+        notifyObservers(this);
     }
 
-
+    public void removeFavorite(Integer origin, Integer destination) throws RepositoryException {
+        repoManager.removeFavorite(origin, destination);
+        allFavorites = repoManager.getAllFavorites(); // Change ?
+        notifyObservers(this);
+    }
 }

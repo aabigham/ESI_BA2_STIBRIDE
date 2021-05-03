@@ -22,28 +22,27 @@ public class RepoManager {
         }
     }
 
-    /**
-     * Selects all of the stations.
-     *
-     * @return all of the stations as a List of Dto objects.
-     * @throws RepositoryException if the resource can't be accessed.
-     */
+    /* STATIONS */
+
     public List<StationDto> getAllStations() throws RepositoryException {
         return stationRepo.getAll();
     }
 
-    /**
-     * Select one station according to the key in parameter.
-     *
-     * @param key key of the element to select.
-     * @return the selected station as a Dto object.
-     * @throws RepositoryException if the resource can't be accessed.
-     */
     public StationDto getStation(Integer key) throws RepositoryException {
         return stationRepo.get(key);
     }
 
+    /* FAVORITES */
+
     public List<FavoriteDto> getAllFavorites() throws RepositoryException {
         return favoriteRepository.getAll();
+    }
+
+    public void addFavorite(Integer firstKey, Integer secondKey, String name) throws RepositoryException {
+        favoriteRepository.add(new FavoriteDto(firstKey, secondKey, name));
+    }
+
+    public void removeFavorite(Integer origin, Integer destination) throws RepositoryException {
+        favoriteRepository.remove(origin, destination);
     }
 }
