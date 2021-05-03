@@ -1,5 +1,6 @@
 package atl.stibride.model;
 
+import atl.stibride.dto.FavoriteDto;
 import atl.stibride.dto.StationDto;
 import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.repository.FavoriteRepository;
@@ -40,5 +41,9 @@ public class RepoManager {
      */
     public StationDto getStation(Integer key) throws RepositoryException {
         return stationRepo.get(key);
+    }
+
+    public List<FavoriteDto> getAllFavorites() throws RepositoryException {
+        return favoriteRepository.getAll();
     }
 }

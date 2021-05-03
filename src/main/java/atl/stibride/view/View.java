@@ -1,5 +1,6 @@
 package atl.stibride.view;
 
+import atl.stibride.dto.FavoriteDto;
 import atl.stibride.dto.StationDto;
 import atl.stibride.model.Ride;
 import atl.stibride.presenter.Presenter;
@@ -28,6 +29,10 @@ public class View {
 
     public void initComboBoxes(List<StationDto> stations) {
         fxmlController.initComboBoxes(stations);
+    }
+
+    public void initFavorites(List<FavoriteDto> favorites) {
+        fxmlController.initFavorites(favorites);
     }
 
     public void addHandlers(Presenter presenter) {

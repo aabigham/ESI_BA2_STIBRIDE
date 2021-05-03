@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Graph algo stream (temp)">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_02.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_1_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_2_02.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_11_0_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_media_win_11_0_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_02.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/FavoriteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/FavoriteDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/FavoritesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/FavoritesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/FavoriteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/FavoriteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +46,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/repository/StationRepository.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qRTp94iAxCkoDFOoFUGP5U7uRh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -121,17 +130,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Tests" />
@@ -171,7 +169,8 @@
       <workItem from="1620050928700" duration="92000" />
       <workItem from="1620051036515" duration="197000" />
       <workItem from="1620053486849" duration="413000" />
-      <workItem from="1620057747485" duration="2230000" />
+      <workItem from="1620057747485" duration="2265000" />
+      <workItem from="1620060120081" duration="1224000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

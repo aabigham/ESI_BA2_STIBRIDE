@@ -1,5 +1,6 @@
 package atl.stibride.view;
 
+import atl.stibride.dto.FavoriteDto;
 import atl.stibride.dto.StationDto;
 import atl.stibride.handlers.AddToFavoriteHandler;
 import atl.stibride.handlers.LaunchFavoriteHandler;
@@ -38,7 +39,7 @@ public class FXMLController {
     @FXML
     private TableColumn<StationDto, String> lignesCol;
     @FXML
-    private ListView<Ride> listFavorite;
+    private ListView<FavoriteDto> listFavorite;
     @FXML
     private Button launchFavorite;
     @FXML
@@ -69,6 +70,12 @@ public class FXMLController {
         originSearch.getSelectionModel().select(0);
         destinationSearch.setItems(stationsObs);
         destinationSearch.getSelectionModel().select(0);
+    }
+
+    void initFavorites(List<FavoriteDto> favorites) {
+        ObservableList<FavoriteDto> favoritesObs
+                = FXCollections.observableList(favorites);
+        listFavorite.setItems(favoritesObs);
     }
 
     void addHandlers(Presenter presenter) {

@@ -1,5 +1,6 @@
 package atl.stibride.presenter;
 
+import atl.stibride.dto.FavoriteDto;
 import atl.stibride.dto.StationDto;
 import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.model.Model;
@@ -22,6 +23,10 @@ public class Presenter implements Observer {
     public void initialize() throws RepositoryException {
         List<StationDto> stations = model.getAllStations();
         view.initComboBoxes(stations);
+
+        List<FavoriteDto> favorites = model.getAllFavorites();
+        view.initFavorites(favorites);
+
         view.addHandlers(this);
     }
 

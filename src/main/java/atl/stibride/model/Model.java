@@ -1,5 +1,6 @@
 package atl.stibride.model;
 
+import atl.stibride.dto.FavoriteDto;
 import atl.stibride.dto.StationDto;
 import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.observer.Observable;
@@ -33,9 +34,15 @@ public class Model extends Observable {
         return allStations;
     }
 
+    public List<FavoriteDto> getAllFavorites() throws RepositoryException {
+        return repoManager.getAllFavorites();
+    }
+
     public Ride getRide() throws IllegalAccessException {
         if (ride == null)
             throw new IllegalAccessException("Ride is null at this moment.");
         return ride;
     }
+
+
 }
