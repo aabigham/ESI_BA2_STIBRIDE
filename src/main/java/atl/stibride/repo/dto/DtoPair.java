@@ -1,9 +1,9 @@
-package atl.stibride.dto;
+package atl.stibride.repo.dto;
 
 import java.util.Objects;
 
 public class DtoPair<K> {
-    
+
     protected K firstKey;
 
     protected K secondKey;

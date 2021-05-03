@@ -1,8 +1,8 @@
-package atl.stibride.repository;
+package atl.stibride.repo.repository;
 
-import atl.stibride.dto.FavoriteDto;
-import atl.stibride.exceptions.RepositoryException;
-import atl.stibride.jdbc.FavoritesDao;
+import atl.stibride.repo.dao.FavoritesDao;
+import atl.stibride.repo.dto.FavoriteDto;
+import atl.stibride.repo.exceptions.RepositoryException;
 import javafx.util.Pair;
 
 import java.util.List;

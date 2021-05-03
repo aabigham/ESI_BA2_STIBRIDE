@@ -1,6 +1,6 @@
 package atl.stibride.model;
 
-import atl.stibride.dto.StationDto;
+import atl.stibride.repo.dto.StationDto;
 
 import java.util.HashMap;
 import java.util.LinkedList;

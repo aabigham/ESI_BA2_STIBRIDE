@@ -1,10 +1,10 @@
 package atl.stibride.model;
 
-import atl.stibride.dto.FavoriteDto;
-import atl.stibride.dto.StationDto;
-import atl.stibride.exceptions.RepositoryException;
-import atl.stibride.repository.FavoriteRepository;
-import atl.stibride.repository.StationRepository;
+import atl.stibride.repo.dto.FavoriteDto;
+import atl.stibride.repo.dto.StationDto;
+import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.repo.repository.FavoriteRepository;
+import atl.stibride.repo.repository.StationRepository;
 
 import java.util.List;
 

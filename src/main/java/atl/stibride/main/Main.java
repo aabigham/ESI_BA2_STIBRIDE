@@ -1,10 +1,10 @@
 package atl.stibride.main;
 
 import atl.stibride.config.ConfigManager;
-import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.model.Model;
 import atl.stibride.model.RepoManager;
 import atl.stibride.presenter.Presenter;
+import atl.stibride.repo.exceptions.RepositoryException;
 import atl.stibride.view.View;
 import javafx.application.Application;
 import javafx.stage.Stage;

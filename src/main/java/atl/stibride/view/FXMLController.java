@@ -1,13 +1,13 @@
 package atl.stibride.view;
 
-import atl.stibride.dto.FavoriteDto;
-import atl.stibride.dto.StationDto;
 import atl.stibride.handlers.AddToFavoriteHandler;
 import atl.stibride.handlers.LaunchFavoriteHandler;
 import atl.stibride.handlers.RemoveFavoriteHandler;
 import atl.stibride.handlers.SearchButtonHandler;
 import atl.stibride.model.Ride;
 import atl.stibride.presenter.Presenter;
+import atl.stibride.repo.dto.FavoriteDto;
+import atl.stibride.repo.dto.StationDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
