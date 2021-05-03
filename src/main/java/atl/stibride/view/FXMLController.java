@@ -1,9 +1,6 @@
 package atl.stibride.view;
 
-import atl.stibride.handlers.AddToFavoriteHandler;
-import atl.stibride.handlers.LaunchFavoriteHandler;
-import atl.stibride.handlers.RemoveFavoriteHandler;
-import atl.stibride.handlers.SearchButtonHandler;
+import atl.stibride.handlers.*;
 import atl.stibride.model.Ride;
 import atl.stibride.presenter.Presenter;
 import atl.stibride.repo.dto.FavoriteDto;
@@ -46,6 +43,8 @@ public class FXMLController {
     @FXML
     private Button removeFavorite;
     @FXML
+    private Button editFavorite;
+    @FXML
     private Label leftStatus;
     @FXML
     private Label rightStatus;
@@ -85,6 +84,7 @@ public class FXMLController {
         addFavorite.setOnAction(new AddToFavoriteHandler(presenter));
         launchFavorite.setOnAction(new LaunchFavoriteHandler(presenter));
         removeFavorite.setOnAction(new RemoveFavoriteHandler(presenter));
+        editFavorite.setOnAction(new EditFavoriteHandler(presenter));
     }
 
     StationDto getOrigin() {
@@ -119,6 +119,7 @@ public class FXMLController {
         addFavorite.setDisable(true);
         launchFavorite.setDisable(true);
         removeFavorite.setDisable(true);
+        editFavorite.setDisable(true);
     }
 
     public void enableButtons() {
@@ -126,5 +127,6 @@ public class FXMLController {
         addFavorite.setDisable(false);
         launchFavorite.setDisable(false);
         removeFavorite.setDisable(false);
+        editFavorite.setDisable(false);
     }
 }

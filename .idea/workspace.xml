@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Graph algo stream (temp)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/EditFavoriteHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/FavoritesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/FavoritesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +73,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="atl.stibride.handlers" />
       <recent name="atl.stibride.jdbc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -171,7 +172,7 @@
       <workItem from="1620053486849" duration="413000" />
       <workItem from="1620057747485" duration="2265000" />
       <workItem from="1620060120081" duration="5046000" />
-      <workItem from="1620066023541" duration="5739000" />
+      <workItem from="1620066023541" duration="6709000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

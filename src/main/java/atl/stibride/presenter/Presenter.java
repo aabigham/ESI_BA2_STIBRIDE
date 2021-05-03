@@ -88,6 +88,10 @@ public class Presenter implements Observer {
         view.enableButtons();
     }
 
+    public void editFavorite() {
+        System.out.println("Edit favorite button");
+    }
+
     @Override
     public void update(Observable observable, Object arg) {
         System.out.println("model update");
@@ -102,4 +106,6 @@ public class Presenter implements Observer {
             view.showException(e.getMessage());
         }
     }
+
+
 }
