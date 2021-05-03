@@ -71,12 +71,14 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         }
         String sql = "UPDATE FAVORITES " +
                 "SET start_station = ?, end_station = ?, name = ? " +
-                "WHERE start_station=? AND end_station = ?";
+                "WHERE start_station = ? AND end_station = ?";
         try {
             PreparedStatement pstmt = connection.prepareStatement(sql);
             pstmt.setInt(1, item.getFirstKey());
             pstmt.setInt(2, item.getSecondKey());
             pstmt.setString(3, item.getName());
+            pstmt.setInt(4, item.getFirstKey());
+            pstmt.setInt(5, item.getSecondKey());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new RepositoryException(e.getMessage());
@@ -88,7 +90,7 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         // Return
         List<FavoriteDto> dtos = new ArrayList<>();
 
-        String query = "SELECT start_station, end_station, name FROM FAVORITES";
+        String query = "SELECT start_station, end_station, name FROM FAVORITES ORDER BY name ASC";
 
         try {
             Statement stmt = connection.createStatement();

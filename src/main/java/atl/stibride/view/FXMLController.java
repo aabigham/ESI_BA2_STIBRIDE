@@ -77,6 +77,7 @@ public class FXMLController {
         ObservableList<FavoriteDto> favoritesObs
                 = FXCollections.observableList(favorites);
         listFavorite.setItems(favoritesObs);
+        listFavorite.getSelectionModel().select(0);
     }
 
     void addHandlers(Presenter presenter) {
