@@ -9,6 +9,10 @@ import java.util.Set;
 public class Graph {
 
     private Set<Node> nodes = new HashSet<>();
+    private boolean initialized = false;
+
+    public Graph() {
+    }
 
     public void initialize(List<StationDto> allStations) {
         // Nodes
@@ -22,6 +26,7 @@ public class Graph {
             }
         }
         //
+        initialized = true;
     }
 
     public void addNode(Node nodeA) {
@@ -42,5 +47,9 @@ public class Graph {
 
     public void setNodes(Set<Node> nodes) {
         this.nodes = nodes;
+    }
+
+    public boolean isInitialized() {
+        return initialized;
     }
 }
