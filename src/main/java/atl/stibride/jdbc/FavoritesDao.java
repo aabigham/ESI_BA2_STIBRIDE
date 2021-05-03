@@ -10,7 +10,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FavoritesDao implements Dao<Integer, FavoriteDto> {
+public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
 
     private static class FavoriteDaoHolder {
         private static FavoritesDao getInstance() throws RepositoryException {
@@ -28,14 +28,21 @@ public class FavoritesDao implements Dao<Integer, FavoriteDto> {
         return FavoritesDao.FavoriteDaoHolder.getInstance();
     }
 
+    // Methods
+
     @Override
     public Integer insert(FavoriteDto item) throws RepositoryException {
         return null;
     }
 
     @Override
-    public void delete(Integer key) throws RepositoryException {
+    public void delete(Integer firstKey, Integer secondKey) throws RepositoryException {
+        // TODO
+    }
 
+    @Override
+    public void update(FavoriteDto item) throws RepositoryException {
+        // TODO
     }
 
     @Override
@@ -43,10 +50,11 @@ public class FavoritesDao implements Dao<Integer, FavoriteDto> {
         // Return
         List<FavoriteDto> dtos = new ArrayList<>();
 
-        String query = "SELECT F.start_station, F.end_station, SS.name, SE.name " +
+        /*String query = "SELECT F.start_station, F.end_station, SS.name, SE.name " +
                 "FROM FAVORITES F " +
                 "JOIN STATIONS SS on SS.id = F.start_station " +
-                "JOIN STATIONS SE on SE.id = F.end_station";
+                "JOIN STATIONS SE on SE.id = F.end_station";*/
+        String query = "SELECT start_station, end_station, name FROM FAVORITES";
 
         try {
             Statement stmt = connection.createStatement();
@@ -55,9 +63,8 @@ public class FavoritesDao implements Dao<Integer, FavoriteDto> {
             while (rs.next()) {
                 int startId = rs.getInt(1);
                 int endId = rs.getInt(2);
-                String startName = rs.getString(3);
-                String endName = rs.getString(4);
-                dtos.add(new FavoriteDto(startId, endId, startName, endName));
+                String name = rs.getString(3);
+                dtos.add(new FavoriteDto(startId, endId, name));
             }
         } catch (SQLException e) {
             throw new RepositoryException(e);
@@ -66,12 +73,7 @@ public class FavoritesDao implements Dao<Integer, FavoriteDto> {
     }
 
     @Override
-    public FavoriteDto select(Integer key) throws RepositoryException {
-        return null;
-    }
-
-
-    public FavoriteDto select(Integer keyStart, Integer keyEnd) throws RepositoryException {
+    public FavoriteDto select(Integer firstKey, Integer secondKey) throws RepositoryException {
         // TODO
         return null;
     }

@@ -5,26 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Graph algo stream (temp)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/DtoPair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/DaoPair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/RepositoryPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/FavoriteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/dto/FavoriteDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/FavoritesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/FavoritesDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/StationsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/Dao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/FavoriteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/FavoriteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/RepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/exceptions/RepositoryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repository/StationRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +171,7 @@
       <workItem from="1620050928700" duration="92000" />
       <workItem from="1620051036515" duration="197000" />
       <workItem from="1620053486849" duration="413000" />
-      <workItem from="1620057747485" duration="1761000" />
+      <workItem from="1620057747485" duration="2230000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

@@ -26,6 +26,8 @@ public class StationsDao implements Dao<Integer, StationDto> {
         return StationsDaoHolder.getInstance();
     }
 
+    // Methods 
+    
     @Override
     public Integer insert(StationDto item) throws RepositoryException {
         return null;

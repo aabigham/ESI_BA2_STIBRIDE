@@ -2,35 +2,23 @@ package atl.stibride.dto;
 
 import java.util.Objects;
 
-public class FavoriteDto extends Dto<Integer> {
+public class FavoriteDto extends DtoPair<Integer> {
 
     // start station key is the super key
-    private int endStationKey;
-    private String nameStart;
-    private String nameEnd;
+    private String name;
 
-    public FavoriteDto(Integer key, int endStationKey, String nameStart, String nameEnd) {
-        super(key);
-        this.endStationKey = endStationKey;
-        this.nameStart = nameStart;
-        this.nameEnd = nameEnd;
+    public FavoriteDto(Integer firstKey, Integer secondKey, String name) {
+        super(firstKey, secondKey);
+        this.name = name;
     }
 
-    public int getEndStationKey() {
-        return endStationKey;
-    }
-
-    public String getNameStart() {
-        return nameStart;
-    }
-
-    public String getNameEnd() {
-        return nameEnd;
+    public String getName() {
+        return name;
     }
 
     @Override
     public String toString() {
-        return nameStart + " => " + nameEnd;
+        return name;
     }
 
     @Override
@@ -39,11 +27,11 @@ public class FavoriteDto extends Dto<Integer> {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         FavoriteDto that = (FavoriteDto) o;
-        return endStationKey == that.endStationKey && nameStart.equals(that.nameStart) && nameEnd.equals(that.nameEnd);
+        return name.equals(that.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), endStationKey, nameStart, nameEnd);
+        return Objects.hash(super.hashCode(), name);
     }
 }
