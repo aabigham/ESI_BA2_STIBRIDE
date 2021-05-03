@@ -2,7 +2,6 @@ package atl.stibride.presenter;
 
 import atl.stibride.dto.StationDto;
 import atl.stibride.model.Model;
-import atl.stibride.model.Ride;
 import atl.stibride.observer.Observable;
 import atl.stibride.observer.Observer;
 import atl.stibride.repository.RepositoryException;
@@ -62,11 +61,11 @@ public class Presenter implements Observer {
 
     @Override
     public void update(Observable observable, Object arg) {
+        System.out.println("model update");
         Model model = (Model) observable;
         try {
-            Ride ride = model.getRide();
-            System.out.println(ride.toString());
-            view.showRide(ride);
+            //Ride ride = model.getRide();
+            view.showRide(model.getRide());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }

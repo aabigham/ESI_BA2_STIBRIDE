@@ -27,6 +27,16 @@ public class StationsDao implements Dao<Integer, StationDto> {
         return StationsDaoHolder.getInstance();
     }
 
+    @Override
+    public Integer insert(StationDto item) throws RepositoryException {
+        return null;
+    }
+
+    @Override
+    public void delete(Integer key) throws RepositoryException {
+
+    }
+
     /**
      * Selects all of the stations.
      *
@@ -41,13 +51,13 @@ public class StationsDao implements Dao<Integer, StationDto> {
         // Return
         List<StationDto> dtos = new ArrayList<>();
 
-        String queryStations = "SELECT STA.id, STA.name, STO.id_line, STO.id_order " +
+        String query = "SELECT STA.id, STA.name, STO.id_line, STO.id_order " +
                 "FROM STATIONS STA " +
                 "JOIN STOPS STO on STA.id = STO.id_station " +
                 "ORDER BY STA.name ASC";
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(queryStations);
+            ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 int key = rs.getInt(1);
                 String name = rs.getString(2);
@@ -108,6 +118,10 @@ public class StationsDao implements Dao<Integer, StationDto> {
         if (key == null) {
             throw new RepositoryException("Key cannot be null.");
         }
+        // TODO neighbors
+        // Cant reset the result set head so i have to store the datas here...
+        List<Integer[]> datas = new ArrayList<>();
+
         String query = "SELECT STA.id, STA.name, STO.id_line, STO.id_order " +
                 "FROM STATIONS STA " +
                 "JOIN STOPS STO on STA.id = STO.id_station " +

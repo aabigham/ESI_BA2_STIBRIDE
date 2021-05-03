@@ -8,10 +8,12 @@ import java.util.Set;
 
 public class Graph {
 
-    private Set<Node> nodes = new HashSet<>();
-    private boolean initialized = false;
+    private Set<Node> nodes;
+    private boolean initialized;
 
     public Graph() {
+        this.nodes = new HashSet<>();
+        this.initialized = false;
     }
 
     public void initialize(List<StationDto> allStations) {
