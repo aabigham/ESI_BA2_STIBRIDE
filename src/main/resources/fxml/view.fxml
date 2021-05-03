@@ -159,7 +159,7 @@
                                 </TableView>
                                 <VBox alignment="CENTER" prefHeight="327.0" prefWidth="326.0">
                                     <children>
-                                        <Label prefHeight="28.0" prefWidth="116.0" text="Trajets Favoris:" underline="true">
+                                        <Label prefHeight="28.0" prefWidth="116.0" text="Favorite rides:" underline="true">
                                             <font>
                                                 <Font size="15.0" />
                                             </font>

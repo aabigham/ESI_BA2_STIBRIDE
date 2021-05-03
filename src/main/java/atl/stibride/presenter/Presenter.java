@@ -90,6 +90,7 @@ public class Presenter implements Observer {
 
     public void editFavorite() {
         System.out.println("Edit favorite button");
+        // TODO popup window
     }
 
     @Override
