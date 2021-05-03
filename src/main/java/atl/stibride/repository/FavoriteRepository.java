@@ -1,6 +1,7 @@
 package atl.stibride.repository;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.jdbc.FavoritesDao;
 
 import java.util.List;

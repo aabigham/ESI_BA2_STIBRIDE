@@ -2,7 +2,7 @@ package atl.stibride.jdbc;
 
 
 import atl.stibride.config.ConfigManager;
-import atl.stibride.repository.RepositoryException;
+import atl.stibride.exceptions.RepositoryException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -17,7 +17,7 @@ class DBManager {
 
     private DBManager() {
     }
-    
+
     Connection getConnection() throws RepositoryException {
         String jdbcUrl = "jdbc:sqlite:" + ConfigManager.getInstance().getProperties("db.url");
         //|| connection.isClosed()

@@ -1,8 +1,7 @@
 package atl.stibride.jdbc;
 
 import atl.stibride.dto.StationDto;
-import atl.stibride.repository.Dao;
-import atl.stibride.repository.RepositoryException;
+import atl.stibride.exceptions.RepositoryException;
 import javafx.util.Pair;
 
 import java.sql.*;

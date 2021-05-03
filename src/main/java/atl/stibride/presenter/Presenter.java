@@ -1,10 +1,10 @@
 package atl.stibride.presenter;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.model.Model;
 import atl.stibride.observer.Observable;
 import atl.stibride.observer.Observer;
-import atl.stibride.repository.RepositoryException;
 import atl.stibride.view.View;
 
 import java.util.List;

@@ -1,6 +1,7 @@
 package atl.stibride.repository;
 
 import atl.stibride.dto.Dto;
+import atl.stibride.exceptions.RepositoryException;
 
 import java.util.List;
 

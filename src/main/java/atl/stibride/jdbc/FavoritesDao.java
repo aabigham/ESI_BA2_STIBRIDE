@@ -1,8 +1,7 @@
 package atl.stibride.jdbc;
 
 import atl.stibride.dto.FavoriteDto;
-import atl.stibride.repository.Dao;
-import atl.stibride.repository.RepositoryException;
+import atl.stibride.exceptions.RepositoryException;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

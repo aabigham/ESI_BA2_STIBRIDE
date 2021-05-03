@@ -1,8 +1,8 @@
 package atl.stibride.model;
 
 import atl.stibride.dto.StationDto;
+import atl.stibride.exceptions.RepositoryException;
 import atl.stibride.observer.Observable;
-import atl.stibride.repository.RepositoryException;
 
 import java.util.List;
 

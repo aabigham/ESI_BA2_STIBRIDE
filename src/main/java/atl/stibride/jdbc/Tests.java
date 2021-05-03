@@ -2,7 +2,7 @@ package atl.stibride.jdbc;
 
 import atl.stibride.config.ConfigManager;
 import atl.stibride.dto.StationDto;
-import atl.stibride.repository.RepositoryException;
+import atl.stibride.exceptions.RepositoryException;
 
 import java.io.IOException;
 import java.util.List;

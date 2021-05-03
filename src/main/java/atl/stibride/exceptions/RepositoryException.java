@@ -1,4 +1,4 @@
-package atl.stibride.repository;
+package atl.stibride.exceptions;
 
 /**
  * <code>RepositoryException</code> is thrown when an resources can't be access.

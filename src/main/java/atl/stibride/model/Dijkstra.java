@@ -22,11 +22,15 @@ public class Dijkstra {
                 break;
             }
         }*/
-        graph.getNodes()
+        /*graph.getNodes()
                 .stream()
                 .filter(node -> node.getStationDto().equals(end))
                 .findAny()
                 .orElseThrow()
+                .getShortestPath()
+                .forEach(nodePath -> result.add(nodePath.getStationDto()));*/
+
+        graph.getNode(end.getKey())
                 .getShortestPath()
                 .forEach(nodePath -> result.add(nodePath.getStationDto()));
 
