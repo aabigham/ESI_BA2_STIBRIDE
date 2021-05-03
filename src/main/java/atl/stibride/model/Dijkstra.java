@@ -6,15 +6,11 @@ import java.util.*;
 
 public class Dijkstra {
 
-    private static Graph graph = new Graph();
-    
     public static List<StationDto> computePath(List<StationDto> stations,
                                                StationDto start, StationDto end) {
-        // Initialize graph from list
-        if (!graph.isInitialized()) {
-            graph.initialize(stations);
-        }
-
+        // graph
+        Graph graph = new Graph();
+        graph.initialize(stations);
         graph = calculateShortestPathFromSource(graph, graph.getNode(start.getKey()));
 
         List<StationDto> result = new ArrayList<>();
