@@ -175,7 +175,7 @@ public class StationsDao implements Dao<Integer, StationDto> {
         if (key == null) {
             throw new RepositoryException("Key cannot be null.");
         }
-        String query = "SELECT name FROM STATIONS WHERE  id = ?";
+        String query = "SELECT name FROM STATIONS WHERE id = ?";
         String name = null;
         try {
             PreparedStatement pstmt = connection.prepareStatement(query);
