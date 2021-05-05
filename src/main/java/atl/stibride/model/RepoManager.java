@@ -45,4 +45,8 @@ public class RepoManager {
     public void removeFavorite(Integer origin, Integer destination) throws RepositoryException {
         favoriteRepository.remove(origin, destination);
     }
+
+    public String getFavName(Integer origin, Integer destination) throws RepositoryException {
+        return favoriteRepository.getFavoriteNameById(origin, destination);
+    }
 }

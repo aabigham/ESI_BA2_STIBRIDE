@@ -140,4 +140,32 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         }
         return dto;
     }
+
+    public String selectNameById(Integer firstKey, Integer secondKey) throws RepositoryException {
+        if (firstKey == null || secondKey == null) {
+            throw new RepositoryException("Parameters cannot be null.");
+        }
+        String sql = "SELECT name " +
+                "FROM FAVORITES " +
+                "WHERE start_station = ? AND end_station = ?";
+        String name = null;
+        try {
+            PreparedStatement pstmt = connection.prepareStatement(sql);
+            pstmt.setInt(1, firstKey);
+            pstmt.setInt(2, secondKey);
+            ResultSet rs = pstmt.executeQuery();
+
+            int count = 0;
+            while (rs.next()) {
+                name = rs.getString(1);
+                count++;
+            }
+            if (count > 1) {
+                throw new RepositoryException("Non unique record " + firstKey + ", " + secondKey);
+            }
+        } catch (SQLException e) {
+            throw new RepositoryException(e);
+        }
+        return name;
+    }
 }

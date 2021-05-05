@@ -8,11 +8,15 @@ import atl.stibride.repo.dto.StationDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.util.Pair;
 import org.controlsfx.control.SearchableComboBox;
+import org.javatuples.Triplet;
 
 import java.util.List;
 import java.util.Optional;
@@ -65,8 +69,7 @@ public class FXMLController {
     }
 
     void initComboBoxes(List<StationDto> stations) {
-        ObservableList<StationDto> stationsObs
-                = FXCollections.observableList(stations);
+        ObservableList<StationDto> stationsObs = FXCollections.observableList(stations);
         originSearch.setItems(stationsObs);
         originSearch.getSelectionModel().select(0);
         destinationSearch.setItems(stationsObs);
@@ -131,7 +134,7 @@ public class FXMLController {
         editFavorite.setDisable(false);
     }
 
-    String showEditPopup(String default_str) {
+    String showFavNamePopup(String default_str) {
         TextInputDialog dialog = new TextInputDialog(default_str);
         dialog.setTitle("Modification dialog");
         dialog.setHeaderText("Modification of your favorite ride");
@@ -139,5 +142,69 @@ public class FXMLController {
 
         Optional<String> result = dialog.showAndWait();
         return result.orElse(default_str);
+    }
+
+    Triplet<Integer, Integer, String> showEditPopup(List<StationDto> stations, String default_str)
+            throws IllegalArgumentException {
+        // Dialog
+        Dialog<Triplet<Integer, Integer, String>> dialog = new Dialog<>();
+        dialog.setTitle("Modification dialog");
+        dialog.setHeaderText("Enter the new values");
+
+        // Button type
+        ButtonType enterButtonType = new ButtonType("Enter", ButtonBar.ButtonData.OK_DONE);
+        dialog.getDialogPane().getButtonTypes().addAll(enterButtonType);
+
+        // Ui elements
+        ObservableList<StationDto> stationsObs = FXCollections.observableList(stations);
+        SearchableComboBox<StationDto> origin = new SearchableComboBox<>(stationsObs);
+        origin.getSelectionModel().select(0);
+        SearchableComboBox<StationDto> destination = new SearchableComboBox<>(stationsObs);
+        destination.getSelectionModel().select(0);
+        TextField name = new TextField();
+        name.setPromptText(default_str);
+
+        // Gridpane
+        GridPane grid = new GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new Insets(20, 150, 10, 10));
+
+        grid.add(new Label("New origin:"), 0, 0);
+        grid.add(origin, 1, 0);
+        grid.add(new Label("New destination:"), 0, 1);
+        grid.add(destination, 1, 1);
+        grid.add(new Label("New name:"), 0, 2);
+        grid.add(name, 1, 2);
+
+        // Checks when name is empty
+        Node loginButton = dialog.getDialogPane().lookupButton(enterButtonType);
+        loginButton.setDisable(true);
+
+        name.textProperty().addListener((observable, oldValue, newValue) -> {
+            loginButton.setDisable(newValue.trim().isEmpty());
+        });
+
+        // Set grid
+        dialog.getDialogPane().setContent(grid);
+
+        // Converts the result to a triplet when button clicked
+        dialog.setResultConverter(dialogButton -> {
+            if (dialogButton == enterButtonType) {
+                return new Triplet<>(
+                        origin.getSelectionModel().getSelectedItem().getKey(),
+                        destination.getSelectionModel().getSelectedItem().getKey(),
+                        name.getText()
+                );
+            }
+            return null;
+        });
+
+        Optional<Triplet<Integer, Integer, String>> result = dialog.showAndWait();
+        if (result.isPresent()) {
+            return result.get();
+        } else {
+            throw new IllegalArgumentException("You must fill in the form.");
+        }
     }
 }

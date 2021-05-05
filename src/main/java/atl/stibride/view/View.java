@@ -9,6 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.util.Pair;
+import org.javatuples.Triplet;
 
 import java.io.IOException;
 import java.util.List;
@@ -68,7 +69,12 @@ public class View {
         fxmlController.enableButtons();
     }
 
-    public String showEditPopup(String default_str) {
-        return fxmlController.showEditPopup(default_str);
+    public String showFavNamePopup(String default_str) {
+        return fxmlController.showFavNamePopup(default_str);
+    }
+
+    public Triplet<Integer, Integer, String> showEditPopup(List<StationDto> stations, String default_str)
+            throws IllegalArgumentException {
+        return fxmlController.showEditPopup(stations, default_str);
     }
 }

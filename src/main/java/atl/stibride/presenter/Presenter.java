@@ -8,6 +8,7 @@ import atl.stibride.repo.dto.FavoriteDto;
 import atl.stibride.repo.dto.StationDto;
 import atl.stibride.repo.exceptions.RepositoryException;
 import atl.stibride.view.View;
+import org.javatuples.Triplet;
 
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class Presenter implements Observer {
         view.disableButtons();
         StationDto origin = view.getOrigin();
         StationDto destination = view.getDestination();
-        String name = view.showEditPopup(origin.getName() + " => " + destination.getName());
+        String name = view.showFavNamePopup(origin.getName() + " => " + destination.getName());
         try {
             model.addToFavorite(origin, destination, name);
         } catch (Exception e) {
@@ -93,6 +94,23 @@ public class Presenter implements Observer {
         System.out.println("Edit favorite button");
         view.disableButtons();
         // TODO popup window
+        Integer origin = view.getFavorite().getKey();
+        Integer destination = view.getFavorite().getValue();
+        try {
+            String favName = model.getFavName(origin, destination);
+            Triplet<Integer, Integer, String> newValues
+                    = view.showEditPopup(model.getAllStations(), favName);
+            // Add new
+            model.addToFavorite(
+                    model.getStationDto(newValues.getValue0()),
+                    model.getStationDto(newValues.getValue1()),
+                    newValues.getValue2()
+            );
+            // Remove old
+            model.removeFavorite(origin, destination);
+        } catch (Exception e) {
+            view.showException(e.getMessage());
+        }
         view.enableButtons();
     }
 

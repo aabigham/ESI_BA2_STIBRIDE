@@ -52,4 +52,8 @@ public class FavoriteRepository implements RepositoryPair<Integer, FavoriteDto> 
         FavoriteDto refreshItem = dao.select(firstKey, secondKey);
         return refreshItem != null;
     }
+
+    public String getFavoriteNameById(Integer origin, Integer destination) throws RepositoryException {
+        return dao.selectNameById(origin, destination);
+    }
 }

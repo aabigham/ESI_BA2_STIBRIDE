@@ -76,4 +76,8 @@ public class Model extends Observable {
         allFavorites = repoManager.getAllFavorites(); // Change ?
         notifyObservers(this);
     }
+
+    public String getFavName(Integer origin, Integer destination) throws RepositoryException {
+        return repoManager.getFavName(origin, destination);
+    }
 }
