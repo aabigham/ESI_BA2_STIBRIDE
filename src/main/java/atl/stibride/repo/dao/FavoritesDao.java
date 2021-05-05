@@ -8,26 +8,51 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Data access object of the favorite table in the database.
+ */
 public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
 
+    /**
+     * Holder of the dao.
+     */
     private static class FavoriteDaoHolder {
         private static FavoritesDao getInstance() throws RepositoryException {
             return new FavoritesDao();
         }
     }
 
+    /* The connection to the database */
     private final Connection connection;
 
+    /**
+     * Constructor of FavoriteDao.
+     *
+     * @throws RepositoryException if there was a database error.
+     */
     public FavoritesDao() throws RepositoryException {
         this.connection = DBManager.getInstance().getConnection();
     }
 
+    /**
+     * Gets the instance of this dao.
+     *
+     * @return the instance of this dao.
+     * @throws RepositoryException if there was a database error.
+     */
     public static FavoritesDao getInstance() throws RepositoryException {
         return FavoritesDao.FavoriteDaoHolder.getInstance();
     }
 
     // Methods
 
+    /**
+     * Inserts a row to the favorite table inside the database.
+     *
+     * @param item the item to insert inside the database.
+     * @return the key of the newly insterted item.
+     * @throws RepositoryException if there was a database error.
+     */
     @Override
     public Pair<Integer, Integer> insert(FavoriteDto item) throws RepositoryException {
         if (item == null) {
@@ -48,6 +73,13 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         return new Pair<>(item.getFirstKey(), item.getSecondKey());
     }
 
+    /**
+     * Deletes a row from the favorite table inside the database.
+     *
+     * @param firstKey  the first key of the favorite object.
+     * @param secondKey the second key of the favorite object.
+     * @throws RepositoryException if there was a database error.
+     */
     @Override
     public void delete(Integer firstKey, Integer secondKey) throws RepositoryException {
         if (firstKey == null || secondKey == null) {
@@ -64,6 +96,12 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         }
     }
 
+    /**
+     * Updates a row of the favorite table inside the database.
+     *
+     * @param item the item to update.
+     * @throws RepositoryException if there was a database error.
+     */
     @Override
     public void update(FavoriteDto item) throws RepositoryException {
         if (item == null) {
@@ -85,6 +123,13 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         }
     }
 
+    /**
+     * Selects every row inside the favorite table in the database.
+     *
+     * @return every row inside the favorite table in the database,
+     * as a list of data transfer objects.
+     * @throws RepositoryException if there was a database error.
+     */
     @Override
     public List<FavoriteDto> selectAll() throws RepositoryException {
         // Return
@@ -108,6 +153,14 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         return dtos;
     }
 
+    /**
+     * Selects a favorite item from the table inside the database.
+     *
+     * @param firstKey  the first key of the favorite object.
+     * @param secondKey the the second key of the favorite object.
+     * @return the favorite item according to its keys in parameter.
+     * @throws RepositoryException if there was a database error.
+     */
     @Override
     public FavoriteDto select(Integer firstKey, Integer secondKey) throws RepositoryException {
         if (firstKey == null || secondKey == null) {
@@ -141,6 +194,14 @@ public class FavoritesDao implements DaoPair<Integer, FavoriteDto> {
         return dto;
     }
 
+    /**
+     * Selects the name of a favorite according to its keys in parameter.
+     *
+     * @param firstKey  the first key of the favorite object.
+     * @param secondKey the second key of the favorite object.
+     * @return the name of a favorite according to its keys in parameter.
+     * @throws RepositoryException if there was a database error.
+     */
     public String selectNameById(Integer firstKey, Integer secondKey) throws RepositoryException {
         if (firstKey == null || secondKey == null) {
             throw new RepositoryException("Parameters cannot be null.");

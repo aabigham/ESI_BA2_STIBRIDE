@@ -11,12 +11,24 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Main class of the project.
+ */
 public class Main extends Application {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * The main entry point for all JavaFX applications.
+     *
+     * @param stage the primary stage for this application, onto which
+     *              the application scene can be set
+     */
     @Override
     public void start(Stage stage) {
         try {

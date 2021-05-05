@@ -2,7 +2,7 @@ package atl.stibride.presenter;
 
 import atl.stibride.model.Model;
 import atl.stibride.model.Ride;
-import atl.stibride.model.StationValidation;
+import atl.stibride.model.validation.StationValidation;
 import atl.stibride.observer.Observable;
 import atl.stibride.observer.Observer;
 import atl.stibride.repo.dto.FavoriteDto;
@@ -134,7 +134,7 @@ public class Presenter implements Observer {
                 view.showRide(ride);
             }
             view.initFavorites(model.getAllFavorites());
-        } catch (IllegalAccessException | RepositoryException e) {
+        } catch (RepositoryException e) {
             view.showException(e.getMessage());
         }
     }

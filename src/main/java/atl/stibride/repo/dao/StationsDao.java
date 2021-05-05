@@ -11,20 +11,39 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Data access object of the station table in the database.
+ */
 public class StationsDao implements Dao<Integer, StationDto> {
 
+    /**
+     * Holder of the dao.
+     */
     private static class StationsDaoHolder {
         private static StationsDao getInstance() throws RepositoryException {
             return new StationsDao();
         }
     }
 
+    /* The connection to the database */
+
     private final Connection connection;
 
+    /**
+     * Constructor of StationsDao.
+     *
+     * @throws RepositoryException if there was a database error.
+     */
     public StationsDao() throws RepositoryException {
         this.connection = DBManager.getInstance().getConnection();
     }
 
+    /**
+     * Gets the instance of this dao.
+     *
+     * @return the instance of this dao.
+     * @throws RepositoryException if there was a database error.
+     */
     public static StationsDao getInstance() throws RepositoryException {
         return StationsDaoHolder.getInstance();
     }
@@ -32,7 +51,7 @@ public class StationsDao implements Dao<Integer, StationDto> {
     // Methods
 
     /**
-     * Selects all of the stations.
+     * Selects all of the stations inside the database.
      *
      * @return all of the stations as a List of Dto objects.
      * @throws RepositoryException if the resource can't be accessed.

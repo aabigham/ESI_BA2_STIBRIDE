@@ -12,6 +12,9 @@ import org.javatuples.Triplet;
 
 import java.util.List;
 
+/**
+ * This dialogs allows the user to input new values when editing a favorite.
+ */
 public class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>> {
 
     private final ButtonType enterButtonType;
@@ -20,6 +23,12 @@ public class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>
     private final TextField name;
     private final GridPane gridPane;
 
+    /**
+     * The constructor of the dialog.
+     *
+     * @param stations    every stations to propose to the user.
+     * @param default_str the default favorite name field.
+     */
     public EditFavoriteDialog(List<StationDto> stations, String default_str) {
         // Dialog
         this.setTitle("Modification dialog");
@@ -65,7 +74,7 @@ public class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>
         // Sets grid
         this.getDialogPane().setContent(gridPane);
 
-        // Converts the result to a triplet when button clicked, show and wait method
+        // Converts the result to a triplet when button clicked (show and wait method)
         this.setResultConverter(dialogButton -> {
             if (dialogButton == enterButtonType) {
                 return new Triplet<>(

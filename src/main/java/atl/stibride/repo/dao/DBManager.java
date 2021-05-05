@@ -13,11 +13,21 @@ import java.sql.SQLException;
  */
 class DBManager {
 
+    /* Connection to the database */
     private Connection connection;
 
+    /**
+     * Constructor of DBManager.
+     */
     private DBManager() {
     }
 
+    /**
+     * Gets the connection to the database.
+     *
+     * @return the connection to the database.
+     * @throws RepositoryException if there was a database error.
+     */
     Connection getConnection() throws RepositoryException {
         String jdbcUrl = "jdbc:sqlite:" + ConfigManager.getInstance().getProperties("db.url");
         //|| connection.isClosed()
@@ -31,10 +41,18 @@ class DBManager {
         return connection;
     }
 
+    /**
+     * Gets an instance of this database manager.
+     *
+     * @return an instance of this database manager.
+     */
     static DBManager getInstance() {
         return DBManagerHolder.INSTANCE;
     }
 
+    /**
+     * Holder of the class instance.
+     */
     private static class DBManagerHolder {
 
         private static final DBManager INSTANCE = new DBManager();
