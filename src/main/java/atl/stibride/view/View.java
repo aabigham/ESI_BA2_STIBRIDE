@@ -67,4 +67,8 @@ public class View {
     public void enableButtons() {
         fxmlController.enableButtons();
     }
+
+    public String showEditPopup(String default_str) {
+        return fxmlController.showEditPopup(default_str);
+    }
 }

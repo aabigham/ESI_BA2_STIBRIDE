@@ -49,8 +49,9 @@ public class Presenter implements Observer {
         view.disableButtons();
         StationDto origin = view.getOrigin();
         StationDto destination = view.getDestination();
+        String name = view.showEditPopup(origin.getName() + " => " + destination.getName());
         try {
-            model.addToFavorite(origin, destination);
+            model.addToFavorite(origin, destination, name);
         } catch (Exception e) {
             view.showException(e.getMessage());
         }
@@ -90,7 +91,9 @@ public class Presenter implements Observer {
 
     public void editFavorite() {
         System.out.println("Edit favorite button");
+        view.disableButtons();
         // TODO popup window
+        view.enableButtons();
     }
 
     @Override

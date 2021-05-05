@@ -57,11 +57,11 @@ public class Model extends Observable {
         return allFavorites;
     }
 
-    public void addToFavorite(StationDto origin, StationDto destination) throws RepositoryException {
+    public void addToFavorite(StationDto origin, StationDto destination, String name)
+            throws RepositoryException {
         if (origin.equals(destination)) {
             throw new IllegalArgumentException("Stations cannot be the same.");
         }
-        String name = origin.getName() + " => " + destination.getName();
         repoManager.addFavorite(
                 origin.getKey(),
                 destination.getKey(),

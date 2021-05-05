@@ -15,6 +15,7 @@ import javafx.util.Pair;
 import org.controlsfx.control.SearchableComboBox;
 
 import java.util.List;
+import java.util.Optional;
 
 public class FXMLController {
 
@@ -106,7 +107,7 @@ public class FXMLController {
         tableView.setItems(stations);
     }
 
-    public void showException(String message) {
+    void showException(String message) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
         alert.setTitle("Warning");
         alert.setHeaderText(message);
@@ -114,7 +115,7 @@ public class FXMLController {
         alert.showAndWait();
     }
 
-    public void disableButtons() {
+    void disableButtons() {
         searchButton.setDisable(true);
         addFavorite.setDisable(true);
         launchFavorite.setDisable(true);
@@ -122,11 +123,21 @@ public class FXMLController {
         editFavorite.setDisable(true);
     }
 
-    public void enableButtons() {
+    void enableButtons() {
         searchButton.setDisable(false);
         addFavorite.setDisable(false);
         launchFavorite.setDisable(false);
         removeFavorite.setDisable(false);
         editFavorite.setDisable(false);
+    }
+
+    String showEditPopup(String default_str) {
+        TextInputDialog dialog = new TextInputDialog(default_str);
+        dialog.setTitle("Modification dialog");
+        dialog.setHeaderText("Modification of your favorite ride");
+        dialog.setContentText("Please enter a new favorite name:");
+
+        Optional<String> result = dialog.showAndWait();
+        return result.orElse(default_str);
     }
 }
