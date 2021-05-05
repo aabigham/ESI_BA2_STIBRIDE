@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="progress">
-      <change afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/StationValidation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/StationsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/Tests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/StationRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +175,7 @@
       <workItem from="1620060120081" duration="5046000" />
       <workItem from="1620066023541" duration="8659000" />
       <workItem from="1620235849872" duration="2049000" />
-      <workItem from="1620237933035" duration="2310000" />
+      <workItem from="1620237933035" duration="2432000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
