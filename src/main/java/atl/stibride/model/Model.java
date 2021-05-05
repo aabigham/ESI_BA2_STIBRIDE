@@ -26,9 +26,7 @@ public class Model extends Observable {
     /* RIDE */
 
     public void computeRide(StationDto start, StationDto end) throws IllegalArgumentException {
-        if (start.equals(end)) {
-            throw new IllegalArgumentException("Stations cannot be the same.");
-        }
+        StationValidation.validateStations(start, end);
         List<StationDto> path = Dijkstra.computePath(allStations, start, end);
         ride = new Ride(start, end, path);
         notifyObservers(this);
@@ -59,9 +57,7 @@ public class Model extends Observable {
 
     public void addToFavorite(StationDto origin, StationDto destination, String name)
             throws RepositoryException {
-        if (origin.equals(destination)) {
-            throw new IllegalArgumentException("Stations cannot be the same.");
-        }
+        StationValidation.validateStations(origin, destination);
         repoManager.addFavorite(
                 origin.getKey(),
                 destination.getKey(),
