@@ -1,4 +1,4 @@
-package atl.stibride.model;
+package atl.stibride.model.dijkstra;
 
 import atl.stibride.repo.dto.StationDto;
 
@@ -19,7 +19,7 @@ public class Graph {
         for (StationDto currStation : allStations) {
             nodes.add(new Node(currStation));
         }
-        // Destinations
+        // Destinations to each neighbor
         for (Node currNode : nodes) {
             for (Integer neighbor : currNode.getStationDto().getNeighbors()) {
                 currNode.addDestination(getNode(neighbor), 1);

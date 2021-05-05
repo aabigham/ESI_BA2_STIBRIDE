@@ -1,4 +1,4 @@
-package atl.stibride.model;
+package atl.stibride.model.dijkstra;
 
 import atl.stibride.repo.dto.StationDto;
 
@@ -7,11 +7,11 @@ import java.util.*;
 public class Dijkstra {
 
     public static List<StationDto> computePath(List<StationDto> stations,
-                                               StationDto start, StationDto end) {
+                                               StationDto origin, StationDto destination) {
         // graph
         Graph graph = new Graph();
         graph.initialize(stations);
-        graph = calculateShortestPathFromSource(graph, graph.getNode(start.getKey()));
+        graph = calculateShortestPathFromSource(graph, graph.getNode(origin.getKey()));
 
         List<StationDto> result = new ArrayList<>();
         /*for (Node node : graph.getNodes()) {
@@ -30,11 +30,11 @@ public class Dijkstra {
                 .getShortestPath()
                 .forEach(nodePath -> result.add(nodePath.getStationDto()));*/
 
-        graph.getNode(end.getKey())
+        graph.getNode(destination.getKey())
                 .getShortestPath()
                 .forEach(nodePath -> result.add(nodePath.getStationDto()));
 
-        result.add(end); // Destination station
+        result.add(destination); // Destination station
         return result;
     }
 

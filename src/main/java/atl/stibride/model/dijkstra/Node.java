@@ -1,4 +1,4 @@
-package atl.stibride.model;
+package atl.stibride.model.dijkstra;
 
 import atl.stibride.repo.dto.StationDto;
 

@@ -1,5 +1,6 @@
 package atl.stibride.model;
 
+import atl.stibride.model.dijkstra.Dijkstra;
 import atl.stibride.observer.Observable;
 import atl.stibride.repo.dto.FavoriteDto;
 import atl.stibride.repo.dto.StationDto;
@@ -23,12 +24,14 @@ public class Model extends Observable {
         allFavorites = repoManager.getAllFavorites();
     }
 
-    /* RIDE */
+    /*============================*/
+    /*=========== RIDE ===========*/
+    /*============================*/
 
-    public void computeRide(StationDto start, StationDto end) throws IllegalArgumentException {
-        StationValidation.validateStations(start, end);
-        List<StationDto> path = Dijkstra.computePath(allStations, start, end);
-        ride = new Ride(start, end, path);
+    public void computeRide(StationDto origin, StationDto destination) throws IllegalArgumentException {
+        StationValidation.validateStations(origin, destination);
+        List<StationDto> path = Dijkstra.computePath(allStations, origin, destination);
+        ride = new Ride(origin, destination, path);
         notifyObservers(this);
     }
 
@@ -36,20 +39,24 @@ public class Model extends Observable {
         return ride;
     }
 
-    /* STATIONS */
+    /*============================*/
+    /*========= STATIONS =========*/
+    /*============================*/
 
     public List<StationDto> getAllStations() throws RepositoryException {
         return allStations;
     }
 
-    public StationDto getStationDto(int key) {
+    public StationDto getStationDto(int stationKey) {
         return allStations.stream()
-                .filter(stationDto -> stationDto.getKey().equals(key))
+                .filter(stationDto -> stationDto.getKey().equals(stationKey))
                 .findAny()
                 .orElseThrow();
     }
 
-    /* FAVORITES */
+    /*============================*/
+    /*========= FAVORITES ========*/
+    /*============================*/
 
     public List<FavoriteDto> getAllFavorites() throws RepositoryException {
         return allFavorites;

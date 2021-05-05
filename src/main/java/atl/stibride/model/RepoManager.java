@@ -22,24 +22,24 @@ public class RepoManager {
         }
     }
 
-    /* STATIONS */
+    /*============================*/
+    /*========= STATIONS =========*/
+    /*============================*/
 
     public List<StationDto> getAllStations() throws RepositoryException {
         return stationRepo.getAll();
     }
 
-    public StationDto getStation(Integer key) throws RepositoryException {
-        return stationRepo.get(key);
-    }
-
-    /* FAVORITES */
+    /*============================*/
+    /*========= FAVORITES ========*/
+    /*============================*/
 
     public List<FavoriteDto> getAllFavorites() throws RepositoryException {
         return favoriteRepository.getAll();
     }
 
-    public void addFavorite(Integer firstKey, Integer secondKey, String name) throws RepositoryException {
-        favoriteRepository.add(new FavoriteDto(firstKey, secondKey, name));
+    public void addFavorite(Integer origin, Integer destination, String name) throws RepositoryException {
+        favoriteRepository.add(new FavoriteDto(origin, destination, name));
     }
 
     public void removeFavorite(Integer origin, Integer destination) throws RepositoryException {
