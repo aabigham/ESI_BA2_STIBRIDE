@@ -1,4 +1,5 @@
 BEGIN TRANSACTION;
+---------------------------------------------------------------
 DROP TABLE IF EXISTS `STOPS`;
 CREATE TABLE IF NOT EXISTS `STOPS`
 (
@@ -197,6 +198,7 @@ INSERT INTO `STOPS` (id_line, id_station, id_order)
 VALUES (6, 8462, 25);
 INSERT INTO `STOPS` (id_line, id_station, id_order)
 VALUES (6, 8472, 26);
+---------------------------------------------------------------
 DROP TABLE IF EXISTS `STATIONS`;
 CREATE TABLE IF NOT EXISTS `STATIONS`
 (
@@ -324,6 +326,7 @@ INSERT INTO `STATIONS` (id, name)
 VALUES (8824, 'HEYSEL');
 INSERT INTO `STATIONS` (id, name)
 VALUES (8833, 'ROI BAUDOUIN');
+---------------------------------------------------------------
 DROP TABLE IF EXISTS `LINES`;
 CREATE TABLE IF NOT EXISTS `LINES`
 (
