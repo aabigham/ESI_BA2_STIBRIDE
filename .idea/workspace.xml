@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="progress">
+      <change afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/FavoritesDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/StationsDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/repository/FavoriteRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/repository/StationRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyRunnable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/ThreadPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StibRide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StibRide.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/EditFavoriteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/EditFavoriteDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,7 @@
         <option value="JavaFXApplication" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -65,10 +69,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.data.extractors.current.export.id" value="HTML-Groovy.html.groovy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28735632" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -85,6 +91,16 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\main\resources\fxml" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="atl.stibride.repo.dao" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="atl.stibride.repo.repository" />
+      <recent name="atl.stibride.repo.dao" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -96,7 +112,7 @@
       <command value="mvn clean javafx:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.All in StibRide">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="atl.stibride.main.Main" />
       <module name="StibRide" />
@@ -123,21 +139,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in StibRide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StibRide" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in StibRide" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Tests" />
       </list>
@@ -181,6 +204,8 @@
       <workItem from="1620235849872" duration="2049000" />
       <workItem from="1620237933035" duration="9304000" />
       <workItem from="1620253452446" duration="41000" />
+      <workItem from="1620256809446" duration="684000" />
+      <workItem from="1620309845462" duration="2667000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

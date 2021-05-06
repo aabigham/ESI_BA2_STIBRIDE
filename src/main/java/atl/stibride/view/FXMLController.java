@@ -90,8 +90,7 @@ public class FXMLController {
      * @param favorites the favorite rides of the user.
      */
     void initFavorites(List<FavoriteDto> favorites) {
-        ObservableList<FavoriteDto> favoritesObs
-                = FXCollections.observableList(favorites);
+        ObservableList<FavoriteDto> favoritesObs = FXCollections.observableList(favorites);
         listFavorite.setItems(favoritesObs);
         listFavorite.getSelectionModel().select(0);
     }
@@ -143,8 +142,7 @@ public class FXMLController {
      * @param ride the ride to display to the user.
      */
     void showRide(Ride ride) {
-        ObservableList<StationDto> stations
-                = FXCollections.observableList(ride.getPath());
+        ObservableList<StationDto> stations = FXCollections.observableList(ride.getPath());
         tableView.setItems(stations);
     }
 

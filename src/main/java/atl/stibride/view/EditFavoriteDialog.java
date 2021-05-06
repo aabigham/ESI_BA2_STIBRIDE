@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * This dialogs allows the user to input new values when editing a favorite.
  */
-public class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>> {
+class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>> {
 
     private final ButtonType enterButtonType;
     private final SearchableComboBox<StationDto> origin;
@@ -29,7 +29,7 @@ public class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>
      * @param stations    every stations to propose to the user.
      * @param default_str the default favorite name field.
      */
-    public EditFavoriteDialog(List<StationDto> stations, String default_str) {
+    EditFavoriteDialog(List<StationDto> stations, String default_str) {
         // Dialog
         this.setTitle("Modification dialog");
         this.setHeaderText("Enter the new values");
@@ -50,7 +50,7 @@ public class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>
         name = new TextField();
         name.setPromptText(default_str);
 
-        // Gridpane
+        // GridPane
         gridPane = new GridPane();
         gridPane.setHgap(10);
         gridPane.setVgap(10);
