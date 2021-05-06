@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add test files">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/sqlite/create.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/sqlite/drop.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/sqlite/populate.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/sqlite/script.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/sqlite/stib_test.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add test db files">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/f6e894ab-b3f4-4975-92e0-894a07dce9fb.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sqlite/stib.db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib.db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/sqlite/stib_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sqlite/stib_test.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +69,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.data.extractors.current.export.id" value="HTML-Groovy.html.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/sqlite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/config" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -85,6 +83,7 @@
       <recent name="atl.stibride.jdbc" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\test\resources\config" />
       <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\test\resources\sqlite" />
       <recent name="C:\Users\amine\Documents\gits\ATLG4\g54985\ATL\StibRide\src\main\resources\img" />
     </key>
@@ -105,14 +104,15 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn compile" />
-      <command value="mvn clean compile" />
       <command value="mvn install" />
-      <command value="mvn clean " />
       <command value="mvn javafx:run" />
       <command value="mvn clean javafx:run" />
+      <command value="mvn clean " />
+      <command value="mvn test" />
+      <command value="mvn clean compile" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in StibRide">
+  <component name="RunManager" selected="JUnit.All in StibRide (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="atl.stibride.main.Main" />
       <module name="StibRide" />
@@ -150,6 +150,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in StibRide (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StibRide" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in StibRide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StibRide" />
       <option name="PACKAGE_NAME" value="" />
@@ -160,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in StibRide (1)" />
         <item itemvalue="JUnit.All in StibRide" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Tests" />
@@ -205,7 +214,7 @@
       <workItem from="1620237933035" duration="9304000" />
       <workItem from="1620253452446" duration="41000" />
       <workItem from="1620256809446" duration="684000" />
-      <workItem from="1620309845462" duration="3802000" />
+      <workItem from="1620309845462" duration="4268000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -326,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620312864494</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add test db files">
+      <created>1620313993181</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1620313993181</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +378,8 @@
     <MESSAGE value="Graph algo stream (temp)" />
     <MESSAGE value="progress" />
     <MESSAGE value="Add test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test files" />
+    <MESSAGE value="Add test db files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test db files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
