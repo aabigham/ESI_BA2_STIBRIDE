@@ -5,39 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Update tests">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/RepoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Dijkstra.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/validation/StationValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/validation/StationValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/DBManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/DaoPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/DaoPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/FavoritesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/FavoritesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/StationsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/Dto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/DtoPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/DtoPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/FavoriteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/FavoriteDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/StationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/StationDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/exceptions/RepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/exceptions/RepositoryException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/FavoriteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/FavoriteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/RepositoryPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/RepositoryPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/StationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/EditFavoriteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/EditFavoriteDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/StationsDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/StationsDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/repository/FavoriteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/repository/StationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +27,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -96,13 +68,13 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.data.extractors.current.export.id" value="SQL-Insert-Statements.sql.groovy" />
     <property name="database.data.extractors.current.id" value="SQL-Insert-Multirow.sql.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/config" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../td3-sorting" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28735632" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -146,22 +118,11 @@
       <command value="mvn clean compile javafx:run" />
       <command value="StationsDaoTest" />
       <command value="mvn clean " />
-      <command value="mvn clean javafx:run" />
       <command value="mvn clean compile" />
+      <command value="mvn clean javafx:run" />
     </option>
   </component>
   <component name="RunManager" selected="JUnit.FavoritesDaoTest.testInsertExists">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FavoritesDaoTest.testInsertExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StibRide" />
       <extension name="coverage">
@@ -298,6 +259,7 @@
       <workItem from="1620253452446" duration="41000" />
       <workItem from="1620256809446" duration="684000" />
       <workItem from="1620309845462" duration="19098000" />
+      <workItem from="1620331187624" duration="462000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -459,6 +421,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../.." />
+    </ignored-roots>
     <MESSAGE value="Add DTO classes + update view" />
     <MESSAGE value="Add empty DAO classes" />
     <MESSAGE value="Add Ride class" />
