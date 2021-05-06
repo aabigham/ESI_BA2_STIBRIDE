@@ -35,9 +35,7 @@ create table FAVORITES
         references STATIONS,
     name          text not null,
     constraint FAVORITES_pk
-        primary key (start_station, end_station),
-    constraint UC_PK
-        unique (start_station, end_station)
+        primary key (start_station, end_station)
 );
 -----------------------------------
 COMMIT;

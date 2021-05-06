@@ -319,4 +319,11 @@ VALUES (6, 8462, 25);
 INSERT INTO `STOPS` (id_line, id_station, id_order)
 VALUES (6, 8472, 26);
 ---------------------------------------------------------------
+insert into main.FAVORITES (start_station, end_station, name)
+values (8032, 8052, 'maison'),
+       (8132, 8804, 'VANDERVELDE => STUYVENBERGH'),
+       (8222, 8062, 'HANKAR => SCHUMAN'),
+       (8462, 8112, 'RIBAUCOURT => TOMBERG'),
+       (8161, 8132, 'STOCKEL => VANDERVELDE');
+---------------------------------------------------------------
 COMMIT;
