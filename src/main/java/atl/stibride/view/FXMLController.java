@@ -182,6 +182,16 @@ public class FXMLController {
     }
 
     /**
+     * Sets the feedback labels with the size of the ride path.
+     *
+     * @param size the size of the ride path.
+     */
+    public void setFeedBack(int size) {
+        leftStatus.setText("Recherche terminée");
+        rightStatus.setText(size + " stations");
+    }
+
+    /**
      * Shows a dialog for the user to choose a name to give its favorite ride.
      *
      * @param default_str the default name.

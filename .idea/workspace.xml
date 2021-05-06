@@ -8,8 +8,16 @@
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/td3-sorting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/td3-sorting.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +46,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1qRTp94iAxCkoDFOoFUGP5U7uRh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -70,7 +78,7 @@
     <property name="database.data.extractors.current.id" value="SQL-Insert-Multirow.sql.groovy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../td3-sorting" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28735632" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -259,7 +267,7 @@
       <workItem from="1620253452446" duration="41000" />
       <workItem from="1620256809446" duration="684000" />
       <workItem from="1620309845462" duration="19098000" />
-      <workItem from="1620331187624" duration="462000" />
+      <workItem from="1620331187624" duration="1122000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>

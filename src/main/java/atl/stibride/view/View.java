@@ -147,4 +147,13 @@ public class View {
             throws IllegalArgumentException {
         return fxmlController.showEditPopup(stations, default_str);
     }
+
+    /**
+     * Shows the feedback with the size of the ride path.
+     *
+     * @param size the size of the ride path.
+     */
+    public void showFeedBack(int size) {
+        fxmlController.setFeedBack(size);
+    }
 }

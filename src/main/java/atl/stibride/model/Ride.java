@@ -58,6 +58,15 @@ public class Ride {
     }
 
     /**
+     * Gets the size of the ride path.
+     *
+     * @return the size of the ride path.
+     */
+    public int getPathSize() {
+        return path.size();
+    }
+
+    /**
      * A String representation of the ride.
      *
      * @return a String representation of the ride.

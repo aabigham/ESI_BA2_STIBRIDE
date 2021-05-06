@@ -132,6 +132,7 @@ public class Presenter implements Observer {
             Ride ride = model.getRide();
             if (ride != null) {
                 view.showRide(ride);
+                view.showFeedBack(ride.getPathSize());
             }
             view.initFavorites(model.getAllFavorites());
         } catch (RepositoryException e) {
