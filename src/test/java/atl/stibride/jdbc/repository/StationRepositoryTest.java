@@ -1,4 +1,4 @@
-package atl.stibride.repo.repository;
+package atl.stibride.jdbc.repository;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

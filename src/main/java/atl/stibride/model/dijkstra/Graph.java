@@ -1,6 +1,6 @@
 package atl.stibride.model.dijkstra;
 
-import atl.stibride.repo.dto.StationDto;
+import atl.stibride.jdbc.dto.StationDto;
 
 import java.util.HashSet;
 import java.util.List;

@@ -1,8 +1,8 @@
-package atl.stibride.repo.dao;
+package atl.stibride.jdbc.dao;
 
 import atl.stibride.config.ConfigManager;
-import atl.stibride.repo.dto.StationDto;
-import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.jdbc.dto.StationDto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;

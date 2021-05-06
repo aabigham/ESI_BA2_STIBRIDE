@@ -1,13 +1,13 @@
 package atl.stibride.presenter;
 
+import atl.stibride.jdbc.dto.FavoriteDto;
+import atl.stibride.jdbc.dto.StationDto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 import atl.stibride.model.Model;
 import atl.stibride.model.Ride;
 import atl.stibride.model.validation.StationValidation;
 import atl.stibride.observer.Observable;
 import atl.stibride.observer.Observer;
-import atl.stibride.repo.dto.FavoriteDto;
-import atl.stibride.repo.dto.StationDto;
-import atl.stibride.repo.exceptions.RepositoryException;
 import atl.stibride.view.View;
 import org.javatuples.Triplet;
 

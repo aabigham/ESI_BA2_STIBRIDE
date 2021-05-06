@@ -4,35 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="config test file">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_launcher_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_runner_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_suite_api_1_2_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/767c561d-13fc-49af-a6ee-804974881b6f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f6e894ab-b3f4-4975-92e0-894a07dce9fb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f6e894ab-b3f4-4975-92e0-894a07dce9fb.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_1_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_3_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_1.xml" afterDir="false" />
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Update tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StibRide.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StibRide.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/FavoritesDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/StationsDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/StationsDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/sqlite/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sqlite/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/sqlite/drop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sqlite/drop.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/sqlite/populate.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sqlite/populate.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/sqlite/stib_test.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sqlite/stib_test.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/GradeESI/.idea/dataSources/45f858a8-5a28-47c6-807d-4ab9fafc6814.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/GradeESI/.idea/dataSources/45f858a8-5a28-47c6-807d-4ab9fafc6814.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/atl_Repository.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/atl_Repository.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/libraries/Maven__org_jetbrains_annotations_20_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/RepoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/RepoManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Dijkstra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Dijkstra.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/dijkstra/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/validation/StationValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/validation/StationValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/DBManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/DBManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/Dao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/DaoPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/DaoPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/FavoritesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/FavoritesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dao/StationsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dao/StationsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/Dto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/Dto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/DtoPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/DtoPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/FavoriteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/FavoriteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/dto/StationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/dto/StationDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/exceptions/RepositoryException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/exceptions/RepositoryException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/FavoriteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/FavoriteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/RepositoryPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/RepositoryPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/repo/repository/StationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/StationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/EditFavoriteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/EditFavoriteDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/dao/StationsDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/StationsDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/repository/FavoriteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/repo/repository/StationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jdbc-master/atl_Repository/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jdbc-master/atl_Repository/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +122,7 @@
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="atl.stibride.jdbc" />
       <recent name="atl.stibride.repo.dao" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
@@ -134,17 +140,17 @@
       <command value="mvn javafx:run" />
       <command value="mvn test" />
       <command value="Tests" />
-      <command value="mvn clean " />
-      <command value="mvn clean javafx:run" />
       <command value="mvn clean" />
       <command value="All in StibRide" />
       <command value="FavoritesDaoTest" />
       <command value="mvn clean compile javafx:run" />
-      <command value="mvn clean compile" />
       <command value="StationsDaoTest" />
+      <command value="mvn clean " />
+      <command value="mvn clean javafx:run" />
+      <command value="mvn clean compile" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.StationsDaoTest">
+  <component name="RunManager" selected="JUnit.FavoritesDaoTest.testInsertExists">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -160,12 +166,12 @@
       <module name="StibRide" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="atl.stibride.repo.dao.*" />
+          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.repo.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.repo.dao.FavoritesDaoTest" />
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
       <option name="METHOD_NAME" value="testInsertExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -176,12 +182,12 @@
       <module name="StibRide" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="atl.stibride.repo.dao.*" />
+          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.repo.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.repo.dao.FavoritesDaoTest" />
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
       <option name="METHOD_NAME" value="testSelectNameById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -192,12 +198,12 @@
       <module name="StibRide" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="atl.stibride.repo.dao.*" />
+          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.repo.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.repo.dao.FavoritesDaoTest" />
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
       <option name="METHOD_NAME" value="testSelectNotExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -208,12 +214,12 @@
       <module name="StibRide" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="atl.stibride.repo.dao.*" />
+          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.repo.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.repo.dao.StationsDaoTest" />
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.StationsDaoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -223,12 +229,12 @@
       <module name="StibRide" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="atl.stibride.repo.dao.*" />
+          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.repo.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.repo.dao.StationsDaoTest" />
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.StationsDaoTest" />
       <option name="METHOD_NAME" value="testSelectAllNeighbor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -244,9 +250,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FavoritesDaoTest.testInsertExists" />
         <item itemvalue="JUnit.StationsDaoTest" />
         <item itemvalue="JUnit.StationsDaoTest.testSelectAllNeighbor" />
-        <item itemvalue="JUnit.FavoritesDaoTest.testInsertExists" />
         <item itemvalue="JUnit.FavoritesDaoTest.testSelectNameById" />
         <item itemvalue="JUnit.FavoritesDaoTest.testSelectNotExists" />
       </list>
@@ -291,7 +297,7 @@
       <workItem from="1620237933035" duration="9304000" />
       <workItem from="1620253452446" duration="41000" />
       <workItem from="1620256809446" duration="684000" />
-      <workItem from="1620309845462" duration="17552000" />
+      <workItem from="1620309845462" duration="19098000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -426,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620314563342</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Update tests">
+      <created>1620328550858</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1620328550858</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -464,7 +477,8 @@
     <MESSAGE value="Add test files" />
     <MESSAGE value="Add test db files" />
     <MESSAGE value="config test file" />
-    <option name="LAST_COMMIT_MESSAGE" value="config test file" />
+    <MESSAGE value="Update tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,6 +1,6 @@
 package atl.stibride.view;
 
-import atl.stibride.repo.dto.StationDto;
+import atl.stibride.jdbc.dto.StationDto;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;

@@ -1,4 +1,4 @@
-package atl.stibride.repo.dto;
+package atl.stibride.jdbc.dto;
 
 import java.util.Objects;
 

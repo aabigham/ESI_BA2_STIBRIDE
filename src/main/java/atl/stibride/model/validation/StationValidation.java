@@ -1,6 +1,6 @@
 package atl.stibride.model.validation;
 
-import atl.stibride.repo.dto.StationDto;
+import atl.stibride.jdbc.dto.StationDto;
 
 /**
  * This class allows validation between to stations objects or id.

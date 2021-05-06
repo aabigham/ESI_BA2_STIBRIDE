@@ -1,6 +1,6 @@
 package atl.stibride.model;
 
-import atl.stibride.repo.dto.StationDto;
+import atl.stibride.jdbc.dto.StationDto;
 
 import java.util.List;
 import java.util.Objects;

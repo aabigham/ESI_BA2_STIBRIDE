@@ -1,11 +1,12 @@
 package atl.stibride.model;
 
+import atl.stibride.jdbc.RepoManager;
+import atl.stibride.jdbc.dto.FavoriteDto;
+import atl.stibride.jdbc.dto.StationDto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 import atl.stibride.model.dijkstra.Dijkstra;
 import atl.stibride.model.validation.StationValidation;
 import atl.stibride.observer.Observable;
-import atl.stibride.repo.dto.FavoriteDto;
-import atl.stibride.repo.dto.StationDto;
-import atl.stibride.repo.exceptions.RepositoryException;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
-package atl.stibride.repo.dao;
+package atl.stibride.jdbc.dao;
 
 import atl.stibride.config.ConfigManager;
-import atl.stibride.repo.dto.FavoriteDto;
-import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.jdbc.dto.FavoriteDto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 import javafx.util.Pair;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

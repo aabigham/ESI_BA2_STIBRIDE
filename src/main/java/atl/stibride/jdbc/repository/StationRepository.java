@@ -1,8 +1,8 @@
-package atl.stibride.repo.repository;
+package atl.stibride.jdbc.repository;
 
-import atl.stibride.repo.dao.StationsDao;
-import atl.stibride.repo.dto.StationDto;
-import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.jdbc.dao.StationsDao;
+import atl.stibride.jdbc.dto.StationDto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 
 import java.util.List;
 

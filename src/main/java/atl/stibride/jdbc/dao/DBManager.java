@@ -1,8 +1,8 @@
-package atl.stibride.repo.dao;
+package atl.stibride.jdbc.dao;
 
 
 import atl.stibride.config.ConfigManager;
-import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

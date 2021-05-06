@@ -1,7 +1,7 @@
-package atl.stibride.repo.dao;
+package atl.stibride.jdbc.dao;
 
-import atl.stibride.repo.dto.Dto;
-import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.jdbc.dto.Dto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 
 import java.util.List;
 
@@ -22,5 +22,5 @@ public interface Dao<K, T extends Dto<K>> {
      * @throws RepositoryException if the resource can't be accessed.
      */
     List<T> selectAll() throws RepositoryException;
-    
+
 }

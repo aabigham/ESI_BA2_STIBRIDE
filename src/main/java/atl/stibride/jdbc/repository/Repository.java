@@ -1,7 +1,7 @@
-package atl.stibride.repo.repository;
+package atl.stibride.jdbc.repository;
 
-import atl.stibride.repo.dto.Dto;
-import atl.stibride.repo.exceptions.RepositoryException;
+import atl.stibride.jdbc.dto.Dto;
+import atl.stibride.jdbc.exceptions.RepositoryException;
 
 import java.util.List;
 
