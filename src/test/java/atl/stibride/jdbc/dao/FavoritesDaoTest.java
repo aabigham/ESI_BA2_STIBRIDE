@@ -23,7 +23,7 @@ class FavoritesDaoTest {
      * Maison will exist in the ddb
      */
     private static final Pair<Integer, Integer> MAISON_KEYS = new Pair<>(8032, 8052);
-    private final FavoriteDto MAISON
+    private static final FavoriteDto MAISON
             = new FavoriteDto(MAISON_KEYS.getKey(), MAISON_KEYS.getValue(), "maison");
 
     /**

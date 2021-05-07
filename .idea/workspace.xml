@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Complete FavoriteRepositoryTest">
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="fix typo testGetFavoriteNameById">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +270,7 @@
       <workItem from="1620309845462" duration="19098000" />
       <workItem from="1620331187624" duration="1157000" />
       <workItem from="1620391837100" duration="1891000" />
-      <workItem from="1620394443809" duration="4491000" />
+      <workItem from="1620394443809" duration="5556000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -459,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620398787133</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix typo testGetFavoriteNameById">
+      <created>1620399030333</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1620399030333</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +491,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="Add empty DAO classes" />
     <MESSAGE value="Add Ride class" />
     <MESSAGE value="Add status + todo" />
     <MESSAGE value="Add fmxl components" />
@@ -507,7 +515,8 @@
     <MESSAGE value="Add test methods" />
     <MESSAGE value="Add testAddWhenExisting, testAddWhenNotExisting" />
     <MESSAGE value="Complete FavoriteRepositoryTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete FavoriteRepositoryTest" />
+    <MESSAGE value="fix typo testGetFavoriteNameById" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix typo testGetFavoriteNameById" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
