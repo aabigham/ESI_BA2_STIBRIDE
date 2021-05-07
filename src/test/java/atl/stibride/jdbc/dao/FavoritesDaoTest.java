@@ -19,12 +19,16 @@ class FavoritesDaoTest {
 
     private FavoritesDao instance;
 
-    // Parc => Maelbeek, inside Db
+    /**
+     * Maison will exist in the ddb
+     */
     private static final Pair<Integer, Integer> MAISON_KEYS = new Pair<>(8032, 8052);
     private final FavoriteDto MAISON
             = new FavoriteDto(MAISON_KEYS.getKey(), MAISON_KEYS.getValue(), "maison");
 
-    // Maelbeek => Parc, not inside Db
+    /**
+     * Ecole will not exist in the db
+     */
     private static final Pair<Integer, Integer> ECOLE_KEYS = new Pair<>(8052, 8032);
     private static final FavoriteDto ECOLE
             = new FavoriteDto(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue(), "ecole");

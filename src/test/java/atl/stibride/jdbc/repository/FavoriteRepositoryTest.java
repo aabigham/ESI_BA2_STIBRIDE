@@ -13,19 +13,30 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+
 @ExtendWith(MockitoExtension.class)
 //@RunWith(JUnitPlatform.class)
 class FavoriteRepositoryTest {
 
+    /**
+     * Maison will exist in the dao
+     */
     private static final Pair<Integer, Integer> MAISON_KEYS = new Pair<>(8032, 8052);
     private final FavoriteDto MAISON
             = new FavoriteDto(MAISON_KEYS.getKey(), MAISON_KEYS.getValue(), "maison");
 
+    /**
+     * Ecole will not exist in the dao
+     */
     private static final Pair<Integer, Integer> ECOLE_KEYS = new Pair<>(8052, 8032);
     private static final FavoriteDto ECOLE
             = new FavoriteDto(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue(), "ecole");
 
-    private List<FavoriteDto> allFavorites;
+    private final List<FavoriteDto> allFavorites;
 
     @Mock
     private FavoritesDao mockDao;
@@ -42,22 +53,47 @@ class FavoriteRepositoryTest {
                 .thenReturn(allFavorites);
         Mockito.lenient()
                 .when(mockDao.select(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()))
-                .thenReturn(MAISON);
+                .thenReturn(MAISON); // Maison exists
         Mockito.lenient()
                 .when(mockDao.select(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue()))
-                .thenReturn(null);
+                .thenReturn(null); // Ecole does not exists
         Mockito.lenient()
                 .when(mockDao.select(null, null))
                 .thenThrow(RepositoryException.class);
     }
 
     @Test
-    void testAddWhenExisting() {
+    void testAddWhenExisting() throws RepositoryException {
+        System.out.println("testAddWhenExisting");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Action
+        repository.add(MAISON);
+        //Assert
+        Mockito.verify(mockDao, times(1))
+                .select(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        Mockito.verify(mockDao, times(1))
+                .update(MAISON);
+        Mockito.verify(mockDao, times(0))
+                .insert(any(FavoriteDto.class));
+        assertEquals(MAISON, repository.get(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()));
     }
 
     @Test
-    public void testAddWhenNotExisting() {
-
+    public void testAddWhenNotExisting() throws RepositoryException {
+        System.out.println("testAddWhenNotExisting");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Action
+        repository.add(ECOLE);
+        //Assert
+        Mockito.verify(mockDao, times(1))
+                .select(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        Mockito.verify(mockDao, times(0))
+                .update(ECOLE);
+        Mockito.verify(mockDao, times(1))
+                .insert(any(FavoriteDto.class));
+        assertNull(repository.get(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()));
     }
 
     @Test
