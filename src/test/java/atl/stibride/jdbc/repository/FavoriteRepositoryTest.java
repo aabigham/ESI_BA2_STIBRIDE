@@ -13,8 +13,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.times;
 
@@ -60,6 +59,12 @@ class FavoriteRepositoryTest {
         Mockito.lenient()
                 .when(mockDao.select(null, null))
                 .thenThrow(RepositoryException.class);
+        Mockito.lenient()
+                .when(mockDao.selectNameById(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()))
+                .thenReturn(MAISON.getName());
+        Mockito.lenient()
+                .when(mockDao.selectNameById(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue()))
+                .thenReturn(null);
     }
 
     @Test
@@ -93,65 +98,189 @@ class FavoriteRepositoryTest {
                 .update(ECOLE);
         Mockito.verify(mockDao, times(1))
                 .insert(any(FavoriteDto.class));
-        assertNull(repository.get(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()));
+        assertNull(repository.get(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue()));
     }
 
     @Test
-    public void testAddIncorrectParameter() {
-
+    public void testAddIncorrectParameter() throws RepositoryException {
+        System.out.println("testAddIncorrectParameter");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Assert
+        assertThrows(NullPointerException.class, () -> {
+            // Action
+            repository.add(null);
+        });
+        Mockito.verify(mockDao, times(0))
+                .select(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        Mockito.verify(mockDao, times(0))
+                .update(MAISON);
+        Mockito.verify(mockDao, times(0))
+                .insert(any(FavoriteDto.class));
     }
 
     @Test
-    public void testRemoveExisting() {
-
+    public void testRemoveExisting() throws RepositoryException {
+        System.out.println("testRemoveExisting");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Action
+        repository.remove(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        // Assert
+        Mockito.verify(mockDao, times(1))
+                .delete(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
     }
 
     @Test
-    public void testRemoveNotExisting() {
-
+    public void testRemoveNotExisting() throws RepositoryException {
+        System.out.println("testRemoveNotExisting");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Assert
+        assertThrows(RepositoryException.class, () -> {
+            // Action
+            repository.remove(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        });
+        Mockito.verify(mockDao, times(1))
+                .select(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        Mockito.verify(mockDao, times(0))
+                .delete(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
     }
 
     @Test
-    public void testRemoveIncorrectParameter() {
-
+    public void testRemoveIncorrectParameter() throws RepositoryException {
+        System.out.println("testRemoveIncorrectParameter");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Assert
+        assertThrows(RepositoryException.class, () -> {
+            // Action
+            repository.remove(null, null);
+        });
+        Mockito.verify(mockDao, times(1))
+                .select(null, null);
+        Mockito.verify(mockDao, times(0))
+                .delete(null, null);
     }
 
     @Test
-    public void testGetAllExisting() {
-
+    public void testGetAllExisting() throws RepositoryException {
+        System.out.println("testGetAllExisting");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Action
+        List<FavoriteDto> result = repository.getAll();
+        // Assert
+        Mockito.verify(mockDao, times(1))
+                .selectAll();
+        assertEquals(allFavorites, result);
     }
 
 
     @Test
-    public void testGetExist() {
-
+    public void testGetExist() throws RepositoryException {
+        System.out.println("testGetExist");
+        //Arrange
+        FavoriteDto expected = MAISON;
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Action
+        FavoriteDto result = repository.get(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        //Assert
+        assertEquals(expected, result);
+        Mockito.verify(mockDao, times(1))
+                .select(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
     }
 
     @Test
-    public void testGetNotExist() {
-
+    public void testGetNotExist() throws RepositoryException {
+        System.out.println("testGetNotExist");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Action
+        FavoriteDto result = repository.get(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        //Assert
+        assertNull(result);
+        Mockito.verify(mockDao, times(1))
+                .select(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
     }
 
     @Test
-    public void testGetIncorrectParameter() {
-
+    public void testGetIncorrectParameter() throws RepositoryException {
+        System.out.println("testGetIncorrectParameter");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Assert
+        assertThrows(RepositoryException.class, () -> {
+            //Action
+            repository.get(null, null);
+        });
+        Mockito.verify(mockDao, times(1))
+                .select(null, null);
     }
 
     @Test
-    public void testContainsExisting() {
-
+    public void testContainsExisting() throws RepositoryException {
+        System.out.println("testContainsExisting");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Action
+        boolean expected = repository.contains(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        // Assert
+        Mockito.verify(mockDao, times(1))
+                .select(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        assertTrue(expected);
     }
 
     @Test
-    public void testContainsNotExisting() {
-
+    public void testContainsNotExisting() throws RepositoryException {
+        System.out.println("testContainsNotExisting");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Action
+        boolean expected = repository.contains(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        // Assert
+        Mockito.verify(mockDao, times(1))
+                .select(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        assertFalse(expected);
     }
 
     @Test
-    public void testContainsIncorrectParameter() {
+    public void testContainsIncorrectParameter() throws RepositoryException {
+        System.out.println("testContainsIncorrectParameter");
+        // Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        // Assert
+        assertThrows(RepositoryException.class, () -> {
+            // Action
+            repository.contains(null, null);
+        });
+        Mockito.verify(mockDao, times(1)).select(null, null);
     }
 
     @Test
-    void getFavoriteNameById() {
+    void getFavoriteNameByIdExist() throws RepositoryException {
+        System.out.println("getFavoriteNameByIdExist");
+        //Arrange
+        String expected = MAISON.getName();
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Action
+        String result = repository.getFavoriteNameById(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+        //Assert
+        assertEquals(expected, result);
+        Mockito.verify(mockDao, times(1))
+                .selectNameById(MAISON_KEYS.getKey(), MAISON_KEYS.getValue());
+    }
+
+    @Test
+    void getFavoriteNameByIdNotExist() throws RepositoryException {
+        System.out.println("getFavoriteNameByIdNotExist");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Action
+        String result = repository.getFavoriteNameById(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+        //Assert
+        assertNull(result);
+        Mockito.verify(mockDao, times(1))
+                .selectNameById(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
     }
 }

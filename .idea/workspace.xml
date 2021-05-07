@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add test methods">
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add testAddWhenExisting, testAddWhenNotExisting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/FavoriteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/jdbc/repository/FavoriteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" afterDir="false" />
     </list>
@@ -68,6 +68,7 @@
     <property name="database.data.extractors.current.export.id" value="SQL-Insert-Statements.sql.groovy" />
     <property name="database.data.extractors.current.id" value="SQL-Insert-Multirow.sql.groovy" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../td3-sorting" />
+    <property name="nodejs.jest.jest_package" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
@@ -114,14 +115,16 @@
       <command value="mvn clean compile javafx:run" />
       <command value="StationsDaoTest" />
       <command value="mvn clean javafx:run" />
-      <command value="mvn clean compile" />
       <command value="All in StibRide" />
       <command value="Tests" />
       <command value="FavoritesDaoTest" />
       <command value="mvn clean " />
+      <command value="FavoriteRepositoryTest" />
+      <command value="mvn clean compile" />
+      <command value="All Tests" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FavoriteRepositoryTest">
+  <component name="RunManager" selected="JUnit.All Tests">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -131,6 +134,16 @@
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All Tests" type="JUnit" factoryName="JUnit">
+      <module name="StibRide" />
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -145,6 +158,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="atl.stibride.jdbc.repository" />
       <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.repository.FavoriteRepositoryTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,12 +174,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
       <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FavoritesDaoTest.testInsertExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FavoritesDaoTest.testDeleteNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StibRide" />
       <extension name="coverage">
         <pattern>
@@ -175,7 +190,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
       <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
-      <option name="METHOD_NAME" value="testInsertExists" />
+      <option name="METHOD_NAME" value="testDeleteNotExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,41 +206,25 @@
       </extension>
       <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
       <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.StationsDaoTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StationsDaoTest.testSelectAllNeighbor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StibRide" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.StationsDaoTest" />
-      <option name="METHOD_NAME" value="testSelectAllNeighbor" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.FavoritesDaoTest.testInsertExists" />
+      <item itemvalue="JUnit.All Tests" />
       <item itemvalue="JUnit.StationsDaoTest" />
-      <item itemvalue="JUnit.StationsDaoTest.testSelectAllNeighbor" />
       <item itemvalue="JUnit.FavoritesDaoTest" />
       <item itemvalue="JUnit.FavoriteRepositoryTest" />
+      <item itemvalue="JUnit.FavoritesDaoTest.testDeleteNotExists" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FavoritesDaoTest.testDeleteNotExists" />
         <item itemvalue="JUnit.FavoriteRepositoryTest" />
         <item itemvalue="JUnit.FavoritesDaoTest" />
-        <item itemvalue="JUnit.FavoritesDaoTest.testInsertExists" />
         <item itemvalue="JUnit.StationsDaoTest" />
-        <item itemvalue="JUnit.StationsDaoTest.testSelectAllNeighbor" />
       </list>
     </recent_temporary>
   </component>
@@ -271,7 +270,7 @@
       <workItem from="1620309845462" duration="19098000" />
       <workItem from="1620331187624" duration="1157000" />
       <workItem from="1620391837100" duration="1891000" />
-      <workItem from="1620394443809" duration="1674000" />
+      <workItem from="1620394443809" duration="4264000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -448,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620395216994</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Add testAddWhenExisting, testAddWhenNotExisting">
+      <created>1620396154488</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1620396154488</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +501,8 @@
     <MESSAGE value="Refactor favorites dao test" />
     <MESSAGE value="Refactor package" />
     <MESSAGE value="Add test methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test methods" />
+    <MESSAGE value="Add testAddWhenExisting, testAddWhenNotExisting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add testAddWhenExisting, testAddWhenNotExisting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

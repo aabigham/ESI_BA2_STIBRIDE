@@ -69,7 +69,8 @@ class FavoritesDaoTest {
         Pair<Integer, Integer> expected = ECOLE_KEYS;
         // Action
         Pair<Integer, Integer> result = instance.insert(ECOLE);
-        instance.delete(result.getKey(), result.getValue()); // pour pas faire bugger le reste des tests
+        // pour pas faire bugger le reste des tests
+        instance.delete(result.getKey(), result.getValue());
         // Assert
         assertEquals(expected, result);
     }
@@ -93,7 +94,8 @@ class FavoritesDaoTest {
         // Action
         instance.delete(to_delete.getKey(), to_delete.getValue());
         FavoriteDto expected = instance.select(to_delete.getKey(), to_delete.getValue());
-        instance.insert(MAISON); // pour pas faire bugger le reste des test
+        // pour pas faire bugger le reste des test
+        instance.insert(MAISON);
         // Assert
         assertNull(expected);
     }
@@ -121,6 +123,8 @@ class FavoritesDaoTest {
         // Action
         instance.update(to_update);
         FavoriteDto expected = instance.select(MAISON.getFirstKey(), MAISON.getSecondKey());
+        // reset
+        instance.update(MAISON);
         // Assert
         assertEquals(expected.getName(), to_update.getName());
     }

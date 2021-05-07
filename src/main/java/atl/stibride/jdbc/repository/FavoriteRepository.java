@@ -63,7 +63,11 @@ public class FavoriteRepository implements RepositoryPair<Integer, FavoriteDto> 
      */
     @Override
     public void remove(Integer firstKey, Integer secondKey) throws RepositoryException {
-        dao.delete(firstKey, secondKey);
+        if (contains(firstKey, secondKey)) {
+            dao.delete(firstKey, secondKey);
+        } else {
+            throw new RepositoryException("Cannot delete nothing");
+        }
     }
 
     /**
