@@ -1,7 +1,6 @@
 package atl.stibride.main;
 
 import atl.stibride.config.ConfigManager;
-import atl.stibride.jdbc.RepoManager;
 import atl.stibride.jdbc.exceptions.RepositoryException;
 import atl.stibride.model.Model;
 import atl.stibride.presenter.Presenter;
@@ -33,15 +32,11 @@ public class Main extends Application {
     public void start(Stage stage) {
         try {
             ConfigManager.getInstance().load();
-            RepoManager repoManager = new RepoManager();
-
-            Model model = new Model(repoManager);
+            Model model = new Model();
             model.initialize();
             View view = new View(stage);
             Presenter presenter = new Presenter(model, view);
-
             model.addObserver(presenter);
-
             presenter.initialize();
         } catch (RepositoryException | IOException e) {
             e.printStackTrace();

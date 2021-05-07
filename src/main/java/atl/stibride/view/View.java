@@ -33,6 +33,7 @@ public class View {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/view.fxml"));
         Parent root = loader.load();
         fxmlController = loader.getController();
+        
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);

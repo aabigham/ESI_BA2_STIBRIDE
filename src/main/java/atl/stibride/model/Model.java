@@ -8,6 +8,7 @@ import atl.stibride.model.dijkstra.Dijkstra;
 import atl.stibride.model.validation.StationValidation;
 import atl.stibride.observer.Observable;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -28,12 +29,12 @@ public class Model extends Observable {
     private Ride ride = null;
 
     /**
-     * Constructor of Model.
+     * Constructor of Model. Loads the config file.
      *
-     * @param repoManager the repo manager to interact with the database.
+     * @throws IOException if no file is found.
      */
-    public Model(RepoManager repoManager) {
-        this.repoManager = repoManager;
+    public Model() throws IOException {
+        this.repoManager = new RepoManager();
     }
 
     /**
