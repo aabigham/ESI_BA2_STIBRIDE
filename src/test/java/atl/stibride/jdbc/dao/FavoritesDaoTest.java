@@ -51,11 +51,10 @@ class FavoritesDaoTest {
     void testInsertExists() {
         System.out.println("testInsertExists");
         // Arrange
-        FavoriteDto existing = MAISON;
         // Assert
         assertThrows(RepositoryException.class, () -> {
             // Action
-            instance.insert(existing);
+            instance.insert(MAISON); // maison exists
         });
     }
 
@@ -72,7 +71,7 @@ class FavoritesDaoTest {
     }
 
     @Test
-    void testInsertIncorrectParameter() throws RepositoryException {
+    void testInsertIncorrectParameter() {
         System.out.println("testInsertNotExists");
         // Arrange
         // Assert
@@ -156,7 +155,7 @@ class FavoritesDaoTest {
     }
 
     @Test
-    public void testSelectIncorrectParameter() throws Exception {
+    public void testSelectIncorrectParameter() {
         System.out.println("testSelectIncorrectParameter");
         //Arrange
         //Assert
@@ -178,7 +177,7 @@ class FavoritesDaoTest {
     }
 
     @Test
-    void testSelectNameByIdIncorrectParameter() throws RepositoryException {
+    void testSelectNameByIdIncorrectParameter() {
         System.out.println("testSelectNameById");
         // Arrange
         // Assert
