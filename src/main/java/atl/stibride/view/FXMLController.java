@@ -188,7 +188,7 @@ public class FXMLController {
      */
     public void setFeedBack(int size) {
         leftStatus.setText("Recherche terminée");
-        rightStatus.setText(size + " stations");
+        rightStatus.setText("Nombre de stations : " + size);
     }
 
     /**
