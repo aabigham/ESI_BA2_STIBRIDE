@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Update tests">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add feedback label set">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Ride.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../td3-sorting/td3-sorting.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/td3-sorting.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,18 +108,44 @@
       <command value="mvn install" />
       <command value="mvn javafx:run" />
       <command value="mvn test" />
-      <command value="Tests" />
       <command value="mvn clean" />
-      <command value="All in StibRide" />
-      <command value="FavoritesDaoTest" />
       <command value="mvn clean compile javafx:run" />
       <command value="StationsDaoTest" />
       <command value="mvn clean " />
-      <command value="mvn clean compile" />
       <command value="mvn clean javafx:run" />
+      <command value="mvn clean compile" />
+      <command value="All in StibRide" />
+      <command value="Tests" />
+      <command value="FavoritesDaoTest" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FavoritesDaoTest.testInsertExists">
+  <component name="RunManager" selected="JUnit.FavoritesDaoTest">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FavoritesDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="StibRide" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
+      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FavoritesDaoTest.testInsertExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StibRide" />
       <extension name="coverage">
@@ -158,22 +173,6 @@
       <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
       <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
       <option name="METHOD_NAME" value="testSelectNameById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FavoritesDaoTest.testSelectNotExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="StibRide" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="atl.stibride.jdbc.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="atl.stibride.jdbc.dao" />
-      <option name="MAIN_CLASS_NAME" value="atl.stibride.jdbc.dao.FavoritesDaoTest" />
-      <option name="METHOD_NAME" value="testSelectNotExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,19 +210,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FavoritesDaoTest.testSelectNotExists" />
       <item itemvalue="JUnit.FavoritesDaoTest.testSelectNameById" />
       <item itemvalue="JUnit.FavoritesDaoTest.testInsertExists" />
       <item itemvalue="JUnit.StationsDaoTest" />
       <item itemvalue="JUnit.StationsDaoTest.testSelectAllNeighbor" />
+      <item itemvalue="JUnit.FavoritesDaoTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FavoritesDaoTest" />
         <item itemvalue="JUnit.FavoritesDaoTest.testInsertExists" />
         <item itemvalue="JUnit.StationsDaoTest" />
         <item itemvalue="JUnit.StationsDaoTest.testSelectAllNeighbor" />
         <item itemvalue="JUnit.FavoritesDaoTest.testSelectNameById" />
-        <item itemvalue="JUnit.FavoritesDaoTest.testSelectNotExists" />
       </list>
     </recent_temporary>
   </component>
@@ -267,7 +266,8 @@
       <workItem from="1620253452446" duration="41000" />
       <workItem from="1620256809446" duration="684000" />
       <workItem from="1620309845462" duration="19098000" />
-      <workItem from="1620331187624" duration="1122000" />
+      <workItem from="1620331187624" duration="1157000" />
+      <workItem from="1620391837100" duration="1331000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -409,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620328550858</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Add feedback label set">
+      <created>1620332341808</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1620332341808</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +458,8 @@
     <MESSAGE value="Add test db files" />
     <MESSAGE value="config test file" />
     <MESSAGE value="Update tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update tests" />
+    <MESSAGE value="Add feedback label set" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add feedback label set" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

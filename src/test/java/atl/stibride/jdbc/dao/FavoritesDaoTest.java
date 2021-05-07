@@ -4,7 +4,6 @@ import atl.stibride.config.ConfigManager;
 import atl.stibride.jdbc.dto.FavoriteDto;
 import atl.stibride.jdbc.exceptions.RepositoryException;
 import javafx.util.Pair;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -40,16 +39,6 @@ class FavoritesDaoTest {
         allFavorites.add(new FavoriteDto(8132, 8804, "VANDERVELDE => STUYVENBERGH"));
         allFavorites.add(MAISON);
 
-        /*try {
-            ConfigManager.getInstance().load();
-            instance = FavoritesDao.getInstance();
-        } catch (RepositoryException | IOException e) {
-            e.printStackTrace();
-        }*/
-    }
-
-    @BeforeEach
-    void setUp() {
         try {
             ConfigManager.getInstance().load();
             instance = FavoritesDao.getInstance();
@@ -77,8 +66,20 @@ class FavoritesDaoTest {
         Pair<Integer, Integer> expected = ECOLE_KEYS;
         // Action
         Pair<Integer, Integer> result = instance.insert(ECOLE);
+        instance.delete(result.getKey(), result.getValue()); // pour pas faire bugger le reste des tests
         // Assert
         assertEquals(expected, result);
+    }
+
+    @Test
+    void testInsertIncorrectParameter() throws RepositoryException {
+        System.out.println("testInsertNotExists");
+        // Arrange
+        // Assert
+        assertThrows(RepositoryException.class, () -> {
+            // Action
+            Pair<Integer, Integer> result = instance.insert(null);
+        });
     }
 
     @Test
@@ -89,6 +90,7 @@ class FavoritesDaoTest {
         // Action
         instance.delete(to_delete.getKey(), to_delete.getValue());
         FavoriteDto expected = instance.select(to_delete.getKey(), to_delete.getValue());
+        instance.insert(MAISON); // pour pas faire bugger le reste des test
         // Assert
         assertNull(expected);
     }
@@ -154,6 +156,17 @@ class FavoritesDaoTest {
     }
 
     @Test
+    public void testSelectIncorrectParameter() throws Exception {
+        System.out.println("testSelectIncorrectParameter");
+        //Arrange
+        //Assert
+        assertThrows(RepositoryException.class, () -> {
+            //Action
+            instance.select(null, null);
+        });
+    }
+
+    @Test
     void testSelectNameById() throws RepositoryException {
         System.out.println("testSelectNameById");
         // Arrange
@@ -162,5 +175,16 @@ class FavoritesDaoTest {
         String result = instance.selectNameById(MAISON.getFirstKey(), MAISON.getSecondKey());
         // Assert
         assertEquals(expected, result);
+    }
+
+    @Test
+    void testSelectNameByIdIncorrectParameter() throws RepositoryException {
+        System.out.println("testSelectNameById");
+        // Arrange
+        // Assert
+        assertThrows(RepositoryException.class, () -> {
+            // Action
+            String result = instance.selectNameById(null, null);
+        });
     }
 }
