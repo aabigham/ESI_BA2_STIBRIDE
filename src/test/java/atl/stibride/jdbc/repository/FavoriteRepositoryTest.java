@@ -46,10 +46,13 @@ class FavoriteRepositoryTest {
 
     @BeforeEach
     void setUp() throws RepositoryException {
-        // Mock dao select behavior
+        /* Mock dao behavior */
+
+        // Select All
         Mockito.lenient()
                 .when(mockDao.selectAll())
                 .thenReturn(allFavorites);
+        // Select
         Mockito.lenient()
                 .when(mockDao.select(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()))
                 .thenReturn(MAISON); // Maison exists
@@ -59,12 +62,16 @@ class FavoriteRepositoryTest {
         Mockito.lenient()
                 .when(mockDao.select(null, null))
                 .thenThrow(RepositoryException.class);
+        // SelectNameById
         Mockito.lenient()
                 .when(mockDao.selectNameById(MAISON_KEYS.getKey(), MAISON_KEYS.getValue()))
                 .thenReturn(MAISON.getName());
         Mockito.lenient()
                 .when(mockDao.selectNameById(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue()))
                 .thenReturn(null);
+        Mockito.lenient()
+                .when(mockDao.selectNameById(null, null))
+                .thenThrow(RepositoryException.class);
     }
 
     @Test
@@ -258,7 +265,7 @@ class FavoriteRepositoryTest {
     }
 
     @Test
-    void getFavoriteNameByIdExist() throws RepositoryException {
+    public void testGetFavoriteNameByIdExist() throws RepositoryException {
         System.out.println("getFavoriteNameByIdExist");
         //Arrange
         String expected = MAISON.getName();
@@ -272,7 +279,7 @@ class FavoriteRepositoryTest {
     }
 
     @Test
-    void getFavoriteNameByIdNotExist() throws RepositoryException {
+    public void testGetFavoriteNameByIdExistFavoriteNameByIdNotExist() throws RepositoryException {
         System.out.println("getFavoriteNameByIdNotExist");
         //Arrange
         FavoriteRepository repository = new FavoriteRepository(mockDao);
@@ -282,5 +289,19 @@ class FavoriteRepositoryTest {
         assertNull(result);
         Mockito.verify(mockDao, times(1))
                 .selectNameById(ECOLE_KEYS.getKey(), ECOLE_KEYS.getValue());
+    }
+
+    @Test
+    public void testGetFavoriteNameByIdExistFavoriteNameByIdIncorrectParameter() throws RepositoryException {
+        System.out.println("getFavoriteNameByIdNotExist");
+        //Arrange
+        FavoriteRepository repository = new FavoriteRepository(mockDao);
+        //Assert
+        assertThrows(RepositoryException.class, () -> {
+            //Action
+            String result = repository.getFavoriteNameById(null, null);
+        });
+        Mockito.verify(mockDao, times(1))
+                .selectNameById(null, null);
     }
 }
