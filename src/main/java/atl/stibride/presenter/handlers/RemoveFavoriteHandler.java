@@ -1,4 +1,4 @@
-package atl.stibride.handlers;
+package atl.stibride.presenter.handlers;
 
 import atl.stibride.presenter.Presenter;
 import javafx.event.ActionEvent;
@@ -7,7 +7,7 @@ import javafx.event.EventHandler;
 /**
  * Handles the remove favorite button.
  */
-public class SearchButtonHandler implements EventHandler<ActionEvent> {
+public class RemoveFavoriteHandler implements EventHandler<ActionEvent> {
 
     /**
      * The Presenter to link the button to.
@@ -19,7 +19,7 @@ public class SearchButtonHandler implements EventHandler<ActionEvent> {
      *
      * @param presenter the Presenter to link the button to.
      */
-    public SearchButtonHandler(Presenter presenter) {
+    public RemoveFavoriteHandler(Presenter presenter) {
         this.presenter = presenter;
     }
 
@@ -30,6 +30,6 @@ public class SearchButtonHandler implements EventHandler<ActionEvent> {
      */
     @Override
     public void handle(ActionEvent actionEvent) {
-        presenter.searchRide();
+        presenter.removeFavorite();
     }
 }

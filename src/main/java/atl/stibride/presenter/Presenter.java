@@ -95,7 +95,6 @@ public class Presenter implements Observer {
     public void editFavorite() {
         System.out.println("Edit favorite button");
         view.disableButtons();
-        // TODO popup window
         try {
             // Selected favorite
             Integer origin = view.getFavorite().getKey();

@@ -1,13 +1,13 @@
-package atl.stibride.handlers;
+package atl.stibride.presenter.handlers;
 
 import atl.stibride.presenter.Presenter;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 /**
- * Handles the add to favorite button.
+ * Handles the edit favorite button.
  */
-public class AddToFavoriteHandler implements EventHandler<ActionEvent> {
+public class EditFavoriteHandler implements EventHandler<ActionEvent> {
 
     /**
      * The Presenter to link the button to.
@@ -19,7 +19,7 @@ public class AddToFavoriteHandler implements EventHandler<ActionEvent> {
      *
      * @param presenter the Presenter to link the button to.
      */
-    public AddToFavoriteHandler(Presenter presenter) {
+    public EditFavoriteHandler(Presenter presenter) {
         this.presenter = presenter;
     }
 
@@ -30,6 +30,6 @@ public class AddToFavoriteHandler implements EventHandler<ActionEvent> {
      */
     @Override
     public void handle(ActionEvent actionEvent) {
-        presenter.addToFavorite();
+        presenter.editFavorite();
     }
 }

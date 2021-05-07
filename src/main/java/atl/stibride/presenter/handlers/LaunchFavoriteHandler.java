@@ -1,13 +1,13 @@
-package atl.stibride.handlers;
+package atl.stibride.presenter.handlers;
 
 import atl.stibride.presenter.Presenter;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 /**
- * Handles the remove favorite button.
+ * Handles the launch favorite button.
  */
-public class RemoveFavoriteHandler implements EventHandler<ActionEvent> {
+public class LaunchFavoriteHandler implements EventHandler<ActionEvent> {
 
     /**
      * The Presenter to link the button to.
@@ -19,7 +19,7 @@ public class RemoveFavoriteHandler implements EventHandler<ActionEvent> {
      *
      * @param presenter the Presenter to link the button to.
      */
-    public RemoveFavoriteHandler(Presenter presenter) {
+    public LaunchFavoriteHandler(Presenter presenter) {
         this.presenter = presenter;
     }
 
@@ -30,6 +30,6 @@ public class RemoveFavoriteHandler implements EventHandler<ActionEvent> {
      */
     @Override
     public void handle(ActionEvent actionEvent) {
-        presenter.removeFavorite();
+        presenter.launchFavorite();
     }
 }
