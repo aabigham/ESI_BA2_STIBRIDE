@@ -21,7 +21,6 @@ class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>> {
     private final SearchableComboBox<StationDto> origin;
     private final SearchableComboBox<StationDto> destination;
     private final TextField name;
-    private final GridPane gridPane;
 
     /**
      * The constructor of the dialog.
@@ -51,7 +50,7 @@ class EditFavoriteDialog extends Dialog<Triplet<Integer, Integer, String>> {
         name.setPromptText(default_str);
 
         // GridPane
-        gridPane = new GridPane();
+        GridPane gridPane = new GridPane();
         gridPane.setHgap(10);
         gridPane.setVgap(10);
         gridPane.setPadding(new Insets(20, 150, 10, 10));
