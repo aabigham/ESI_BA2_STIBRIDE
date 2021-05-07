@@ -4,7 +4,7 @@ import atl.stibride.jdbc.dto.FavoriteDto;
 import atl.stibride.jdbc.dto.StationDto;
 import atl.stibride.model.Ride;
 import atl.stibride.presenter.Presenter;
-import atl.stibride.presenter.handlers.*;
+import atl.stibride.presenter.handler.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

@@ -6,6 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add StationRepositoryTest +  fix some typos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/AddToFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handler/AddToFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/EditFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handler/EditFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/LaunchFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handler/LaunchFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/RemoveFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handler/RemoveFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/SearchButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handler/SearchButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/handler/HandlerClearButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/view/handler/HandlerClearButton.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,15 +129,13 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.All Tests">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -268,6 +273,7 @@
       <workItem from="1620331187624" duration="1157000" />
       <workItem from="1620391837100" duration="1891000" />
       <workItem from="1620394443809" duration="6525000" />
+      <workItem from="1620413232824" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
