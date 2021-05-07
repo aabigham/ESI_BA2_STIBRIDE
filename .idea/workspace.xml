@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="fix typo testGetFavoriteNameById">
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add StationRepositoryTest +  fix some typos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +269,7 @@
       <workItem from="1620309845462" duration="19098000" />
       <workItem from="1620331187624" duration="1157000" />
       <workItem from="1620391837100" duration="1891000" />
-      <workItem from="1620394443809" duration="5556000" />
+      <workItem from="1620394443809" duration="5931000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -468,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620399030333</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Add StationRepositoryTest +  fix some typos">
+      <created>1620400063422</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1620400063422</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,7 +497,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="Add Ride class" />
     <MESSAGE value="Add status + todo" />
     <MESSAGE value="Add fmxl components" />
     <MESSAGE value="Stations Dao Methods" />
@@ -516,7 +521,8 @@
     <MESSAGE value="Add testAddWhenExisting, testAddWhenNotExisting" />
     <MESSAGE value="Complete FavoriteRepositoryTest" />
     <MESSAGE value="fix typo testGetFavoriteNameById" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix typo testGetFavoriteNameById" />
+    <MESSAGE value="Add StationRepositoryTest +  fix some typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add StationRepositoryTest +  fix some typos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

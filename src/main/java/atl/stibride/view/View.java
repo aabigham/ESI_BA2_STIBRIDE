@@ -15,7 +15,8 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * The view class in the MVP Pattern.
+ * The view is a passive interface that displays data (the model)
+ * and routes user commands (events) to the presenter to act upon that data.
  */
 public class View {
 
