@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add More favoritesDaoTest">
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Refactor favorites dao test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/dao/FavoritesDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/AddToFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/AddToFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/EditFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/EditFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/LaunchFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/LaunchFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/RemoveFavoriteHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/RemoveFavoriteHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/handlers/SearchButtonHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/handlers/SearchButtonHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/FavoriteRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/atl/stibride/jdbc/repository/StationRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/sqlite/script.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,17 +129,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.FavoritesDaoTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FavoritesDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="StibRide" />
       <extension name="coverage">
@@ -267,7 +265,8 @@
       <workItem from="1620256809446" duration="684000" />
       <workItem from="1620309845462" duration="19098000" />
       <workItem from="1620331187624" duration="1157000" />
-      <workItem from="1620391837100" duration="1448000" />
+      <workItem from="1620391837100" duration="1891000" />
+      <workItem from="1620394443809" duration="725000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -423,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620393900222</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Refactor favorites dao test">
+      <created>1620393992084</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1620393992084</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -467,7 +473,8 @@
     <MESSAGE value="Update tests" />
     <MESSAGE value="Add feedback label set" />
     <MESSAGE value="Add More favoritesDaoTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add More favoritesDaoTest" />
+    <MESSAGE value="Refactor favorites dao test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor favorites dao test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
