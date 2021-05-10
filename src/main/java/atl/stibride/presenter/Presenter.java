@@ -5,13 +5,13 @@ import atl.stibride.jdbc.dto.StationDto;
 import atl.stibride.jdbc.exceptions.RepositoryException;
 import atl.stibride.model.Model;
 import atl.stibride.model.Ride;
-import atl.stibride.model.validation.StationValidation;
 import atl.stibride.observer.Observable;
 import atl.stibride.observer.Observer;
 import atl.stibride.view.View;
 import org.javatuples.Triplet;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * The presenter acts upon the model and the view.
@@ -24,7 +24,7 @@ public class Presenter implements Observer {
     private final View view;
 
     /**
-     * Instaciates the Presenter.
+     * Instanciates the Presenter.
      *
      * @param model the model.
      * @param view  the view.
@@ -41,14 +41,14 @@ public class Presenter implements Observer {
      *
      * @throws RepositoryException if there was a database error.
      */
-    public void initialize() throws RepositoryException {
+    public void initializeView() throws RepositoryException {
         /* All stations */
         List<StationDto> stations = model.getAllStations();
-        view.initComboBoxes(stations);
+        view.initStationsSearchBoxes(stations);
 
         /* All Favorites */
         List<FavoriteDto> favorites = model.getAllFavorites();
-        view.initFavorites(model.getAllFavorites());
+        view.setFavoritesListView(model.getAllFavorites());
 
         view.addHandlers(this);
     }
@@ -59,14 +59,16 @@ public class Presenter implements Observer {
     public void searchRide() {
         System.out.println("Search button");
         view.disableButtons();
+        // Ride selected by the user
+        StationDto origin = view.getOrigin();
+        StationDto destination = view.getDestination();
         try {
-            StationDto origin = view.getOrigin();
-            StationDto destination = view.getDestination();
             model.computeRide(origin, destination);
         } catch (Exception e) {
             view.showException(e.getMessage());
+        } finally {
+            view.enableButtons();
         }
-        view.enableButtons();
     }
 
     /**
@@ -75,16 +77,17 @@ public class Presenter implements Observer {
     public void addToFavorite() {
         System.out.println("Add to favorite button");
         view.disableButtons();
+        // Ride selected by the user
+        StationDto origin = view.getOrigin();
+        StationDto destination = view.getDestination();
+        String name = view.showFavNamePopup(origin.getName() + " => " + destination.getName());
         try {
-            StationDto origin = view.getOrigin();
-            StationDto destination = view.getDestination();
-            StationValidation.validateStations(origin, destination);
-            String name = view.showFavNamePopup(origin.getName() + " => " + destination.getName());
             model.addToFavorite(origin, destination, name);
         } catch (Exception e) {
             view.showException(e.getMessage());
+        } finally {
+            view.enableButtons();
         }
-        view.enableButtons();
     }
 
     /**
@@ -93,18 +96,19 @@ public class Presenter implements Observer {
     public void launchFavorite() {
         System.out.println("Launch favorite button");
         view.disableButtons();
+        // Selected favorite by the user
+        Integer origin = view.getFavorite().getKey();
+        Integer destination = view.getFavorite().getValue();
         try {
-            // Favorite is stored as a Pair
-            Integer origin = view.getFavorite().getKey();
-            Integer destination = view.getFavorite().getValue();
             model.computeRide(
                     model.getStationDto(origin),
                     model.getStationDto(destination)
             );
         } catch (Exception e) {
             view.showException(e.getMessage());
+        } finally {
+            view.enableButtons();
         }
-        view.enableButtons();
     }
 
     /**
@@ -113,15 +117,16 @@ public class Presenter implements Observer {
     public void removeFavorite() {
         System.out.println("Remove favorite button");
         view.disableButtons();
+        // Selected favorite by the user
+        Integer origin = view.getFavorite().getKey();
+        Integer destination = view.getFavorite().getValue();
         try {
-            // Favorite is stored as a Pair
-            Integer origin = view.getFavorite().getKey();
-            Integer destination = view.getFavorite().getValue();
             model.removeFavorite(origin, destination);
         } catch (Exception e) {
             view.showException(e.getMessage());
+        } finally {
+            view.enableButtons();
         }
-        view.enableButtons();
     }
 
     /**
@@ -132,21 +137,21 @@ public class Presenter implements Observer {
         System.out.println("Edit favorite button");
         view.disableButtons();
         try {
-            // Selected favorite
+            // Selected favorite by the user
             Integer origin = view.getFavorite().getKey();
             Integer destination = view.getFavorite().getValue();
             String favName = model.getFavName(origin, destination);
 
             // New values to be inserted by the user
             Triplet<Integer, Integer, String> newValues
-                    = view.showEditPopup(model.getAllStations(), favName);
+                    = view.showEditFavoritePopup(model.getAllStations(), favName);
             Integer newOrigin = newValues.getValue0();
             Integer newDestination = newValues.getValue1();
-            StationValidation.validateStations(newOrigin, newDestination);
+            //StationValidation.validateStations(newOrigin, newDestination);
             String newName = newValues.getValue2();
 
-            // Remove old favorite
-            model.removeFavorite(origin, destination);
+            // Remove old favorite , maybe useless because it updates it anyway?
+            //model.removeFavorite(origin, destination);
             // Add new favorite
             model.addToFavorite(
                     model.getStationDto(newOrigin),
@@ -155,8 +160,9 @@ public class Presenter implements Observer {
             );
         } catch (Exception e) {
             view.showException(e.getMessage());
+        } finally {
+            view.enableButtons();
         }
-        view.enableButtons();
     }
 
     /**
@@ -167,19 +173,24 @@ public class Presenter implements Observer {
      */
     @Override
     public void update(Observable observable, Object arg) {
-        System.out.println("model update");
         Model model = (Model) observable;
-        try {
-            Ride ride = model.getRide();
-            if (ride != null) {
-                view.showRide(ride);
-                view.showFeedBack(ride.getPathSize());
-            }
-            view.initFavorites(model.getAllFavorites());
-        } catch (RepositoryException e) {
-            view.showException(e.getMessage());
+        Integer notifyFlag = (Integer) arg;
+        System.out.println("presenter is notified by the model with flag = " + notifyFlag);
+        switch (notifyFlag) {
+            case 0: // Ride was updated
+                Optional<Ride> ride = model.getRideOptional();
+                ride.ifPresent(view::update);
+                break;
+            case 1: // Favorites were updated
+                try {
+                    view.update(model.getAllFavorites());
+                } catch (RepositoryException e) {
+                    view.showException(e.getMessage());
+                }
+                break;
+            default:
+                view.showException("Unexpected issue when updating the view.");
+                break;
         }
     }
-
-
 }

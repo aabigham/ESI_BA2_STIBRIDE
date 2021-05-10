@@ -31,13 +31,19 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         try {
+            // Loads config file (contains db url)
             ConfigManager.getInstance().load();
+            // Model
             Model model = new Model();
             model.initialize();
+            // View
             View view = new View(stage);
+            // Presenter takes the view and model
             Presenter presenter = new Presenter(model, view);
+            // Model is an observable
             model.addObserver(presenter);
-            presenter.initialize();
+            // Presenter initializes the view from the model datas
+            presenter.initializeView();
         } catch (RepositoryException | IOException e) {
             e.printStackTrace();
         }

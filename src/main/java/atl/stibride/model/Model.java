@@ -10,6 +10,7 @@ import atl.stibride.observer.Observable;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * The model class in the MVP Pattern.
@@ -19,14 +20,19 @@ import java.util.List;
  */
 public class Model extends Observable {
 
+    /* Allows the Observers to know that its the ride that was updated */
+    private static final Integer NOTIFY_RIDE = 0;
+    /* Allow the Observers to know that its the favorites that were updated */
+    private static final Integer NOTIFY_FAVORITES = 1;
+
     /* Manages the database requests */
     private final RepoManager repoManager;
     /* Every metro station available */
-    private List<StationDto> allStations = null;
+    private List<StationDto> allStations;
     /* Every favorite station */
-    private List<FavoriteDto> allFavorites = null;
+    private List<FavoriteDto> allFavorites;
     /* The computed ride */
-    private Ride ride = null;
+    private Optional<Ride> rideOptional;
 
     /**
      * Constructor of Model. Loads the config file.
@@ -35,10 +41,13 @@ public class Model extends Observable {
      */
     public Model() throws IOException {
         this.repoManager = new RepoManager();
+        this.allStations = null;      // Will be set in the initialize method
+        this.allFavorites = null;     // Will be set in the initialize method
+        this.rideOptional = Optional.empty(); // Usually there are no ride at the first launch of the app
     }
 
     /**
-     * Initializes the model.
+     * Initializes the model. Loads the favorites and all the stations from the database.
      *
      * @throws RepositoryException if there was a database error.
      */
@@ -53,6 +62,7 @@ public class Model extends Observable {
 
     /**
      * Computes the ride between two stations.
+     * This method notifies the observer.
      *
      * @param origin      the origin station.
      * @param destination the destination station.
@@ -61,8 +71,8 @@ public class Model extends Observable {
     public void computeRide(StationDto origin, StationDto destination) throws IllegalArgumentException {
         StationValidation.validateStations(origin, destination);
         List<StationDto> path = Dijkstra.computePath(allStations, origin, destination);
-        ride = new Ride(origin, destination, path);
-        notifyObservers(this);
+        rideOptional = Optional.of(new Ride(origin, destination, path));
+        notifyObservers(NOTIFY_RIDE);
     }
 
     /**
@@ -70,8 +80,8 @@ public class Model extends Observable {
      *
      * @return the computed ride.
      */
-    public Ride getRide() {
-        return ride;
+    public Optional<Ride> getRideOptional() {
+        return rideOptional;
     }
 
     /*============================*/
@@ -117,6 +127,7 @@ public class Model extends Observable {
 
     /**
      * Adds a Ride to the user's favorite.
+     * This method notifies the observer.
      *
      * @param origin      the origin station.
      * @param destination the destination station.
@@ -132,11 +143,12 @@ public class Model extends Observable {
                 name
         );
         allFavorites = repoManager.getAllFavorites(); // Change ?
-        notifyObservers(this);
+        notifyObservers(NOTIFY_FAVORITES);
     }
 
     /**
      * Removes a favorite ride from the application.
+     * This method notifies the observer.
      *
      * @param origin      the origin station id.
      * @param destination the destination station id.
@@ -145,7 +157,7 @@ public class Model extends Observable {
     public void removeFavorite(Integer origin, Integer destination) throws RepositoryException {
         repoManager.removeFavorite(origin, destination);
         allFavorites = repoManager.getAllFavorites(); // Change ?
-        notifyObservers(this);
+        notifyObservers(NOTIFY_FAVORITES);
     }
 
     /**

@@ -76,7 +76,7 @@ public class FXMLController {
      *
      * @param stations the stations of the metro network.
      */
-    void initComboBoxes(List<StationDto> stations) {
+    void initStationsSearchBoxes(List<StationDto> stations) {
         ObservableList<StationDto> stationsObs = FXCollections.observableList(stations);
         originSearch.setItems(stationsObs);
         originSearch.getSelectionModel().select(0);
@@ -89,7 +89,7 @@ public class FXMLController {
      *
      * @param favorites the favorite rides of the user.
      */
-    void initFavorites(List<FavoriteDto> favorites) {
+    void setFavoritesListView(List<FavoriteDto> favorites) {
         ObservableList<FavoriteDto> favoritesObs = FXCollections.observableList(favorites);
         listFavorite.setItems(favoritesObs);
         listFavorite.getSelectionModel().select(0);
@@ -147,16 +147,13 @@ public class FXMLController {
     }
 
     /**
-     * Shows an exception dialog to the user.
+     * Sets the feedback labels with the size of the ride path.
      *
-     * @param message the message to show inside the dialog.
+     * @param size the size of the ride path.
      */
-    void showException(String message) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setTitle("Warning");
-        alert.setHeaderText(message);
-        alert.setContentText("Careful with the next steps !");
-        alert.showAndWait();
+    public void setFeedBack(int size) {
+        leftStatus.setText("Recherche terminée");
+        rightStatus.setText("Nombre de stations : " + size);
     }
 
     /**
@@ -182,14 +179,18 @@ public class FXMLController {
     }
 
     /**
-     * Sets the feedback labels with the size of the ride path.
+     * Shows an exception dialog to the user.
      *
-     * @param size the size of the ride path.
+     * @param message the message to show inside the dialog.
      */
-    public void setFeedBack(int size) {
-        leftStatus.setText("Recherche terminée");
-        rightStatus.setText("Nombre de stations : " + size);
+    void showException(String message) {
+        Alert alert = new Alert(Alert.AlertType.WARNING);
+        alert.setTitle("Warning");
+        alert.setHeaderText(message);
+        alert.setContentText("Careful with the next steps !");
+        alert.showAndWait();
     }
+
 
     /**
      * Shows a dialog for the user to choose a name to give its favorite ride.
@@ -215,7 +216,7 @@ public class FXMLController {
      * @return a triplet containing all of the new values inserted by the user.
      * @throws IllegalArgumentException is a value was missing.
      */
-    Triplet<Integer, Integer, String> showEditPopup(List<StationDto> stations, String default_str)
+    Triplet<Integer, Integer, String> showEditFavoritePopup(List<StationDto> stations, String default_str)
             throws IllegalArgumentException {
         // Dialog
         EditFavoriteDialog dialog = new EditFavoriteDialog(stations, default_str);

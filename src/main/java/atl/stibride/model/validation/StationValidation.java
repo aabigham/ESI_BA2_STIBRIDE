@@ -9,7 +9,7 @@ import atl.stibride.jdbc.dto.StationDto;
 public class StationValidation {
 
     /**
-     * Validate two stations objects.
+     * Validate two stations objects. They cannot be similar.
      *
      * @param origin      the origin station.
      * @param destination the destination station.
@@ -23,7 +23,7 @@ public class StationValidation {
     }
 
     /**
-     * Validate two stations id.
+     * Validate two stations id. They cannot be similar.
      *
      * @param origin      the origin station.
      * @param destination the destination station.

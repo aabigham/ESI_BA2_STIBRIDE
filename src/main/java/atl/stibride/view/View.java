@@ -33,7 +33,7 @@ public class View {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/view.fxml"));
         Parent root = loader.load();
         fxmlController = loader.getController();
-        
+
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setResizable(false);
@@ -42,12 +42,31 @@ public class View {
     }
 
     /**
+     * Updates the view's ride.
+     *
+     * @param ride the ride to show.
+     */
+    public void update(Ride ride) {
+        fxmlController.showRide(ride);
+        fxmlController.setFeedBack(ride.getPathSize());
+    }
+
+    /**
+     * Updates the view's favorites list.
+     *
+     * @param allFavorites the favorites to show.
+     */
+    public void update(List<FavoriteDto> allFavorites) {
+        fxmlController.setFavoritesListView(allFavorites);
+    }
+
+    /**
      * Initializes the combo boxes that show the stations
      *
      * @param stations the stations of the metro network.
      */
-    public void initComboBoxes(List<StationDto> stations) {
-        fxmlController.initComboBoxes(stations);
+    public void initStationsSearchBoxes(List<StationDto> stations) {
+        fxmlController.initStationsSearchBoxes(stations);
     }
 
     /**
@@ -55,8 +74,8 @@ public class View {
      *
      * @param favorites the favorite rides of the user.
      */
-    public void initFavorites(List<FavoriteDto> favorites) {
-        fxmlController.initFavorites(favorites);
+    public void setFavoritesListView(List<FavoriteDto> favorites) {
+        fxmlController.setFavoritesListView(favorites);
     }
 
     /**
@@ -96,24 +115,6 @@ public class View {
     }
 
     /**
-     * Displays a ride to the user.
-     *
-     * @param ride the ride to display to the user.
-     */
-    public void showRide(Ride ride) {
-        fxmlController.showRide(ride);
-    }
-
-    /**
-     * Shows an exception dialog to the user.
-     *
-     * @param message the message to show inside the dialog.
-     */
-    public void showException(String message) {
-        fxmlController.showException(message);
-    }
-
-    /**
      * Disables all the buttons.
      */
     public void disableButtons() {
@@ -125,6 +126,15 @@ public class View {
      */
     public void enableButtons() {
         fxmlController.enableButtons();
+    }
+
+    /**
+     * Shows an exception dialog to the user.
+     *
+     * @param message the message to show inside the dialog.
+     */
+    public void showException(String message) {
+        fxmlController.showException(message);
     }
 
     /**
@@ -145,17 +155,9 @@ public class View {
      * @return a triplet containing all of the new values inserted by the user.
      * @throws IllegalArgumentException is a value was missing.
      */
-    public Triplet<Integer, Integer, String> showEditPopup(List<StationDto> stations, String default_str)
+    public Triplet<Integer, Integer, String> showEditFavoritePopup(List<StationDto> stations, String default_str)
             throws IllegalArgumentException {
-        return fxmlController.showEditPopup(stations, default_str);
+        return fxmlController.showEditFavoritePopup(stations, default_str);
     }
 
-    /**
-     * Shows the feedback with the size of the ride path.
-     *
-     * @param size the size of the ride path.
-     */
-    public void showFeedBack(int size) {
-        fxmlController.setFeedBack(size);
-    }
 }
