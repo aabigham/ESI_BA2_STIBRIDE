@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Add StationRepositoryTest +  fix some typos">
+    <list default="true" id="12a6a303-b8e7-481a-badf-071ce570382d" name="Default Changelist" comment="Better update method + typos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/sqlite/stib_db.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/sqlite/stib_db.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/model/validation/StationValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/model/validation/StationValidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/presenter/Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/FXMLController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/atl/stibride/view/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyRunnable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyRunnable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../td3-sorting/src/main/java/atl/sorting/model/MyThread.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -275,7 +270,9 @@
       <workItem from="1620394443809" duration="6525000" />
       <workItem from="1620413232824" duration="47000" />
       <workItem from="1620566436758" duration="5147000" />
-      <workItem from="1620665847080" duration="3928000" />
+      <workItem from="1620665847080" duration="4244000" />
+      <workItem from="1620677798630" duration="234000" />
+      <workItem from="1621347584891" duration="2528000" />
     </task>
     <task id="LOCAL-00001" summary="Add DTO classes + update view">
       <created>1617108191407</created>
@@ -480,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620400063422</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Better update method + typos">
+      <created>1620670024902</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1620670024902</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +507,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../.." />
     </ignored-roots>
-    <MESSAGE value="Add status + todo" />
     <MESSAGE value="Add fmxl components" />
     <MESSAGE value="Stations Dao Methods" />
     <MESSAGE value="Add Repositories" />
@@ -528,7 +531,8 @@
     <MESSAGE value="Complete FavoriteRepositoryTest" />
     <MESSAGE value="fix typo testGetFavoriteNameById" />
     <MESSAGE value="Add StationRepositoryTest +  fix some typos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add StationRepositoryTest +  fix some typos" />
+    <MESSAGE value="Better update method + typos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better update method + typos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
