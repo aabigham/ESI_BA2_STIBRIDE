@@ -1,13 +1,25 @@
-# Notes sur la base de données
+# StibRide
 
-Dans l'api de la STIB certaines stations possèdent plusieurs identifiants.
+A JavaFX program  that computes the best path between two metro stations in the public transport network of Brussels (STIB/MIVB)
 
-Afin de simplifier l'implémentation réalisée dans le cours ces nœuds ont été fusionnés.
+## Author
 
-Voici les changements apportés : 
+- Amine-Ayoub Bigham (https://github.com/aabigham)
 
-- station ERASME : le nœud 8642 de la ligne 5 à été remplacé par le nœud 8641
-- station ROI BAUDOUIN : le nœud 8834 de la ligne 6 à été remplacé par le nœud 8833
-- station BEEKKANT : le nœud 8744 de la ligne 4 à été remplacé par le nœud 8742
-- station ARTS-LOI : le nœud 8402 de la ligne 4 à été remplacé par le nœud 8042
-- stations GARE DE L'OUEST : les nœuds 8732 et 8733 ont été remplacés par le nœud 8382
+## About the project
+
+This project was realized in the context of the ATLG4 course of the HE2B - ESI school in brussels.
+It involves the use of: 
+
+- the JavaFX technology for the graphical user interface ; 
+- the Dijkstra algorithm (shortest path)
+- JDBC for database connection ;
+- the MVP, Observer, and Repository design patterns 
+
+## Instructions
+
+- Run the project with `mvn javafx:run`
+
+## Screenshot
+
+![StibRide](img/screenshot.PNG)
